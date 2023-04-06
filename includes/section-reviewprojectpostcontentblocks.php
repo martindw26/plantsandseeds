@@ -266,7 +266,7 @@ $PartsProductParagraphImage = get_sub_field('parts_paragraph_image');
 <?php if ($PartsProductParagraphTitle): ?>
 <h4 class="mt-4"><?php echo $PartsProductParagraphTitle; ?><i></i></h4>
 <?php endif; ?>	 
-<div class="border border-1 p-2">
+<div class="border border-1">
 <?php if ($PartsProductParagraphImage) : ?>
     <p><?php echo $PartsProductParagraphImage; ?></p>
 <?php endif; ?>
