@@ -203,10 +203,10 @@ $ads = get_sub_field('ads');
 $gallery_title = get_sub_field('gallery_title');
 $gallery = get_sub_field('gallery');
 ?>
-<div class="">
+
 <h3><?php echo $gallery_title; ?></h3>
 <?php echo $gallery; ?>
-</div>
+
 <?php endif; ?>
 
 <!-- Gallery justified_imge_grid block -->
