@@ -264,13 +264,11 @@ $PartsProductParagraphImage = get_sub_field('parts_paragraph_image');
 ?>	
 <div class="row bg-light border-end border-1 border-start border-1 border-top border-1">
 <?php if ($PartsProductParagraphTitle): ?>
-<h4 class="mt-4"><?php echo $PartsProductParagraphTitle; ?><i></i></h4>
+<h4 class="mt-2"><?php echo $PartsProductParagraphTitle; ?><i></i></h4>
 <?php endif; ?>	 
-<div class="border-top border-1 mb-2">
 <?php if ($PartsProductParagraphImage) : ?>
     <p><?php echo $PartsProductParagraphImage; ?></p>
-<?php endif; ?>
-</div>    
+<?php endif; ?>    
 <table class="table table-light table-hover table-bordered p-2">
 <tr>
 <th class=""><h4 class="text-center">Part</h4></th>
