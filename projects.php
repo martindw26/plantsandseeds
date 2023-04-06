@@ -50,11 +50,11 @@
              <?php the_field('seo_paragraph');?> 
              </div>
 
-
+             <div class="container">
              <!-- Article content blocks -->
              <?php get_template_part('includes/section','reviewprojectpostcontentblocks');?>
              <!-- End Article content blocks-->
-
+             </div>
 
             <!-- Article content disclaimer block -->
             <?php get_template_part('includes/section','disclaimer');?>
