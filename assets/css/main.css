@@ -377,8 +377,7 @@ footer  .primary-menu-footer li{
 /* ###### Justified image grid ##### */
 
 div#JigBlock{
-  min-height: 800px!important;
-  max-height: 1000px!important;
+  max-height: 1200px!important;
 }
 
 
