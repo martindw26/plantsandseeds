@@ -254,7 +254,7 @@ $PartsProductParagraph = get_sub_field('parts_paragraph');
 </div>
 
 <!-- Parts (image) column horizontal block -->
-<div class="container mt-2 ">
+
 <?php if (get_row_layout() == 'parts_column_section_image'):
 $partscolumns = get_sub_field('parts_column');
 $PartsProductTitle = get_sub_field('part_title');
@@ -297,7 +297,7 @@ $PartsProductParagraphImage = get_sub_field('parts_paragraph_image');
 </table>
 </div>
 <?php endif; ?>
-</div>
+
 
 <!-- Pros and cons column horizontal block -->
 <?php if (get_row_layout() == 'pros_cons_column'):
