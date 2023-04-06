@@ -229,7 +229,7 @@ $PartsProductParagraph = get_sub_field('parts_paragraph');
 ?>	
 <div class="row">
 <?php if ($PartsProductTitle): ?>
-<hr><h4 class="m-4">Here are the parts required for the this <?php echo $PartsProductTitle; ?><i> project</i></h4>
+<hr><h4 class="">Here are the parts required for the this <?php echo $PartsProductTitle; ?><i> project</i></h4>
 <?php endif; ?>	 
 <table class="table table-light table-hover table-bordered table-striped p-2">
 <tr>
