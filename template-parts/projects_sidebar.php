@@ -26,7 +26,7 @@ while ($block1->have_posts()) : $block1->the_post();?>
  <div class="card rounded rounded-0 border border-1 p-2">
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
 <img class="card-img-top rounded rounded-0 featured p-2" src="<?php echo $url ?>" alt="Card image cap" style="object-fit: cover; padding: 2px;">  <div class="card-body">
-    <h6 class="card-title"><?php echo get_the_title();?></h6>
+    <h6 class="card-title fw-bold"><?php echo get_the_title();?></h6>
 
 <div>
 <?php
@@ -58,7 +58,7 @@ while ($block1->have_posts()) : $block1->the_post();?>
 				?>
 				<!-- End catarrayrated -->
 				</p>
-<p class="mb-3">&#34;<?php echo excerpt(25);?>&#34;
+				<p class="mb-3 fw-normal">&#34;<?php echo excerpt(25);?>&#34;
 				</p>
 
 		<div class="card-text text-muted small">
