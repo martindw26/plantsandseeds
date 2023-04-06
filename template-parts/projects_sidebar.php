@@ -40,7 +40,7 @@ while ($block1->have_posts()) : $block1->the_post();?>
           </div>';
   }
 ?>
-</div>
+</div> 
 
 
 				<p class="mb-4">	
