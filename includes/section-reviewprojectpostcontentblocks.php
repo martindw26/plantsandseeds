@@ -203,10 +203,10 @@ $ads = get_sub_field('ads');
 $gallery_title = get_sub_field('gallery_title');
 $gallery = get_sub_field('gallery');
 ?>
-
+<div class="">
 <h3><?php echo $gallery_title; ?></h3>
 <?php echo $gallery; ?>
-
+</div>
 <?php endif; ?>
 
 <!-- Gallery justified_imge_grid block -->
@@ -229,7 +229,7 @@ $PartsProductParagraph = get_sub_field('parts_paragraph');
 ?>	
 <div class="row">
 <?php if ($PartsProductTitle): ?>
-<hr class="hr"><h4 class="pt-4">Here are the parts required for the this <?php echo $PartsProductTitle; ?><i> project</i></h4>
+<hr><h4 class="m-4">Here are the parts required for the this <?php echo $PartsProductTitle; ?><i> project</i></h4>
 <?php endif; ?>	 
 <table class="table table-light table-hover table-bordered table-striped p-2">
 <tr>
@@ -254,7 +254,7 @@ $PartsProductParagraph = get_sub_field('parts_paragraph');
 </div>
 
 <!-- Parts (image) column horizontal block -->
-
+<div class="container mt-2 ">
 <?php if (get_row_layout() == 'parts_column_section_image'):
 $partscolumns = get_sub_field('parts_column');
 $PartsProductTitle = get_sub_field('part_title');
@@ -264,7 +264,7 @@ $PartsProductParagraphImage = get_sub_field('parts_paragraph_image');
 ?>	
 <div class="row">
 <?php if ($PartsProductParagraphTitle): ?>
-    <hr class="hr"><h4 class="pt-4">Here are the parts required for the this <?php echo $PartsProductTitle; ?><i> project</i></h4>
+<h4 class="m-4"><?php echo $PartsProductParagraphTitle; ?><i></i></h4>
 <?php endif; ?>	 
 <?php if ($PartsProductParagraphImage) : ?>
     <p><?php echo $PartsProductParagraphImage; ?></p>
@@ -297,7 +297,7 @@ $PartsProductParagraphImage = get_sub_field('parts_paragraph_image');
 </table>
 </div>
 <?php endif; ?>
-
+</div>
 
 <!-- Pros and cons column horizontal block -->
 <?php if (get_row_layout() == 'pros_cons_column'):
