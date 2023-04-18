@@ -40,7 +40,7 @@ while ($block1->have_posts()) : $block1->the_post();?>
   }
 ?>
 </div>
-<h6 class="card-title"><?php echo get_the_title();?></h6>
+
 				<p class="mb-4">	
 				<!-- catarrayrated -->
 				<?php 
