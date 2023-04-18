@@ -22,10 +22,10 @@ if ($block1->have_posts()) :
 while ($block1->have_posts()) : $block1->the_post();?>
 <!-- Blog post-->
 <div class="col">
- <div class="card rounded rounded-0 border border-1">
+ <div class="card rounded rounded-0 border border-1 p-2">
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-<img class="card-img-top rounded rounded-0 featured p-2" src="<?php echo $url ?>" alt="Card image cap" style="object-fit: cover; object-position: center 50%; width: 300px; padding: 2px;">  <div class="card-body">
-    <h6 class="card-title"><?php echo get_the_title();?></h6>
+<img class="card-img-top rounded rounded-0 featured p-2" src="<?php echo $url ?>" alt="Card image cap" style="object-fit: cover; padding: 2px;">  <div class="card-body">
+    <h6 class="card-title fw-bold"><?php echo get_the_title();?></h6>
 
 <div>
 <?php
@@ -39,7 +39,7 @@ while ($block1->have_posts()) : $block1->the_post();?>
           </div>';
   }
 ?>
-</div>
+</div> 
 
 				<p class="mb-4">	
 				<!-- catarrayrated -->
