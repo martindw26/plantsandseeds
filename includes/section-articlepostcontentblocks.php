@@ -216,7 +216,7 @@ $currency = '&#8377';
 <?php if($a_video):?>
 <div class="videoWrapper">
     <!-- Video block-->
-    <iframe width="400" height="349" src="https://www.youtube.com/embed/<?php the_sub_field( 'a_video' ); ?>?controls=0&autoplay=0&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+    <iframe width="400" height="349" src="https://www.youtube.com/embed/<?php the_sub_field( 'a_video' ); ?>?controls=0&autoplay=0&rel=0&autoplay=<?php echo $autoplay; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
         <?php the_sub_field( 'a_video' ); ?>
 </div>
 <?php endif;?>
@@ -422,8 +422,8 @@ $media_select = get_sub_field('image_or_video');
 <img src="<?php echo $picture; ?>" class="img-fluid">
 <?php elseif ($media_select == 'video'): ?>
 <div class="videoWrapper">
-    <!-- Image/Video left hand side block -->
-<iframe class="" width="380" height="349" src="https://www.youtube.com/embed/<?php echo $video2; ?>?autoplay=0&rel=0&ecver=1" frame-border="0" allowfullscreen></iframe>
+<!-- Image/Video left hand side block -->
+<iframe class="" width="400" height="349" src="https://www.youtube.com/embed/<?php echo $a_video;?>?autoplay=<?php echo $autoplay; ?>&mute=1&rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
 </div>
 <?php else: ?>	
 <?php endif; ?>			
