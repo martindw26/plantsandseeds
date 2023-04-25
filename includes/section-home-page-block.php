@@ -77,7 +77,7 @@ while ($block1->have_posts()) : $block1->the_post();
 				$condition = array(
 				'post_type' => 'post',
 				'post_status' => 'publish',
-				'orderby' => 'title',	
+				
 				'order' => $block_orderby,
 				'offset' => $block_offset,
 				'posts_per_page' => 3,
