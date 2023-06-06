@@ -141,14 +141,16 @@ while ($block1->have_posts()) : $block1->the_post();
 		echo '<p>No content found</p>';
 		endif; ?>
 		<?php // Left block posts projects loop begins here
-         $small_posts_category = get_sub_field('small_posts_category');
-		 $block_offset = get_sub_field('block_right_offset');
-		 $block_post_exclusion = get_sub_field('block_post_right_exclude');
-		 $block_orderby = get_sub_field('orderby');
-
-		 $condition3 = array(
+        $small_posts_category = get_sub_field('small_posts_category');
+		$block_offset = get_sub_field('block_right_offset');
+		$block_post_exclusion = get_sub_field('block_post_right_exclude');
+		$block_orderby = get_sub_field('orderby');
+		$block_orderby_asc_desc = get_sub_field('block_order_asc_desc');
+		
+		$condition2 = array(
 			'post_type' => 'post',
 			'post_status' => 'publish',
+			'order' => $block_orderby_asc_desc,
 			'orderby' => $block_orderby,
 			'offset' => $block_offset,
 			'posts_per_page' => 3,
