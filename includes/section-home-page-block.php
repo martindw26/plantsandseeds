@@ -192,7 +192,10 @@ while ($block1->have_posts()) : $block1->the_post();
 <div class="d-flex justify-content-center">
 <?php $BlockMoreURL = get_sub_field( 'block_more_url' );?>
 <?php $more_button_text = get_sub_field( 'more_button_text' );?>
-<a href="<?php echo $BlockMoreURL;?>" class="btn btn-white text-black border border-2 border-dark pb-sm-2 fs-5 text"><?php echo $more_button_text;?></a>
+<a href="<?php echo $BlockMoreURL;?>">
+    <button type="button" class="btn btn-outline-dark"><?php echo $more_button_text;?></button>
+</a>
+
 </div>
 
 
