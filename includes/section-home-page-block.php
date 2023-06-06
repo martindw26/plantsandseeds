@@ -15,7 +15,7 @@
 		echo '<p>No content found</p>';
 		endif; ?>
 
-<?php // Right small block posts projects loop begins here
+<?php // Right large block posts projects loop begins here
 $large_post_featured_post = get_sub_field ( 'large_post_featured_post' );
 $block_posts_left = get_sub_field ( 'block_posts_left' );
 $tags_exclude = get_sub_field ( 'tags_exclude' );
@@ -67,7 +67,7 @@ while ($block1->have_posts()) : $block1->the_post();
 		else :
 		echo '<p>No content found</p>';
 		endif; ?>
-		<?php // Left block posts projects loop begins here
+		<?php // Left small block posts projects loop begins here
       
 		$small_posts_category = get_sub_field('small_posts_category');
 		$block_offset = get_sub_field('block_right_offset');
@@ -140,14 +140,14 @@ while ($block1->have_posts()) : $block1->the_post();
 		else :
 		echo '<p>No content found</p>';
 		endif; ?>
-		<?php // Left block posts projects loop begins here
+		<?php // Left small mobile block posts projects loop begins here
         $small_posts_category = get_sub_field('small_posts_category');
 		$block_offset = get_sub_field('block_right_offset');
 		$block_post_exclusion = get_sub_field('block_post_right_exclude');
 		$block_orderby = get_sub_field('orderby');
 		$block_orderby_asc_desc = get_sub_field('block_order_asc_desc');
 		
-		$condition2 = array(
+		$condition3 = array(
 			'post_type' => 'post',
 			'post_status' => 'publish',
 			'order' => $block_orderby_asc_desc,
