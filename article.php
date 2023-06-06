@@ -36,17 +36,17 @@
               $featured_post_label = get_field('featured_post');
 
               if ($featured_post_label == 'yes') {
-              echo '<div class="container-fluid text-sm-start">
-              <div class="row row-cols-lg-2 row-cols-sm-2 alert alert-success text-sm-start rounded-0 border-0 p-1 m-1">
-                <div class="col fs-5 d-flex align-items-center justify-content-end">
-                  <?php echo $featured_post_label_text; ?>
+                echo '<div class=\'container-fluid text-sm-start\'>
+                <div class=\'row row-cols-lg-2 row-cols-sm-2 alert alert-success text-sm-start rounded-0 border-0 p-1 m-1\'>
+                  <div class=\'col fs-5 d-flex align-items-center justify-content-end\'>
+                    <?php echo $featured_post_label_text; ?>
+                  </div>
+                  <div class=\'col d-flex align-items-center\'>
+                    <img class=\'img-fluid\' src=\'<?php echo $featured_post_label_logo; ?>\' alt=\'<?php echo $featured_post_label_alt_text; ?>\' style=\'max-height: 100px;\'>
+                  </div>
                 </div>
-                <div class="col d-flex align-items-center">
-                  <img class="img-fluid" src="<?php echo $featured_post_label_logo; ?>" alt="<?php echo $featured_post_label_alt_text; ?>" style="max-height: 100px;">
-                </div>
-              </div>
-            </div>
-            ';
+              </div>';
+  
               }
               ?>
 
