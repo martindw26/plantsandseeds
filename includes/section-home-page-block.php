@@ -74,7 +74,7 @@ while ($block1->have_posts()) : $block1->the_post();
 		$block_post_exclusion = get_sub_field('block_post_right_exclude');
 		$block_orderby = get_sub_field('orderby');
 		
-		$condition = array(
+		$condition2 = array(
 			'post_type' => 'post',
 			'post_status' => 'publish',
 			'orderby' => $block_orderby,
@@ -91,9 +91,9 @@ while ($block1->have_posts()) : $block1->the_post();
 		);
 	  
 	
-                                $block1 = new WP_Query ($condition);
-                                if ($block1->have_posts()) :
-                                while ($block1->have_posts()) : $block1->the_post();
+                                $block2 = new WP_Query ($condition2);
+                                if ($block2->have_posts()) :
+                                while ($block2->have_posts()) : $block2->the_post();
                                 ?>
 <div class="non_featured_block_home_page">
 
@@ -144,7 +144,7 @@ while ($block1->have_posts()) : $block1->the_post();
 		 $block_post_exclusion = get_sub_field('block_post_right_exclude');
 		 $block_orderby = get_sub_field('orderby');
 
-		 $condition2 = array(
+		 $condition3 = array(
 			'post_type' => 'post',
 			'post_status' => 'publish',
 			'orderby' => $block_orderby,
@@ -160,9 +160,9 @@ while ($block1->have_posts()) : $block1->the_post();
 			)
 		);
 
-						 $block2 = new WP_Query ($condition2);
-						 if ($block2->have_posts()) :
-						 while ($block2->have_posts()) : $block2->the_post();
+						 $block3 = new WP_Query ($condition3);
+						 if ($block3->have_posts()) :
+						 while ($block3->have_posts()) : $block3->the_post();
 						 ?>
 <div class="non_featured_block_home_page_mobile pb-2">
 <div class="card rounded rounded-0 border border-0 shadow-sm">
