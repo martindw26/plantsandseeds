@@ -56,25 +56,6 @@ while ($block1->have_posts()) : $block1->the_post();
 </div>
 </div>
 
-<?php
-
-$show_ad = get_field('landing_page_block_ad'); // Check if the field value is 'yes'
-
-if (have_rows('home_page_blocks')) {
-    while (have_rows('home_page_blocks')) {
-        the_row();
-        if ($show_ad === 'yes') {
-            get_template_part('landing_page_ads/homepage_header_top');
-        } elseif (get_row_layout() === 'no') {
-            $ad_code = get_sub_field('script');
-            echo $ad_code;
-        }
-    }
-}
-?>
-
-
-
 
 <?php endwhile;  else :  endif; wp_reset_postdata();?>
 
@@ -117,6 +98,23 @@ if (have_rows('home_page_blocks')) {
                                 while ($block2->have_posts()) : $block2->the_post();
                                 ?>
 <div class="non_featured_block_home_page">
+
+<?php
+
+$show_ad = get_field('landing_page_block_ad'); // Check if the field value is 'yes'
+
+if (have_rows('home_page_blocks')) {
+    while (have_rows('home_page_blocks')) {
+        the_row();
+        if ($show_ad === 'yes') {
+            get_template_part('landing_page_ads/homepage_header_top');
+        } elseif (get_row_layout() === 'no') {
+            $ad_code = get_sub_field('script');
+            echo $ad_code;
+        }
+    }
+}
+?>
 
 
 <div class="container shadow-sm p-3 mb-2 bg-body rounded" style="height:195px;"><!-- small non-fetured block-->
