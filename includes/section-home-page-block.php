@@ -69,26 +69,27 @@ while ($block1->have_posts()) : $block1->the_post();
 		endif; ?>
 		<?php // Left block posts projects loop begins here
       
-				$small_posts_category = get_sub_field('small_posts_category');
-				$block_offset = get_sub_field('block_right_offset');
-				$block_post_exclusion = get_sub_field('block_post_right_exclude');
-				$block_orderby = get_sub_field('orderby');
-
-				$condition = array(
-				'post_type' => 'post',
-				'post_status' => 'publish',
-				'orderby' => $block_orderby,
-				'offset' => $block_offset,
-				'posts_per_page' => 3,
-				'post__not_in' => array($block_post_exclusion),
-				'tax_query' => array(
+		$small_posts_category = get_sub_field('small_posts_category');
+		$block_offset = get_sub_field('block_right_offset');
+		$block_post_exclusion = get_sub_field('block_post_right_exclude');
+		$block_orderby = get_sub_field('orderby');
+		
+		$condition = array(
+			'post_type' => 'post',
+			'post_status' => 'publish',
+			'orderby' => $block_orderby,
+			'offset' => $block_offset,
+			'posts_per_page' => 3,
+			'post__not_in' => array($block_post_exclusion),
+			'tax_query' => array(
 				array(
-				'taxonomy' => 'category',
-				'field' => 'term_id',
-				'terms' => $small_posts_category
+					'taxonomy' => 'category',
+					'field' => 'term_id',
+					'terms' => $small_posts_category
 				)
-				)
-				);
+			)
+		);
+	  
 	
                                 $block1 = new WP_Query ($condition);
                                 if ($block1->have_posts()) :
@@ -144,20 +145,20 @@ while ($block1->have_posts()) : $block1->the_post();
 		 $block_orderby = get_sub_field('orderby');
 
 		 $condition = array(
-		 'post_type' => 'post',
-		 'post_status' => 'publish',
-		 'orderby' => $block_orderby,
-		 'offset' => $block_offset,
-		 'posts_per_page' => 3,
-		 'post__not_in' => array($block_post_exclusion),
-		 'tax_query' => array(
-		 array(
-		 'taxonomy' => 'category',
-		 'field' => 'term_id',
-		 'terms' => $small_posts_category
-		 )
-		 )
-		 );
+			'post_type' => 'post',
+			'post_status' => 'publish',
+			'orderby' => $block_orderby,
+			'offset' => $block_offset,
+			'posts_per_page' => 3,
+			'post__not_in' => array($block_post_exclusion),
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'category',
+					'field' => 'term_id',
+					'terms' => $small_posts_category
+				)
+			)
+		);
 
 						 $block1 = new WP_Query ($condition);
 						 if ($block1->have_posts()) :
