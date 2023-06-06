@@ -57,10 +57,13 @@ while ($block1->have_posts()) : $block1->the_post();
 </div>
 
 <?php
-if (have_rows('ad_placement')) {
-    while (have_rows('ad_placement')) {
+
+$show_ad = get_field('landing_page_block_ad'); // Check if the field value is 'yes'
+
+if (have_rows('home_page_blocks')) {
+    while (have_rows('home_page_blocks')) {
         the_row();
-        if (get_row_layout() === 'landing_page_block_ad') {
+        if ($show_ad === 'yes') {
             get_template_part('landing_page_ads/homepage_header_top');
         } elseif (get_row_layout() === 'ad_code') {
             $ad_code = get_sub_field('script');
@@ -69,6 +72,8 @@ if (have_rows('ad_placement')) {
     }
 }
 ?>
+
+
 
 
 <?php endwhile;  else :  endif; wp_reset_postdata();?>
