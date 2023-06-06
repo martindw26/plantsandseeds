@@ -51,7 +51,7 @@ while ($block1->have_posts()) : $block1->the_post();
 				?>
 				<!-- End catarrayrated -->
 						<p class="mb-3">&#34;<?php echo excerpt(35);?>&#34;</p>
-    <a href="<?php the_permalink() ?>" class="btn btn-dark text-white">Read More</a>
+						<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark">Read More</button></a>
   </div>
 </div>
 </div>
@@ -123,7 +123,7 @@ while ($block1->have_posts()) : $block1->the_post();
 				?>
 				<!-- End catarrayrated -->
 				</h5>
-	<a href="<?php the_permalink() ?>" class="btn btn-sm btn-dark text-white m-0">Read More</a></div>
+				<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark">Read More</button></a>
   </div>
 </div>
 </div>
@@ -177,7 +177,7 @@ while ($block1->have_posts()) : $block1->the_post();
 							Article by: <i><?php echo get_the_author();?></i>,  Posted: <i><?php echo get_the_date();?></i><?php if($read_time):?> | <?php echo $read_time ?><?php endif ?></i>
 						</div><br>
 
-    <a href="<?php the_permalink() ?>" class="btn btn-dark text-white">Read More</a>
+	<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark">Read More</button></a>
   </div>
 </div>
 </div>
