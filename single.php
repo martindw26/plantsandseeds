@@ -18,10 +18,10 @@ $featured_post_label = get_field('featured_post');
 $featured_post_label_logo = get_field('featured_post_label_logo');
 
 if ($featured_post_label == 'yes') {
-  echo '<div class="col-lg-4 col-sm-3 pt-2">
-    <div class="alert alert-success text-center p-1">
+  echo '<div class='col-lg-4 col-sm-3 pt-2'>
+    <div class='alert alert-success text-center p-1'>
       <strong>' . $featured_post_label_text . '</strong>
-      <img src="' . $featured_post_label_logo['url'] . '" alt="' . $featured_post_image['alt'] . '"> <!-- Display ACF image -->
+      <img src='' . $featured_post_label_logo['url'] . '' alt='' . $featured_post_image['alt'] . ''> <!-- Display ACF image -->
     </div>
   </div>';
 }
