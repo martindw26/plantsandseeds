@@ -190,12 +190,13 @@ while ($block1->have_posts()) : $block1->the_post();
 	</div>
 </div><hr class="d-sm-block d-md-none">
 <div class="d-flex justify-content-center">
-<?php $BlockMoreURL = get_sub_field( 'block_more_url' );?>
-<?php $more_button_text = get_sub_field( 'more_button_text' );?>
-<a href="<?php echo $BlockMoreURL;?>">
-    <button type="button" class="btn btn-outline-dark"><?php echo $more_button_text;?></button>
+<?php
+$BlockMoreURL = get_sub_field('block_more_url');
+$more_button_text = get_sub_field('more_button_text');
+?>
+<a href="<?php echo $BlockMoreURL; ?>">
+    <button type="button" class="btn btn-outline-dark"><?php echo $more_button_text; ?></button>
 </a>
-
 </div>
 
 
