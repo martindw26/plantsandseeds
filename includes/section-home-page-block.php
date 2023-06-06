@@ -15,7 +15,6 @@
 		echo '<p>No content found</p>';
 		endif; ?>
 
-
 <?php // Right small block posts projects loop begins here
 $large_post_featured_post = get_sub_field ( 'large_post_featured_post' );
 $block_posts_left = get_sub_field ( 'block_posts_left' );
@@ -56,6 +55,21 @@ while ($block1->have_posts()) : $block1->the_post();
   </div>
 </div>
 </div>
+
+<?php
+if (have_rows('ad_placement')) {
+    while (have_rows('ad_placement')) {
+        the_row();
+        if (get_row_layout() === 'landing_page_block_ad') {
+            get_template_part('landing_page_ads/homepage_header_top');
+        } elseif (get_row_layout() === 'ad_code') {
+            $ad_code = get_sub_field('script');
+            echo $ad_code;
+        }
+    }
+}
+?>
+
 
 <?php endwhile;  else :  endif; wp_reset_postdata();?>
 
