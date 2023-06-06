@@ -196,26 +196,5 @@ while ($block1->have_posts()) : $block1->the_post();
 </div>
 
 
-<?php
 
-$show_ad = get_field('landing_page_block_ad'); // Check if the field value is 'yes'
-
-if (have_rows('home_page_blocks')) {
-    while (have_rows('home_page_blocks')) {
-        the_row();
-        if ($show_ad === 'yes') {
-            get_template_part('landing_page_ads/homepage_header_top');
-        } else {
-            if (get_row_layout() === 'no') {
-                $ad_code = get_sub_field('script');
-                echo $ad_code;
-            }
-        }
-    }
-} else {
-    // Add your fallback code here if there are no rows
-}
-
-wp_reset_postdata();
-?>
 
