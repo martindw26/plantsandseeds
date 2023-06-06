@@ -238,7 +238,7 @@ font-family: 'Open Sans', sans-serif;
 
 .btn, .btn-danger{
     font-family: 'Open Sans', sans-serif;
-    color: #000!important;
+    /*color: #000!important;*/
 }
 
 .pagination_font{
