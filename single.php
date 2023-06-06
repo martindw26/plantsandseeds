@@ -12,17 +12,18 @@
 
             <h1 class=" display-2 font-weight-bold text-dark" style=""><?php echo esc_html( get_the_title() );?><hr></h1>
 
-            <?php
+          <?php
           $featured_post_label_text = get_field('featured_post_label_text');
           $featured_post_label = get_field('featured_post');
           if ($featured_post_label == 'yes') {
-          echo '<div class=" col-lg-4 col-sm-3 pt-2">
-            <div class="alert alert-success text-center p-1">
-              <strong>' . $featured_post_label_text . '</strong>
-            </div>
+          echo '<div class="col-lg-4 col-md-6 col-sm-12 pt-2">
+          <div class="alert alert-success text-center p-1">
+          <strong class="d-block">' . $featured_post_label_text . '</strong>
+          </div>
           </div>';
           }
           ?>
+
 
 				<!-- Social share icons-->
 				<?php $enable_in_article = get_field('on_article','option');?>
