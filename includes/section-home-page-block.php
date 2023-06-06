@@ -65,7 +65,7 @@ if (have_rows('home_page_blocks')) {
         the_row();
         if ($show_ad === 'yes') {
             get_template_part('landing_page_ads/homepage_header_top');
-        } elseif (get_row_layout() === 'ad_code') {
+        } elseif (get_row_layout() === 'no') {
             $ad_code = get_sub_field('script');
             echo $ad_code;
         }
