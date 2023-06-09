@@ -11,34 +11,54 @@ else :
 echo '<p>No content found</p>';
 endif; ?>
 <?php // Block1 posts projects loop begins here
+$sidebarCatProjects = get_field('sidebarCatProjects', 'option');
+$projects_posts_per_page = get_field('projects_posts_per_page', 'option');
+$projects_offset = get_field('projects_offset', 'option');
+$projects_order_by = get_field('project_order_by', 'option');
 $condition = array(
-	"post_type"          	=> "post",
-	"post_status"         	=> "publish",
-	"posts_per_page"      	=> 2,
-	"orderby"               	=> 'date',
-	'offset' 		=> 1,
-	'cat' 		=> 3,
-);$block1 = new WP_Query ($condition);
+    'post_type'      => 'post',
+    'post_status'    => 'publish',
+    'posts_per_page' => $projects_posts_per_page,
+    'orderby'        => $projects_order_by,
+    'offset'         => $projects_offset,
+    'tax_query'      => array(
+        array(
+            'taxonomy' => 'category',
+            'field'    => 'term_id',
+            'terms'    => $sidebarCatProjects
+	        )
+    )
+);
+$block1 = new WP_Query ($condition);
 if ($block1->have_posts()) :
 while ($block1->have_posts()) : $block1->the_post();?>
 <!-- Blog post-->
 <div class="col">
  <div class="card rounded rounded-0 border border-1 p-2">
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-<img class="card-img-top rounded rounded-0 featured p-2" src="<?php echo $url ?>" alt="Card image cap" style="object-fit: cover; padding: 2px;">  <div class="card-body">
+<img class="card-img-top rounded rounded-0 featured p-2" src="<?php echo $url ?>" alt="Card image cap" style="">  <div class="card-body">
     <h6 class="card-title fw-bold"><?php echo get_the_title();?></h6>
 
 <div>
 <?php
-  $featured_post_label_text = get_field('featured_post_label_text');
-  $featured_post_label = get_field('featured_post');
-  if ($featured_post_label == 'yes') {
-    echo '<div class="col-lg-4 col-sm-3 pt-2">
-            <div class="alert alert-success text-center p-1">
-              <strong>' . $featured_post_label_text . '</strong>
+$featured_post_label_text = get_field('featured_post_label_text');
+$featured_post_label_alt_text = get_field('featured_post_label_alt_text');
+$featured_post_label_logo = get_field('featured_post_label_logo');
+$featured_post_label = get_field('featured_post');
+
+if ($featured_post_label == 'yes') {
+    echo '
+    <div class="container-fluid pt-4">
+        <div class="row">
+            <div class="col-sm alert alert-success rounded-0 border-0">
+                <span class="fs-5">' . $featured_post_label_text . '</span>
             </div>
-          </div>';
-  }
+            <div class="col-sm alert alert-success rounded-0 border-0 d-flex align-items-center">
+                <img class="img-fluid" src="' . $featured_post_label_logo . '" alt="' . $featured_post_label_alt_text . '" style="max-height: 50px;">
+            </div>
+        </div>
+    </div>';
+}
 ?>
 </div> 
 

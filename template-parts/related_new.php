@@ -5,13 +5,14 @@
 <?php
 
 $post_id = get_field('post_id');
+$related_order_by = get_field('related_order_by', 'option');
 
 //relared post loop begins here
 
 $args = array(
 					'post_type' 			=> 'post',
 					'post_status' 			=> 'publish',
-					'orderby' 				=> 'none',
+					'orderby' 				=> $related_order_by,
 					'post__in'				=> $post_id
 
 					);

@@ -4,9 +4,9 @@
  /* Template Post Type: post */
 ?>  
 
-<div class="container">
-
-        <div class="row">
+<div class="container p-1">
+  
+  <div class="row">
 	
           <div class="col-lg-8 p-lg-2 bg-white text-dark">
 
@@ -17,17 +17,24 @@
               $featured_post_label_alt_text = get_field('featured_post_label_alt_text');
               $featured_post_label_logo = get_field('featured_post_label_logo');
               $featured_post_label = get_field('featured_post');
+              $featured_post_URL = get_field('featured_post_url');
 
               if ($featured_post_label == 'yes') {
-              echo '<div class="container-fluid text-sm-start">
-              <div class="row row-cols-lg-2 row-cols-sm-2 alert alert-success text-sm-start rounded-0 border-0 p-1 m-1">
-              <div class="col fs-5 d-flex align-items-center justify-content-end">' . $featured_post_label_text . '</div>
-              <div class="col d-flex align-items-center"><img class="img-fluid" src="' . $featured_post_label_logo . '" alt="'. $featured_post_label_alt_text .'" style="max-height: 100px;"></div>
+              echo '<div class="container-fluid rounded rounded-0 border border-0 alert alert-success" style="">
+              <div class="row">
+              <div class="col alert alert-success text-black rounded rounded-0 border border-0 fs-5 d-flex align-items-center justify-content-center">' . $featured_post_label_text . '</div>
+              </div>
+              <div class="row">
+              <div class="col alert alert-success text-white rounded rounded-0 border border-0 d-flex align-items-center justify-content-center">
+              <a href="' . $featured_post_URL . '" target="_blank">
+              <img class="img-fluid" src="' . $featured_post_label_logo . '" alt="' . $featured_post_label_alt_text . '"> 
+              </a>
+              </div>
               </div>
               </div>';
               }
               ?>
-
+              
 				<!-- Social share icons-->
 				<?php $enable_in_article = get_field('on_article','option');?>
 				<?php if($enable_in_article):?>
