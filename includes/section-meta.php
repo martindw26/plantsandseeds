@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid border-border-1 border-light pb-1">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
         <?php
@@ -37,3 +37,4 @@ echo $author_bio;
       </div>
     </div>
   </div>
+  <hr>
