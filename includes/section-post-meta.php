@@ -1,4 +1,4 @@
-<i>Categories: </i>
+<i>Categories: </i><br>
 <?php
 $categories = get_the_category();
 $separator = ' ';
