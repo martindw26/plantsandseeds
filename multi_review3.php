@@ -59,6 +59,9 @@
              <?php get_template_part('includes/section','multiproduct3');?>
              <!-- End Article content blocks-->
             
+             <!-- Article content disclaimer block -->
+             <?php get_template_part('includes/section','post-meta');?>
+             <!-- End content disclaimer block-->
 
              <!-- meta block-->
              <?php get_template_part('includes/section','meta');?>

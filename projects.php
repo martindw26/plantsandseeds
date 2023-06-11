@@ -59,6 +59,10 @@
              <?php get_template_part('includes/section','reviewprojectpostcontentblocks');?>
              <!-- End Article content blocks-->
 
+             <!-- Article content disclaimer block -->
+             <?php get_template_part('includes/section','post-meta');?>
+             <!-- End content disclaimer block-->
+
 
             <!-- Article content disclaimer block -->
             <?php get_template_part('includes/section','disclaimer');?>
