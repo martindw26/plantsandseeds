@@ -1,5 +1,5 @@
-<div class="container">
-<div class="card mb-3" style="">
+
+<div class="card mb-3">
   <div class="row g-0">
     <div class="col-md-4">
     <?php
@@ -11,7 +11,7 @@
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">By </i><?php the_author_meta('display_name', 1); ?></h5>
-        <p class="card-text"><i> | Posted </i><?php echo get_the_date();?></p>
+        <p class="card-text"><i>Posted </i><?php echo get_the_date();?></p>
         <p class="card-text"><small class="text-muted">
         <?php
 $categories = get_the_category();
@@ -28,5 +28,4 @@ if ( ! empty( $categories ) ) {
       </div>
     </div>
   </div>
-</div>
 </div>
