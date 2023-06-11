@@ -50,11 +50,11 @@ $instagram_url = get_the_author_meta('instagram', $user_id);
         <p class="card-text"><?php echo $biographical_info; ?></p>
 
         <?php if ($facebook_url) : ?>
-          <a class="bi bi-facebook text-light m-2 p-2"" href="<?php echo $facebook_url; ?>" target="_blank" rel="nofollow noopener noreferrer">Facebook</a>
+          <a class="bi bi-facebook text-light m-2 p-2" href="<?php echo $facebook_url; ?>" target="_blank" rel="nofollow noopener noreferrer">Facebook</a>
         <?php endif; ?>
 
         <?php if ($twitter_url) : ?>
-          <a href="<?php echo $twitter_url; ?>" target="_blank" rel="nofollow noopener noreferrer">Twitter</a>
+          <a class="bi bi-twitter text-light m-1 p-2" href="<?php echo $twitter_url; ?>" target="_blank" rel="nofollow noopener noreferrer">Twitter</a>
         <?php endif; ?>
 
         <?php if ($instagram_url) : ?>
