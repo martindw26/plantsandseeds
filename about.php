@@ -34,16 +34,15 @@ $biographical_info = get_user_meta($user_id, 'description', true); // Get the us
 
 ?>
 
-<div class="card mb-3" style="max-width: 540px;">
+<div class="card mb-3" style="">
   <div class="row g-0">
-    <div class="col-md-4">
+    <div class="col-md=3">
       <img src="<?php echo $avatar_url; ?>" class="img-fluid rounded-start" alt="Profile Picture">
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title"><?php the_author_meta('display_name', $user_id); ?></h5>
         <p class="card-text"><?php echo $biographical_info; ?></p>
-        <p class="card-text"><small class="text-muted">Last updated <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')); ?> ago</small></p>
       </div>
     </div>
   </div>
