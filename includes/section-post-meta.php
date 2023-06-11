@@ -19,7 +19,7 @@ $tags = get_the_tags(); // Get the tags for the current post
 
 if ($tags) {
     foreach ($tags as $tag) {
-        echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '" class="btn btn-secondary rounded-pill mb-4 mb-md-0">' . esc_html($tag->name) . '</a> ';
+        echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '" class="btn btn-primary rounded-pill mb-4 mb-md-0">' . esc_html($tag->name) . '</a> ';
     }
 }
 ?>
