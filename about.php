@@ -39,7 +39,7 @@ $biographical_info = get_user_meta($user_id, 'description', true); // Get the us
     <div class="col-md=3">
       <img src="<?php echo $avatar_url; ?>" class="img-fluid rounded-start" alt="Profile Picture">
     </div>
-    <div class="col-md-8">
+    <div class="col-md">
       <div class="card-body">
         <h5 class="card-title"><?php the_author_meta('display_name', $user_id); ?></h5>
         <p class="card-text"><?php echo $biographical_info; ?></p>
