@@ -11,7 +11,7 @@ if (!empty($categories)) {
     echo trim($output, $separator);
 }
 ?>
-<br>
+
 <h5 class="card-title">Tags: </h5><br>
 <?php
 $tags = get_the_tags(); // Get the tags for the current post
@@ -22,5 +22,4 @@ if ($tags) {
     }
 }
 ?>
-<br><br>
 
