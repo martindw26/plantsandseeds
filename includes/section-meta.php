@@ -9,7 +9,7 @@
               echo trim( $output, $separator );
           }
 ?>
-<br><br>
+<br>
 <i>Tags: </i>
 <?php
 $tags = get_the_tags(); // Get the tags for the current post
@@ -26,7 +26,7 @@ if ($tags) {
     echo $tags_string; // Output the comma-separated tags
 }
 ?>
-
+<br>
 
 <div class="container-fluid border border-dark border border-1 pb-1 bg-light">
     <div class="row">
