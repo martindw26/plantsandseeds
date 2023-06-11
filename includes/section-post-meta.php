@@ -12,7 +12,7 @@ if (!empty($categories)) {
 }
 ?>
 
-<h5 class="card-title">Tags: </h5><br>
+<h5 class="card-title">Tags: </h5>
 <?php
 $tags = get_the_tags(); // Get the tags for the current post
 
