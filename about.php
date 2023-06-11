@@ -54,7 +54,7 @@ $instagram_url = get_the_author_meta('instagram', $user_id);
         <?php endif; ?>
 
         <?php if ($twitter_url) : ?>
-          <a class="bi bi-twitter text-light m-1 p-2" href="<?php echo $twitter_url; ?>" target="_blank" rel="nofollow noopener noreferrer">Twitter</a>
+          <a href="<?php echo $twitter_url; ?>" target="_blank" rel="nofollow noopener noreferrer"><p class="bi bi-twitter text-light m-1 p-2"></a>
         <?php endif; ?>
 
         <?php if ($instagram_url) : ?>
