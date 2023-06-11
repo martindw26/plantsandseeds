@@ -12,7 +12,8 @@ if (!empty($categories)) {
 }
 ?>
 
-<h5 class="display-6 pt-2 pb-2 p-sm-2">Tags: </h5>
+<h5 class="display-6 pt-4 pb-4 p-sm-2">Tags: </h5>
+
 <?php
 $tags = get_the_tags(); // Get the tags for the current post
 
