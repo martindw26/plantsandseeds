@@ -26,7 +26,7 @@ if ($tags) {
     echo $tags_string; // Output the comma-separated tags
 }
 ?>
-<br>
+<br><br>
 
 <div class="container-fluid border border-dark border border-1 pb-1 bg-light">
     <div class="row">
