@@ -1,3 +1,4 @@
+<i>Categories: </i>
 <?php
 $categories = get_the_category();
 $separator = ' ';
@@ -10,7 +11,7 @@ if (!empty($categories)) {
 }
 ?>
 <br>
-<i>Tags: </i>
+<i>Tags: </i><br>
 <?php
 $tags = get_the_tags(); // Get the tags for the current post
 
