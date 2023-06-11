@@ -9,7 +9,8 @@
               echo trim( $output, $separator );
           }
 ?>
-
+<br>
+<i>Tags: </i>
 <?php
 $tags = get_the_tags(); // Get the tags for the current post
 
