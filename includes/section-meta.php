@@ -1,33 +1,3 @@
-<?php
-          $categories = get_the_category();
-          $separator = ' ';
-          $output = '';
-          if ( ! empty( $categories ) ) {
-              foreach( $categories as $category ) {
-                  $output .= '<i>Category: </i><a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
-              }
-              echo trim( $output, $separator );
-          }
-?>
-<br>
-<i>Tags: </i>
-<?php
-$tags = get_the_tags(); // Get the tags for the current post
-
-if ($tags) {
-    $tag_names = array(); // Create an empty array to store tag names
-
-    foreach ($tags as $tag) {
-        $tag_names[] = $tag->name; // Add each tag name to the array
-    }
-
-    $tags_string = implode(', ', $tag_names); // Combine the tag names with a comma and space
-
-    echo $tags_string; // Output the comma-separated tags
-}
-?>
-<br><br>
-
 <div class="container-fluid border border-dark border border-1 pb-1 bg-light">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
