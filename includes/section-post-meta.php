@@ -1,5 +1,5 @@
 
-<h5 class="card-title">Categories: </h5><br>
+<h5 class="card-title">Categories: </h5>
 <?php
 $categories = get_the_category();
 $separator = ' ';
