@@ -5,9 +5,9 @@
       // Get the ACF field value for author_profile_image
       $author_profile_image = get_field('author_profile_image');
     ?>
-     <img src="<?php echo $author_profile_image; ?>" style="object-fit: contain;">
+     <img src="<?php echo $author_profile_image; ?>" style="width:100%;">
       </div>
-      <div class="col-lg-12 col-md-12 col-sm-12 bg-danger">
+      <div class="col-lg-12 col-md-12 col-sm-12">
        <div class="card-body">
         <h5 class="card-title">By <?php the_author_meta('display_name', 1); ?></h5>
         <p class="card-text"><i>Posted </i><?php echo get_the_date();?></p>
@@ -26,7 +26,7 @@
         </small></p>
       </div>
       </div>
-      <div class="col-lg-12 col-md-12 col-sm-12 bg-success">
+      <div class="col-lg-12 col-md-12 col-sm-12">
         <?php
 $author_id = get_the_author_meta('ID');
 $author_bio = get_the_author_meta('description', $author_id);
