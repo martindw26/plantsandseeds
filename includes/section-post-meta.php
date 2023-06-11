@@ -1,5 +1,5 @@
 
-<h5 class="card-title">Categories: </h5>
+<h5 class="display-5 pb-2">Categories: </h5>
 <?php
 $categories = get_the_category();
 $separator = ' ';
@@ -12,7 +12,7 @@ if (!empty($categories)) {
 }
 ?>
 
-<h5 class="card-title">Tags: </h5>
+<h5 class="display-5 pb-2">Tags: </h5>
 <?php
 $tags = get_the_tags(); // Get the tags for the current post
 
