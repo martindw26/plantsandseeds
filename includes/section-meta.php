@@ -1,5 +1,12 @@
 <hr class="hr">
-<div class="text-dark text-muted m-2"><i>By </i><?php the_author_meta('display_name', 1); ?><i>  | Posted </i><?php echo get_the_date();?></div>
+<div class="author-profile">
+    <div class="author-image">
+        <?php the_author_image(get_the_author_meta('ID')); ?>
+    </div>
+    <div class="author-details">
+        <div class="text-dark text-muted m-2"><i>By </i><?php the_author_meta('display_name', 1); ?><i>  | Posted </i><?php echo get_the_date();?></div>
+    </div>
+</div>
 <div class="text-dark text-muted m-2"><i>Category: </i> 
 <?php
 $categories = get_the_category();
