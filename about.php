@@ -28,7 +28,7 @@
 
 
           <?php
-$user_id = get_the_author_meta('ID'); // Get the author's user ID
+$user_id = gget_the_author_id('ID'); // Get the author's user ID
 $avatar_url = get_avatar_url($user_id); // Get the author's avatar URL
 $biographical_info = get_the_author_meta('description', $user_id); // Get the author's biographical info
 
