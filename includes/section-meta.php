@@ -6,7 +6,8 @@
       // Get the ACF field value for author_profile_image
   $author_profile_image = get_field('author_profile_image');
   ?>
-      <img src="'. $author_profile_image .'" class="img-fluid rounded-start" alt="">
+     <img src="<?php echo $author_profile_image; ?>" class="img-fluid rounded-start" alt="">
+
     </div>
     <div class="col-md-8">
       <div class="card-body">
