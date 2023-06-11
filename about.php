@@ -27,25 +27,6 @@
           </div>
 
 
-          <?php
- 
- global $post;
-  
- // Get the author ID    
- $author_id = get_post_field('post_author' , $post->ID);
-  
- // Get the author image URL    
- $output = get_avatar_url($author_id);
-  
- // Display the author image    
- echo '<img src="'.$output.'"/>';
-  
- ?>
-
-
-
-
-
           </div>
 
                         <div class="sidebar col-lg-4 col-md-4">
