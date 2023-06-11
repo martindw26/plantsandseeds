@@ -27,6 +27,26 @@
           </div>
 
 
+          <?php
+$user_id = get_the_author_meta('ID'); // Get the author's user ID
+$avatar_url = get_avatar_url($user_id); // Get the author's avatar URL
+$biographical_info = get_the_author_meta('description', $user_id); // Get the author's biographical info
+
+?>
+
+<div class="card mb-3" style="">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <img src="<?php echo $avatar_url; ?>" class="img-fluid rounded-start p-2" alt="Profile Picture">
+    </div>
+    <div class="col-md">
+      <div class="card-body">
+        <h5 class="card-title"><?php the_author_meta('display_name', $user_id); ?></h5>
+        <p class="card-text"><?php echo $biographical_info; ?></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
