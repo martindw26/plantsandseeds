@@ -1,14 +1,19 @@
-<hr class="hr">
-<div class="author-profile">
-    <div class="author-image">
-        <?php the_author_image(get_the_author_meta('ID')); ?>
+<div class="container">
+<div class="card mb-3" style="">
+  <div class="row g-0">
+    <div class="col-md-4">
+    <?php
+      // Get the ACF field value for author_profile_image
+  $author_profile_image = get_field('author_profile_image');
+  ?>
+      <img src="'. $author_profile_image['url'] .'" class="img-fluid rounded-start" alt="">
     </div>
-    <div class="author-details">
-        <div class="text-dark text-muted m-2"><i>By </i><?php the_author_meta('display_name', 1); ?><i>  | Posted </i><?php echo get_the_date();?></div>
-    </div>
-</div>
-<div class="text-dark text-muted m-2"><i>Category: </i> 
-<?php
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">By </i><?php the_author_meta('display_name', 1); ?></h5>
+        <p class="card-text"><i> | Posted </i><?php echo get_the_date();?></p>
+        <p class="card-text"><small class="text-muted">
+        <?php
 $categories = get_the_category();
 $separator = ' ';
 $output = '';
@@ -19,6 +24,9 @@ if ( ! empty( $categories ) ) {
     echo trim( $output, $separator );
 }
 ?>
+        </small></p>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="text-dark text-muted m2"><?php echo get_the_tag_list('<p class="m-2"><i>Tags: </i>  ',', ','</p>'); ?>
-</div><hr class="hr">
+</div>
