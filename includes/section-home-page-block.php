@@ -35,7 +35,7 @@ while ($block->have_posts()) : $block->the_post();
 
 <div class="right-card card rounded rounded-0 border border-0 shadow-sm p-lg-3 mb-2 bg-body rounded"><!-- non-fetured block-->
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-<img class="lazy card-img-top rounded rounded-1 featured" src="<?php echo $url ?>" alt="Card image cap" style=" object-fit: cover; height:300px">  <div class="card-body">
+<img class="card-img-top rounded rounded-1 featured" src="<?php echo $url ?>" alt="Card image cap" style=" object-fit: cover; height:300px">  <div class="card-body">
     <h4 class="card-title fw-bold"><?php echo get_the_title();?></h4>
 				<!-- catarrayrated -->
 				<?php 
@@ -104,7 +104,7 @@ while ($block->have_posts()) : $block->the_post();
 
 <div class="row">
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-  <div class="col"><img class="lazy img-fluid featured rounded rounded-1" src="<?php echo $url ?>" style="height:150px";>
+  <div class="col"><img class="img-fluid featured rounded rounded-1" src="<?php echo $url ?>" style="height:150px";>
 </div>
     <div class="col-6">
     <h4 class="card-title fw-bold"><?php echo get_the_title();?></h4>
@@ -171,7 +171,7 @@ while ($block->have_posts()) : $block->the_post();
 <div class="non_featured_block_home_page_mobile pb-2">
 <div class="card rounded rounded-0 border border-0 shadow-sm">
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-<img class="lazy card-img-top rounded rounded-0 featured" src="<?php echo $url ?>" alt="Card image cap" style=" object-fit: cover; height:300px">  <div class="card-body">
+<img class="card-img-top rounded rounded-0 featured" src="<?php echo $url ?>" alt="Card image cap" style=" object-fit: cover; height:300px">  <div class="card-body">
     <h5 class="card-title"><?php echo get_the_title();?></h5>
 		<div class="card-text text-muted small">
 							Article by: <i><?php echo get_the_author();?></i>,  Posted: <i><?php echo get_the_date();?></i><?php if($read_time):?> | <?php echo $read_time ?><?php endif ?></i>
