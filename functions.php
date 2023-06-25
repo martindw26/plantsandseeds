@@ -147,10 +147,18 @@ add_action('wp_enqueue_scripts', 'ww_load_dashicons', 999);
     Lazy Loading
 --------------------------------------------------- */
 
-function enqueue_lazy_load_script() {
-    wp_enqueue_script( 'lazy-load-script', get_template_directory_uri() . '/js/lazy-load.js', array( 'jquery' ), '1.0', true );
+function add_lazy_load_script() {
+    wp_enqueue_script(
+        'lazy-load-script',
+        get_template_directory_uri() . '/js/lazyload.min.js',
+        array(),
+        '1.0',
+        true
+    );
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_lazy_load_script' );
+
+add_action('wp_enqueue_scripts', 'add_lazy_load_script');
+
 
 
 
