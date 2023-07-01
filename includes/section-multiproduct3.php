@@ -97,7 +97,7 @@ if($currency == 'GBP') {
       <td class="border-bottom border-secondary"><?php echo $retailer['label'];?></td>
       <td class="border-bottom border-secondary"><?php echo $currency;?><?php echo $Price;?></td>
       <td class="border-bottom border-secondary"><?php echo $condition;?></td>
-      <td class="border-bottom border-secondary"><button type="button" class="btn btn-success float-end "><a class="text-white text-decoration-none" href="<?php echo $Single_buy_now_button; ?>" target="_blank"></>Buy Now</a></button></td>
+      <td class="border-bottom border-secondary"><button type="button" class="btn btn-success float-end p-2"><a class="text-white text-decoration-none" href="<?php echo $Single_buy_now_button; ?>" target="_blank"></>Buy</a></button></td>
     </tr>
   </tbody>
 <?php endwhile;?>	

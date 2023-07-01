@@ -53,7 +53,7 @@ $retailer = get_sub_field('dir_retailer');
 <div class="col text-white bg-dark  p-2"><?php the_sub_field('dir_description');?></div>
 <div class="col text-white bg-dark  p-2"><h5>Retailer: <?php echo $retailer['label'];?></h5></div>
 </div>
-<button type="button" class="btn btn-success float-end "><a class="text-white text-decoration-none" href="<?php the_sub_field('dir_buy_now');?>"?>Get your <?php echo $Product; ?> at <?php echo $retailer['label'];?> now</a></button>
+<button type="button" class="btn btn-success float-end"><a class="text-white text-decoration-none" href="<?php the_sub_field('dir_buy_now');?>"?>Get your <?php echo $Product; ?> at <?php echo $retailer['label'];?> now</a></button>
 </div>
 </div>
 </div>
