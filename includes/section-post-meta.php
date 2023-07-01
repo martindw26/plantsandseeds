@@ -1,12 +1,12 @@
 
-<h5 class="display-6 pt-2 pb-2">Categories: </h5>
+<h4>Categories: </h4>
 <?php
 $categories = get_the_category();
 $separator = ' ';
 $output = '';
 if (!empty($categories)) {
     foreach ($categories as $category) {
-        $output .= '<a href="' . esc_url(get_category_link($category->term_id)) . '" class="btn btn-primary rounded-pill">' . esc_html($category->name) . '</a>' . $separator;
+        $output .= '<a href="' . esc_url(get_category_link($category->term_id)) . '"<span class="badge bg-primary p-2 text-center fs-6">' . esc_html($category->name) . '</a></span>' . $separator;
     }
     echo trim($output, $separator);
 }
