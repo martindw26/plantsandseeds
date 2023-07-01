@@ -1,5 +1,5 @@
 
-<section class="bg-white p-2 mb-4">
+<section class="bg-white p-2">
 <h4>Categories: </h4>
 <?php
 $categories = get_the_category();
