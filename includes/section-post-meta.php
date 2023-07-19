@@ -24,7 +24,7 @@ if ($tags) {
         echo '<div class="row">
         <div class="col-12">
             <a class="tag-cat-btns" href="' . esc_url(get_tag_link($tag->term_id)) . '">
-                <span class="badge bg-secondary p-2 text-center fs-6 me-2 ms-2 text-decoration-none">' . esc_html($tag->name) . '</span>
+                <span class="badge bg-secondary p-2 text-center fs-6 me-2 ms-2 mb-sm-2 text-decoration-none">' . esc_html($tag->name) . '</span>
             </a>
         </div>
     </div>';
