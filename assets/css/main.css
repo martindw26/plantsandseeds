@@ -500,3 +500,10 @@ p.featured-text{
    font-style: italic;
    font-size:32px;
 }
+
+
+/* Meta CSS */
+
+.tag-cat-btns:hover {
+  color: white;
+}
