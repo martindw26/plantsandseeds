@@ -49,7 +49,7 @@ while ($block1->have_posts()) : $block1->the_post();?>
               $featured_post_URL = get_field('featured_post_url');
 
               if ($featured_post_label == 'yes') {
-              echo '<div class="container-fluid rounded rounded-0 border border-0 alert alert-success" style="height:140px;">
+              echo '<div class="container-fluid rounded rounded-0 border border-0 alert alert-success" style="height:200px;">
               <div class="row">
               <div class="col alert alert-success text-black rounded rounded-0 border border-0 fs-5 d-flex align-items-center justify-content-center"  style="height:15px;">' . $featured_post_label_text . '</div>
               </div>
