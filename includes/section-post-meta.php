@@ -7,8 +7,12 @@ $separator = ' ';
 $output = '';
 if (!empty($categories)) {
     foreach ($categories as $category) {
-        $output .= '<a class="tag-cat-btns" href="' . esc_url(get_category_link($category->term_id)) . '"><span class="badge bg-secondary p-2 text-center fs-6 me-2 ms-2 text-decoration-none">' . esc_html($category->name) . '</span></a>' . $separator;
-
+        $output .= '<div class="col-6 col-md-3">';
+        $output .= '<a class="tag-cat-btns d-inline-block" href="' . esc_url(get_category_link($category->term_id)) . '">';
+        $output .= '<span class="badge bg-secondary p-2 text-center fs-6 me-2 ms-2 text-decoration-none">' . esc_html($category->name) . '</span>';
+        $output .= '</a>';
+        $output .= $separator;
+        $output .= '</div>';        
     }
     echo trim($output, $separator);
 }
