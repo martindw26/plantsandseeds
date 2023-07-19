@@ -504,6 +504,6 @@ p.featured-text{
 
 /* Meta CSS */
 
-.tag-cat-btns:hover {
-  color: white;
+a.tag-cat-btns:hover {
+  color: white !important;
 }
