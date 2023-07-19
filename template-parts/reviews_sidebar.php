@@ -35,35 +35,35 @@ if ($block1->have_posts()) :
 while ($block1->have_posts()) : $block1->the_post();?>
 <!-- Blog post-->
 <div class="col">
- <div class="card rounded rounded-0 border border-1">
+ <div class="card rounded rounded-0 border border-1 p-2">
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
 <img class="card-img-top rounded rounded-0 featured p-2" src="<?php echo $url ?>" alt="Card image cap" style="">  <div class="card-body">
-    <h6 class="card-title"><?php echo get_the_title();?></h6>
+    <h6 class="card-title fw-bold"><?php echo get_the_title();?></h6>
 
 <div>
 <?php
-              $featured_post_label_text = get_field('featured_post_label_text');
-              $featured_post_label_alt_text = get_field('featured_post_label_alt_text');
-              $featured_post_label_logo = get_field('featured_post_label_logo');
-              $featured_post_label = get_field('featured_post');
-              $featured_post_URL = get_field('featured_post_url');
+$featured_post_label_text = get_field('featured_post_label_text');
+$featured_post_label_alt_text = get_field('featured_post_label_alt_text');
+$featured_post_label_logo = get_field('featured_post_label_logo');
+$featured_post_label = get_field('featured_post');
 
-              if ($featured_post_label == 'yes') {
-              echo '<div class="container-fluid rounded rounded-0 border border-0 alert alert-success" style="height:200px;">
-              <div class="row">
-              <div class="col alert alert-success text-black rounded rounded-0 border border-0 fs-5 d-flex align-items-center justify-content-center"  style="height:15px;">' . $featured_post_label_text . '</div>
-              </div>
-              <div class="row">
-              <div class="col alert alert-success text-white rounded rounded-0 border border-0 d-flex align-items-center justify-content-center">
-              <a href="' . $featured_post_URL . '" target="_blank">
-              <img class="img-fluid" src="' . $featured_post_label_logo . '" alt="' . $featured_post_label_alt_text . '"> 
-              </a>
-              </div>
-              </div>
-              </div>';
-              }
-              ?>
-</div>
+if ($featured_post_label == 'yes') {
+    echo '
+    <div class="container-fluid pt-4">
+        <div class="row">
+            <div class="col-sm alert alert-success rounded-0 border-0">
+                <span class="fs-5">' . $featured_post_label_text . '</span>
+            </div>
+            <div class="col-sm alert alert-success rounded-0 border-0 d-flex align-items-center">
+                <img class="img-fluid" src="' . $featured_post_label_logo . '" alt="' . $featured_post_label_alt_text . '" style="max-height: 50px;">
+            </div>
+        </div>
+    </div>';
+}
+?>
+</div> 
+
+
 				<p class="mb-4">	
 				<!-- catarrayrated -->
 				<?php 
@@ -79,7 +79,7 @@ while ($block1->have_posts()) : $block1->the_post();?>
 				?>
 				<!-- End catarrayrated -->
 				</p>
-<p class="mb-3">&#34;<?php echo excerpt(25);?>&#34;
+				<p class="mb-3 fw-normal">&#34;<?php echo excerpt(25);?>&#34;
 				</p>
 
 		<div class="card-text text-muted small">
