@@ -7,7 +7,16 @@ $separator = ' ';
 $output = '';
 if (!empty($categories)) {
     foreach ($categories as $category) {
-        $output .= '<div class="col-6 col-md-3"><a class="tag-cat-btns" href="' . esc_url(get_category_link($category->term_id)) . '"><span class="badge bg-secondary p-2 text-center fs-6 me-2 ms-2 text-decoration-none">' . esc_html($category->name) . '</span></a></div>' . $separator;
+        $output .= '
+        
+        <div class="container mt-3">
+        <div class="btn-group">
+        <button type="button" class="btn btn-primary m-1">
+        <a class="tag-cat-btns text-decoration-none" href="' . esc_url(get_category_link($category->term_id)) . '"><span class="tag-cat-btns text-decoration-none">' . esc_html($category->name) . '
+        </span>
+        </a>
+        </button>
+        </div>' . $separator;
      
     }
     echo trim($output, $separator);
