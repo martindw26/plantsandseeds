@@ -2,6 +2,8 @@ body, html {
   font-size: 1rem;
 }
 
+body, html { overflow-x:hidden; }
+
 @include media-breakpoint-up(sm) {
   html {
     font-size: 1.2rem;
