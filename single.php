@@ -12,6 +12,10 @@
 
             <h1 class=" display-2 font-weight-bold text-dark" style=""><?php echo esc_html( get_the_title() );?><hr></h1>
 
+            <?php if (get_field('affiliate_disclaimer','option')) : ?>
+            <?php echo get_field('affiliate_disclaimer','option'); ?>
+            <?php endif; ?>
+
             <?php
               $featured_post_label_text = get_field('featured_post_label_text');
               $featured_post_label_alt_text = get_field('featured_post_label_alt_text');
