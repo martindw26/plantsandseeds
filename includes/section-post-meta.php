@@ -20,7 +20,7 @@ if (!empty($categories)) {
 $tags = get_the_tags(); // Get the tags for the current post
 
 if ($tags) {
-    echo '<div class="row">';
+    echo '<div class="container mt-3">';
     foreach ($tags as $tag) {
         echo '
         <div class="btn-group">
