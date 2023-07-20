@@ -25,7 +25,7 @@ if ($tags) {
         echo '
         <div class="btn-group">
         <button type="button" class="btn btn-primary m-1">
-            <a class="tag-cat-btns" href="' . esc_url( get_tag_link( $tag->term_id ) ) . '">
+            <a class="tag-cat-btns text-decoration-none" href="' . esc_url( get_tag_link( $tag->term_id ) ) . '">
                 <span class="tag-cat-btns text-white text-decoration-none">' . esc_html( $tag->name ) . '</span>
             </a>
         </button>
