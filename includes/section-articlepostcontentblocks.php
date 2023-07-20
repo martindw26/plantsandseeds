@@ -90,7 +90,9 @@ $Product = get_field('review_product');
 <?php if(have_rows('buy_now_tracked')):?>
 <table class="table table-borderless table-dark">
 <caption>
-<p>This site contains affiliate links to products. We may receive a commission for purchases made through these links. Please also report price issues at <a class="text-muted font-weight-ligh" href="mailto:data@techhobbyist.co.uk?subject=Price issue report">Report Price Issues</a></p>
+<?php if (get_field('affiliate_disclaimer','option')) : ?>
+        <?php echo get_field('affiliate_disclaimer','option'); ?>
+<?php endif; ?>
 </caption>
 <?php while( have_rows('buy_now_tracked')): the_row();?>
 <?php
