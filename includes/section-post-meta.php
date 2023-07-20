@@ -20,10 +20,8 @@ if (!empty($categories)) {
 $tags = get_the_tags(); // Get the tags for the current post
 
 if ($tags) {
-    echo '<div class="row">';
     foreach ($tags as $tag) {
-        echo '<div class="container mt-3">
-
+        echo '<div class="container mt
         <div class="btn-group">
           <button type="button" class="btn btn-primary m-1">
           <a class="tag-cat-btns" href="' . esc_url( get_tag_link( $tag->term_id ) ) . '">
@@ -34,7 +32,7 @@ if ($tags) {
         </div>
       </div>';
     }
-    echo '</div>';
+
 }
 
 
