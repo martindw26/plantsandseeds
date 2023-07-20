@@ -13,7 +13,7 @@
             <h1 class=" display-2 font-weight-bold text-dark" style=""><?php echo esc_html( get_the_title() );?><hr></h1>
 
             <?php if (get_field('affiliate_disclaimer','option')) : ?>
-            <p class="affiliate-text-title text-light"><?php echo get_field('affiliate_disclaimer','option'); ?></p>
+            <p class="affiliate-text-title text-secondary"><?php echo get_field('affiliate_disclaimer','option'); ?></p>
             <?php endif; ?>
 
             <?php
