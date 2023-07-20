@@ -508,4 +508,5 @@ p.featured-text{
 
 a.tag-cat-btns:hover {
   color: white !important;
+  text-decoration: none;
 }
