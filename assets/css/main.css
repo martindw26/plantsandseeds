@@ -513,10 +513,10 @@ a.tag-cat-btns:hover {
 
 a.tag-cat-btns:active {
   color: white !important;
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 a.tag-cat-btns:visited {
   color: rgb(249, 10, 10) !important;
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
