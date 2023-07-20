@@ -9,7 +9,7 @@ if (!empty($categories)) {
     foreach ($categories as $category) {
         $output .= '
         
-        <div class="container mt-3">
+        <div class="">
         <div class="btn-group">
         <button type="button" class="btn btn-primary m-1">
         <a class="tag-cat-btns text-white text-decoration-none" href="' . esc_url(get_category_link($category->term_id)) . '"><span class="tag-cat-btns text-white text-decoration-none">' . esc_html($category->name) . '
@@ -29,7 +29,7 @@ if (!empty($categories)) {
 $tags = get_the_tags(); // Get the tags for the current post
 
 if ($tags) {
-    echo '<div class="container mt-3">';
+    echo '<div class="">';
     foreach ($tags as $tag) {
         echo '
         <div class="btn-group">
