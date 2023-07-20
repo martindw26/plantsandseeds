@@ -12,7 +12,7 @@ if (!empty($categories)) {
         <div class="container mt-3">
         <div class="btn-group">
         <button type="button" class="btn btn-primary m-1">
-        <a class="tag-cat-btns text-decoration-none" href="' . esc_url(get_category_link($category->term_id)) . '"><span class="tag-cat-btns text-decoration-none">' . esc_html($category->name) . '
+        <a class="tag-cat-btns text-white text-decoration-none" href="' . esc_url(get_category_link($category->term_id)) . '"><span class="tag-cat-btns text-white text-decoration-none">' . esc_html($category->name) . '
         </span>
         </a>
         </button>
