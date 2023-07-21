@@ -28,7 +28,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
     <?php if (get_row_layout() === 'mpu1') : ?>
 
       <?php
-      $mpu_option = get_field('mpu_option'); // Get the value of the 'mpu_option' field
+      $mpu_option = get_sub_field('mpu_option'); // Get the value of the 'mpu_option' field
 
       if ($mpu_option) {
         switch ($mpu_option) {
