@@ -25,7 +25,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 
 <?php if (have_rows('mpu_in_content_ads')) : ?>
   <?php while (have_rows('mpu_in_content_ads')) : the_row(); ?>
-    <?php if (get_row_layout() === 'mpu1') : ?>
+    <?php if (get_row_layout() === 'mpu_in_content_1') : ?>
 
       <?php
       $mpu_option = get_sub_field('mpu_option'); // Get the value of the 'mpu_option' field
