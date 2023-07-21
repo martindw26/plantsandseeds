@@ -3,26 +3,8 @@ body, html {
   font-family: 'Open Sans', sans-serif; 
 }
 
-/* For WebKit (Chrome, Safari, and newer versions of Edge) */
-/* Hide scrollbar, but still allow scrolling */
-body::-webkit-scrollbar {
-  width: 0.5em; /* adjust this value as needed */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: transparent; /* hide the thumb */
-}
-
-/* For Firefox */
-/* Hide scrollbar, but still allow scrolling */
-body {
-  scrollbar-width: none; /* hide scrollbar */
-}
-
-/* For Internet Explorer and old Edge (version 18 and below) */
-/* Hide scrollbar, but still allow scrolling */
-body {
-  -ms-overflow-style: none; /* hide scrollbar */
+body.customize-support.cmplz-marketing.cmplz-statistics.cmplz-preferences.cmplz-functional.cmplz-uk.cmplz-optin {
+  overflow: hidden;
 }
 
 
