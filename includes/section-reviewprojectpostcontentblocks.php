@@ -28,7 +28,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 <?php
 // Assuming this code block is inside a loop for flexible content (e.g., repeater field or flexible content field)
 
-// Check if the row layout is 'mpu_in_content_1'
+// Check if the row layout is 'mpu_in_content_ads'
 if (get_row_layout() == 'mpu_in_content_ads') {
   // Get the value of the 'mpu_option' field
   $mpu_option = get_sub_field('mpu_option');
@@ -53,41 +53,32 @@ if (get_row_layout() == 'mpu_in_content_ads') {
           $current_date = time();
 
           if ($delivering === 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
-            <!-- Advertisement Section -->
-            <div class="d-flex justify-content-center p-2 text-dark position-relative" style="margin: 0 auto; background-color: #dee2e6;">
-              Advertisement
-              <span class="px-2" style="position: absolute; top: 0; right: 0;">
-                <a class="text-decoration-none text-dark" href="<?php the_field('adinformation', 'option') ?>" target="_blank">
-                  &#128712;
-                </a>
-              </span>
-            </div>
+            // Advertisement Section
+            echo '<div class="d-flex justify-content-center p-2 text-dark position-relative" style="margin: 0 auto; background-color: #dee2e6;">Advertisement<span class="px-2" style="position: absolute; top: 0; right: 0;"><a class="text-decoration-none text-dark" href="' . get_field('adinformation', 'option') . '" target="_blank">&#128712;</a></span></div>';
             
-            <!-- Ad Content Section -->
-            <div class="d-flex align-items-center justify-content-center mb-2" style="height: 305px; margin: 0 auto; background-color: #dee2e6;">
-              <?php
-              // Check if the $mpu_in_content_1 array exists and has necessary data
-              if (isset($mpu_in_content_1) && is_array($mpu_in_content_1)) {
+            // Ad Content Section
+            echo '<div class="d-flex align-items-center justify-content-center mb-2" style="height: 305px; margin: 0 auto; background-color: #dee2e6;">';
             
-                // Check if 'mpu_in_content_script1' exists and has a value
-                if (!empty($mpu_in_content_1['mpu_in_content_script1'])) {
-                  // If the 'mpu_in_content_script1' has a value, display the script
-                  echo $mpu_in_content_1['mpu_in_content_script1'];
-                } else {
-                  // If the 'mpu_in_content_script1' doesn't have a value, display the ad image
-                  echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name . '"></a>';
-                }
-            
-                // Output the advert details in an HTML comment for debugging or tracking purposes
-                echo "<!-- Advert details: " . $campaign_name . " | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
-            
+            // Check if the $mpu_in_content_1 array exists and has necessary data
+            if (isset($mpu_in_content_1) && is_array($mpu_in_content_1)) {
+              // Check if 'mpu_in_content_script1' exists and has a value
+              if (!empty($mpu_in_content_1['mpu_in_content_script1'])) {
+                // If the 'mpu_in_content_script1' has a value, display the script
+                echo $mpu_in_content_1['mpu_in_content_script1'];
               } else {
-                // If $mpu_in_content_1 is not set or is not an array, display an alternate ad
-                echo '<a href="' . $mpu_in_content_subs_ad_url . '" target="_blank"><img src="' . $mpu_in_content_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
+                // If the 'mpu_in_content_script1' doesn't have a value, display the ad image
+                echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name . '"></a>';
               }
-              ?>
-            </div>
+              // Output the advert details in an HTML comment for debugging or tracking purposes
+              echo "<!-- Advert details: " . $campaign_name . " | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
+            } else {
+              // If $mpu_in_content_1 is not set or is not an array, display an alternate ad
+              echo '<a href="' . $mpu_in_content_subs_ad_url . '" target="_blank"><img src="' . $mpu_in_content_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
+            }
             
+            echo '</div>'; // Closing tag for the Ad Content Section
+          }
+        }
         break;
 
       // Add other cases for 'mpu2', 'mpu3', ..., 'mpu10' if needed.
@@ -99,6 +90,7 @@ if (get_row_layout() == 'mpu_in_content_ads') {
   }
 }
 ?>
+
 
 
 
