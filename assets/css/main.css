@@ -1,8 +1,16 @@
 body, html {
   font-size: 1rem;
-  overflow: hidden!important;
-  overflow-x: hidden!important;
   font-family: 'Open Sans', sans-serif; 
+}
+
+/* For modern browsers (Firefox) */
+body {
+  overflow: hidden;
+}
+
+/* For WebKit-based browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @include media-breakpoint-up(sm) {
