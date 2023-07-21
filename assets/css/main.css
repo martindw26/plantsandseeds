@@ -1,8 +1,9 @@
 body, html {
   font-size: 1rem;
+  overflow: hidden!important;
+  overflow-x: hidden!important;
+  font-family: 'Open Sans', sans-serif; 
 }
-
-body, html { overflow-x:hidden; }
 
 @include media-breakpoint-up(sm) {
   html {
@@ -20,12 +21,6 @@ body, html { overflow-x:hidden; }
   html {
     font-size: 1.6rem;
   }
-}
-
-body {
-  overflow: hidden;
-  overflow-x: hidden;
-  font-family: 'Open Sans', sans-serif; 
 }
 
 .back.cmplz-marketing.cmplz-statistics.cmplz-preferences.cmplz-functional.cmplz-uk.cmplz-optin{
