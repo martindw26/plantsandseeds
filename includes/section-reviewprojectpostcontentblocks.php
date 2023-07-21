@@ -27,96 +27,95 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 <?php if (have_rows('mpu_in_content_ads')) : ?>
   <?php while (have_rows('mpu_in_content_ads')) : the_row(); ?>
     <?php if (get_row_layout() === 'mpu1') : ?>
-<?php
-$mpu_option = get_field('mpu_option'); // Get the value of the 'mpu_option' field
+      <?php
+      $mpu_option = get_field('mpu_option'); // Get the value of the 'mpu_option' field
 
-if ($mpu_option) {
-  if ($mpu_option === 'mpu1') {
-    <div class="d-flex justify-content-center p-2 text-dark position-relative" style="margin: 0 auto; background-color: #dee2e6;">
-        Advertisment
-        <span class="px-2" style="position: absolute; top: 0; right: 0;">
-          <a class="text-decoration-none text-dark" href="<?php the_field('adinformation', 'option') ?>" target='_blank'>
-            &#128712;
-          </a>
-        </span>
-      </div>
-      <div class="d-flex align-items-center justify-content-center mb-2" style="height:305px; margin: 0 auto; background-color: #dee2e6;">
- 
-        // Get the 'mpu_in_content_1' field from the 'option' object
-        $mpu_in_content_1 = get_field('mpu_in_content_1', 'option');
+      if ($mpu_option) {
+        if ($mpu_option === 'mpu1') {
+          echo '<div class="d-flex justify-content-center p-2 text-dark position-relative" style="margin: 0 auto; background-color: #dee2e6;">';
+          echo 'Advertisment';
+          echo '<span class="px-2" style="position: absolute; top: 0; right: 0;">';
+          echo '<a class="text-decoration-none text-dark" href="' . get_field('adinformation', 'option') . '" target="_blank">&#128712;</a>';
+          echo '</span>';
+          echo '</div>';
+          echo '<div class="d-flex align-items-center justify-content-center mb-2" style="height:305px; margin: 0 auto; background-color: #dee2e6;">';
 
-        // Check if the banner field exists
-        if ($mpu_in_content_1) {
-          // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-          $start_date = strtotime($mpu_in_content_1['start_date']);
-          $end_date = strtotime($mpu_in_content_1['end_date']);
-          $campaign_name = $mpu_in_content_1['campaign_name'];
-          $delivering = $mpu_in_content_1['delivering'];
-          $CategoryTarget = $mpu_in_content_1['category'];
-          $PostIDTarget = $mpu_in_content_1['postid'];
-          $OrderNum = $mpu_in_content_1['campaign_order_id'];
-          $Image = $mpu_in_content_1['image'];
-          $Url = $mpu_in_content_1['url'];
+          // Get the 'mpu_in_content_1' field from the 'option' object
+          $mpu_in_content_1 = get_field('mpu_in_content_1', 'option');
 
-          // Get the desktop header backup image and URL from the 'option' object
-          $mpu_in_content_subs_ad_image = get_field('mpu_in_content_image', 'option');
-          $mpu_in_content_subs_ad_url = get_field('mpu_in_content_url', 'option');
+          // Check if the banner field exists
+          if ($mpu_in_content_1) {
+            // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
+            $start_date = strtotime($mpu_in_content_1['start_date']);
+            $end_date = strtotime($mpu_in_content_1['end_date']);
+            $campaign_name = $mpu_in_content_1['campaign_name'];
+            $delivering = $mpu_in_content_1['delivering'];
+            $CategoryTarget = $mpu_in_content_1['category'];
+            $PostIDTarget = $mpu_in_content_1['postid'];
+            $OrderNum = $mpu_in_content_1['campaign_order_id'];
+            $Image = $mpu_in_content_1['image'];
+            $Url = $mpu_in_content_1['url'];
 
-          // Get the current date and time
-          $current_date = time();
+            // Get the desktop header backup image and URL from the 'option' object
+            $mpu_in_content_subs_ad_image = get_field('mpu_in_content_image', 'option');
+            $mpu_in_content_subs_ad_url = get_field('mpu_in_content_url', 'option');
 
-          // Check if the banner is being delivered, the current date is between the start and end dates, and if the category or post ID matches the target
-          if ($delivering === 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
-            // If the banner has a script, display it
-            if ($mpu_in_content_1['mpu_in_content_script1']) {
-              echo $mpu_in_content_1['mpu_in_content_script1'];
+            // Get the current date and time
+            $current_date = time();
+
+            // Check if the banner is being delivered, the current date is between the start and end dates, and if the category or post ID matches the target
+            if ($delivering === 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
+              // If the banner has a script, display it
+              if ($mpu_in_content_1['mpu_in_content_script1']) {
+                echo $mpu_in_content_1['mpu_in_content_script1'];
+              } else {
+                // Otherwise, display the banner image
+                echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name . '"></a>';
+              }
+
+              // Display additional information about the banner
+              echo "<!-- Advert details: " . $campaign_name . " | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
             } else {
-              // Otherwise, display the banner image
-              echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name . '"></a>';
+              // If the banner is not being delivered or the current date is not within the start and end dates, display the desktop header backup image
+              echo '<a href="' . $mpu_in_content_subs_ad_url . '" target="_blank"><img src="' . $mpu_in_content_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
             }
-
-            // Display additional information about the banner
-            echo "<!-- Advert details: " . $campaign_name . " | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
-          } else {
-            // If the banner is not being delivered or the current date is not within the start and end dates, display the desktop header backup image
-            echo '<a href="' . $mpu_in_content_subs_ad_url . '" target="_blank"><img src="' . $mpu_in_content_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
           }
-        }
 
-      </div>
-  } elseif ($mpu_option === 'mpu2') {
-    // Your code to display MPU In Content 2
-    // Add the relevant code here if needed
-  } elseif ($mpu_option === 'mpu3') {
-    // Your code to display MPU In Content 3
-    // Add the relevant code here if needed
-  } elseif ($mpu_option === 'mpu4') {
-    // Your code to display MPU In Content 4
-    // Add the relevant code here if needed
-  } elseif ($mpu_option === 'mpu5') {
-    // Your code to display MPU In Content 5
-    // Add the relevant code here if needed
-  } elseif ($mpu_option === 'mpu6') {
-    // Your code to display MPU In Content 6
-    // Add the relevant code here if needed
-  } elseif ($mpu_option === 'mpu7') {
-    // Your code to display MPU In Content 7
-    // Add the relevant code here if needed
-  } elseif ($mpu_option === 'mpu8') {
-    // Your code to display MPU In Content 8
-    // Add the relevant code here if needed
-  } elseif ($mpu_option === 'mpu9') {
-    // Your code to display MPU In Content 9
-    // Add the relevant code here if needed
-  } elseif ($mpu_option === 'mpu10') {
-    // Your code to display MPU In Content 10
-    // Add the relevant code here if needed
-  }
-}
-?>
+          echo '</div>';
+        } elseif ($mpu_option === 'mpu2') {
+          // Your code to display MPU In Content 2
+          // Add the relevant code here if needed
+        } elseif ($mpu_option === 'mpu3') {
+          // Your code to display MPU In Content 3
+          // Add the relevant code here if needed
+        } elseif ($mpu_option === 'mpu4') {
+          // Your code to display MPU In Content 4
+          // Add the relevant code here if needed
+        } elseif ($mpu_option === 'mpu5') {
+          // Your code to display MPU In Content 5
+          // Add the relevant code here if needed
+        } elseif ($mpu_option === 'mpu6') {
+          // Your code to display MPU In Content 6
+          // Add the relevant code here if needed
+        } elseif ($mpu_option === 'mpu7') {
+          // Your code to display MPU In Content 7
+          // Add the relevant code here if needed
+        } elseif ($mpu_option === 'mpu8') {
+          // Your code to display MPU In Content 8
+          // Add the relevant code here if needed
+        } elseif ($mpu_option === 'mpu9') {
+          // Your code to display MPU In Content 9
+          // Add the relevant code here if needed
+        } elseif ($mpu_option === 'mpu10') {
+          // Your code to display MPU In Content 10
+          // Add the relevant code here if needed
+        }
+      }
+      ?>
     <?php endif; ?>
   <?php endwhile; ?>
 <?php endif; ?>
+
 
 
 
