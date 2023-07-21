@@ -22,12 +22,10 @@ body, html { overflow-x:hidden; }
   }
 }
 
-
-
 body {
-
-overflow-x: hidden
-font-family: 'Open Sans', sans-serif; 
+  overflow: hidden;
+  overflow-x: hidden
+  font-family: 'Open Sans', sans-serif; 
 }
 
 .back.cmplz-marketing.cmplz-statistics.cmplz-preferences.cmplz-functional.cmplz-uk.cmplz-optin{
