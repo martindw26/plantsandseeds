@@ -27,7 +27,12 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 <?php if (have_rows('mpu_in_content_ads')) : ?>
   <?php while (have_rows('mpu_in_content_ads')) : the_row(); ?>
     <?php if (get_row_layout() === 'mpu1') : ?>
-      <div class="d-flex justify-content-center p-2 text-dark position-relative" style="margin: 0 auto; background-color: #dee2e6;">
+<?php
+$mpu_option = get_field('mpu_option'); // Get the value of the 'mpu_option' field
+
+if ($mpu_option) {
+  if ($mpu_option === 'mpu1') {
+    <div class="d-flex justify-content-center p-2 text-dark position-relative" style="margin: 0 auto; background-color: #dee2e6;">
         Advertisment
         <span class="px-2" style="position: absolute; top: 0; right: 0;">
           <a class="text-decoration-none text-dark" href="<?php the_field('adinformation', 'option') ?>" target='_blank'>
@@ -36,7 +41,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
         </span>
       </div>
       <div class="d-flex align-items-center justify-content-center mb-2" style="height:305px; margin: 0 auto; background-color: #dee2e6;">
-        <?php
+ 
         // Get the 'mpu_in_content_1' field from the 'option' object
         $mpu_in_content_1 = get_field('mpu_in_content_1', 'option');
 
@@ -77,34 +82,41 @@ $link_target = $link['target'] ? $link['target'] : '_self';
             echo '<a href="' . $mpu_in_content_subs_ad_url . '" target="_blank"><img src="' . $mpu_in_content_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
           }
         }
-        ?>
+
       </div>
-    <?php elseif (get_row_layout() === 'mpu2') : ?>
-      <!-- Your code to display MPU In Content 2 -->
-    <?php elseif (get_row_layout() === 'mpu3') : ?>
-      <!-- Your code to display MPU In Content 3 -->
-    <?php elseif (get_row_layout() === 'mpu4') : ?>
-      <!-- Your code to display MPU In Content 4 -->
-    <?php elseif (get_row_layout() === 'mpu5') : ?>
-      <!-- Your code to display MPU In Content 5 -->
-    <?php elseif (get_row_layout() === 'mpu6') : ?>
-      <!-- Your code to display MPU In Content 6 -->
-    <?php elseif (get_row_layout() === 'mpu7') : ?>
-      <!-- Your code to display MPU In Content 7 -->
-    <?php elseif (get_row_layout() === 'mpu8') : ?>
-      <!-- Your code to display MPU In Content 8 -->
-    <?php elseif (get_row_layout() === 'mpu9') : ?>
-      <!-- Your code to display MPU In Content 9 -->
-    <?php elseif (get_row_layout() === 'mpu10') : ?>
-      <!-- Your code to display MPU In Content 10 -->
+  } elseif ($mpu_option === 'mpu2') {
+    // Your code to display MPU In Content 2
+    // Add the relevant code here if needed
+  } elseif ($mpu_option === 'mpu3') {
+    // Your code to display MPU In Content 3
+    // Add the relevant code here if needed
+  } elseif ($mpu_option === 'mpu4') {
+    // Your code to display MPU In Content 4
+    // Add the relevant code here if needed
+  } elseif ($mpu_option === 'mpu5') {
+    // Your code to display MPU In Content 5
+    // Add the relevant code here if needed
+  } elseif ($mpu_option === 'mpu6') {
+    // Your code to display MPU In Content 6
+    // Add the relevant code here if needed
+  } elseif ($mpu_option === 'mpu7') {
+    // Your code to display MPU In Content 7
+    // Add the relevant code here if needed
+  } elseif ($mpu_option === 'mpu8') {
+    // Your code to display MPU In Content 8
+    // Add the relevant code here if needed
+  } elseif ($mpu_option === 'mpu9') {
+    // Your code to display MPU In Content 9
+    // Add the relevant code here if needed
+  } elseif ($mpu_option === 'mpu10') {
+    // Your code to display MPU In Content 10
+    // Add the relevant code here if needed
+  }
+}
+?>
     <?php endif; ?>
   <?php endwhile; ?>
 <?php endif; ?>
-
-
-
-
-
 
 
 
