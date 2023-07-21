@@ -71,8 +71,8 @@ if ($mpu_in_content_1) {
   if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_1['mpu_in_content_top_script_1']) {
-      echo $mpu_in_content_1['mpu_in_content_top_script_1'];
+    if ($mpu_in_content_1['mpu_in_content_script1']) {
+      echo $mpu_in_content_1['mpu_in_content_script1'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -121,8 +121,8 @@ if ($mpu_in_content_2) {
   if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_2['mpu_in_content_top_script_2']) {
-      echo $mpu_in_content_2['mpu_in_content_top_script_2'];
+    if ($mpu_in_content_2['mpu_in_content_script2']) {
+      echo $mpu_in_content_2['mpu_in_content_script2'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -166,8 +166,8 @@ if ($mpu_in_content_3) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_3['mpu_in_content_top_script_3']) {
-      echo $mpu_in_content_3['mpu_in_content_top_script_3'];
+    if ($mpu_in_content_3['mpu_in_content_script3']) {
+      echo $mpu_in_content_3['mpu_in_content_script3'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -211,8 +211,8 @@ if ($mpu_in_content_4) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_4['mpu_in_content_top_script_4']) {
-      echo $mpu_in_content_4['mpu_in_content_top_script_4'];
+    if ($mpu_in_content_4['mpu_in_content_script4']) {
+      echo $mpu_in_content_4['mpu_in_content_script4'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -256,8 +256,8 @@ if ($mpu_in_content_5) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_5['mpu_in_content_top_script_5']) {
-      echo $mpu_in_content_5['mpu_in_content_top_script_5'];
+    if ($mpu_in_content_5['mpu_in_content_script5']) {
+      echo $mpu_in_content_5['mpu_in_content_script5'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -301,8 +301,8 @@ if ($mpu_in_content_6) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_6['mpu_in_content_top_script_6']) {
-      echo $mpu_in_content_6['mpu_in_content_top_script_6'];
+    if ($mpu_in_content_6['mpu_in_content_script6']) {
+      echo $mpu_in_content_6['mpu_in_content_script6'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -346,8 +346,8 @@ if ($mpu_in_content_7) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_7['mpu_in_content_top_script_7']) {
-      echo $mpu_in_content_7['mpu_in_content_top_script_7'];
+    if ($mpu_in_content_7['mpu_in_content_script7']) {
+      echo $mpu_in_content_7['mpu_in_content_script7'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -391,8 +391,8 @@ if ($mpu_in_content_8) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_8['mpu_in_content_top_script_8']) {
-      echo $mpu_in_content_8['mpu_in_content_top_script_8'];
+    if ($mpu_in_content_8['mpu_in_content_script8']) {
+      echo $mpu_in_content_8['mpu_in_content_script8'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -436,8 +436,8 @@ if ($mpu_in_content_9) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_9['mpu_in_content_top_script_9']) {
-      echo $mpu_in_content_9['mpu_in_content_top_script_9'];
+    if ($mpu_in_content_9['mpu_in_content_script9']) {
+      echo $mpu_in_content_9['mpu_in_content_script9'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -481,8 +481,8 @@ if ($mpu_in_content_10) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_10['mpu_in_content_top_script_10']) {
-      echo $mpu_in_content_10['mpu_in_content_top_script_10'];
+    if ($mpu_in_content_10['mpu_in_content_script10']) {
+      echo $mpu_in_content_10['mpu_in_content_script10'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -526,8 +526,8 @@ if ($mpu_in_content_11) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_11['mpu_in_content_top_script_11']) {
-      echo $mpu_in_content_11['mpu_in_content_top_script_11'];
+    if ($mpu_in_content_11['mpu_in_content_script11']) {
+      echo $mpu_in_content_11['mpu_in_content_script11'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -571,8 +571,8 @@ if ($mpu_in_content_12) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_12['mpu_in_content_top_script_12']) {
-      echo $mpu_in_content_12['mpu_in_content_top_script_12'];
+    if ($mpu_in_content_12['mpu_in_content_script12']) {
+      echo $mpu_in_content_12['mpu_in_content_script12'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -617,8 +617,8 @@ if ($mpu_in_content_13) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_13['mpu_in_content_top_script_13']) {
-      echo $mpu_in_content_13['mpu_in_content_top_script_13'];
+    if ($mpu_in_content_13['mpu_in_content_script13']) {
+      echo $mpu_in_content_13['mpu_in_content_script13'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -662,8 +662,8 @@ if ($mpu_in_content_14) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_14['mpu_in_content_top_script_14']) {
-      echo $mpu_in_content_14['mpu_in_content_top_script_14'];
+    if ($mpu_in_content_14['mpu_in_content_script14']) {
+      echo $mpu_in_content_14['mpu_in_content_script14'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -707,8 +707,8 @@ if ($mpu_in_content_15) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_15['mpu_in_content_top_script_15']) {
-      echo $mpu_in_content_15['mpu_in_content_top_script_15'];
+    if ($mpu_in_content_15['mpu_in_content_script15']) {
+      echo $mpu_in_content_15['mpu_in_content_script15'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -752,8 +752,8 @@ if ($mpu_in_content_16) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_16['mpu_in_content_top_script_16']) {
-      echo $mpu_in_content_16['mpu_in_content_top_script_16'];
+    if ($mpu_in_content_16['mpu_in_content_script16']) {
+      echo $mpu_in_content_16['mpu_in_content_script16'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -797,8 +797,8 @@ if ($mpu_in_content_17) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_17['mpu_in_content_top_script_17']) {
-      echo $mpu_in_content_17['mpu_in_content_top_script_17'];
+    if ($mpu_in_content_17['mpu_in_content_script17']) {
+      echo $mpu_in_content_17['mpu_in_content_script17'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -842,8 +842,8 @@ if ($mpu_in_content_18) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_18['mpu_in_content_top_script_18']) {
-      echo $mpu_in_content_18['mpu_in_content_top_script_18'];
+    if ($mpu_in_content_18['mpu_in_content_script18']) {
+      echo $mpu_in_content_18['mpu_in_content_script18'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -887,8 +887,8 @@ if ($mpu_in_content_19) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_19['mpu_in_content_top_script_19']) {
-      echo $mpu_in_content_19['mpu_in_content_top_script_19'];
+    if ($mpu_in_content_19['mpu_in_content_script19']) {
+      echo $mpu_in_content_19['mpu_in_content_script19'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -932,8 +932,8 @@ if ($mpu_in_content_20) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($mpu_in_content_20['mpu_in_content_top_script_20']) {
-      echo $mpu_in_content_20['mpu_in_content_top_script_20'];
+    if ($mpu_in_content_20['mpu_in_content_script20']) {
+      echo $mpu_in_content_20['mpu_in_content_script20'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
