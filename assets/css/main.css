@@ -3,7 +3,7 @@ body, html {
   font-family: 'Open Sans', sans-serif; 
 }
 
-body.customize-support.cmplz-marketing.cmplz-statistics.cmplz-preferences.cmplz-functional.cmplz-uk.cmplz-optin {
+body {
   overflow-y: hidden;
 }
 
