@@ -3,15 +3,28 @@ body, html {
   font-family: 'Open Sans', sans-serif; 
 }
 
-/* For modern browsers (Firefox) */
-body {
-  overflow: hidden;
+/* For WebKit (Chrome, Safari, and newer versions of Edge) */
+/* Hide scrollbar, but still allow scrolling */
+body::-webkit-scrollbar {
+  width: 0.5em; /* adjust this value as needed */
 }
 
-/* For WebKit-based browsers (Chrome, Safari) */
-body::-webkit-scrollbar {
-  display: none;
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; /* hide the thumb */
 }
+
+/* For Firefox */
+/* Hide scrollbar, but still allow scrolling */
+body {
+  scrollbar-width: none; /* hide scrollbar */
+}
+
+/* For Internet Explorer and old Edge (version 18 and below) */
+/* Hide scrollbar, but still allow scrolling */
+body {
+  -ms-overflow-style: none; /* hide scrollbar */
+}
+
 
 @include media-breakpoint-up(sm) {
   html {
