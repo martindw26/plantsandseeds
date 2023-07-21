@@ -29,7 +29,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
     <?php if (get_row_layout() === 'mpu1') : ?>
 
       <?php
-      $mpu_option = get_field('mpu_option'); // Get the value of the 'mpu_option' field
+      $mpu_option = get_sub_field('mpu_option'); // Get the value of the 'mpu_option' field
 
       if ($mpu_option) {
         if ($mpu_option === 'mpu1') {
@@ -37,7 +37,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
           <div class="d-flex justify-content-center p-2 text-dark position-relative" style="margin: 0 auto; background-color: #dee2e6;">
             Advertisment
             <span class="px-2" style="position: absolute; top: 0; right: 0;">
-              <a class="text-decoration-none text-dark" href="<?php the_field('adinformation') ?>" target='_blank'>
+              <a class="text-decoration-none text-dark" href="<?php the_sub_field('adinformation') ?>" target='_blank'>
                 &#128712;
               </a>
             </span>
@@ -45,7 +45,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
           <div class="d-flex align-items-center justify-content-center mb-2" style="height:305px; margin: 0 auto; background-color: #dee2e6;">
             <?php
             // Get the 'mpu_in_content_1' field from the object
-            $mpu_in_content_1 = get_field('mpu_in_content_1');
+            $mpu_in_content_1 = get_sub_field('mpu_in_content_1');
 
             // Check if the banner field exists
             if ($mpu_in_content_1) {
@@ -61,8 +61,8 @@ $link_target = $link['target'] ? $link['target'] : '_self';
               $Url = $mpu_in_content_1['url'];
 
               // Get the desktop header backup image and URL from the 'option' object
-              $mpu_in_content_subs_ad_image = get_field('mpu_in_content_image');
-              $mpu_in_content_subs_ad_url = get_field('mpu_in_content_url');
+              $mpu_in_content_subs_ad_image = get_sub_field('mpu_in_content_image');
+              $mpu_in_content_subs_ad_url = get_sub_field('mpu_in_content_url');
 
               // Get the current date and time
               $current_date = time();
