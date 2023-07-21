@@ -23,57 +23,61 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 <?php endif; ?>
 <!-- End Single internal button Block-->
 
+
 <?php
-if (have_rows('mpu_in_content_ads')) {
-  while (have_rows('mpu_in_content_ads')) {
-    the_row();
-    if (get_row_layout() === 'mpu_in_content_1') {
+// Assuming this code block is inside a loop for flexible content (e.g., repeater field or flexible content field)
 
-      $mpu_option = get_sub_field('mpu_option'); // Get the value of the 'mpu_option' field
+// Check if the row layout is 'mpu_in_content_1'
+if (get_row_layout() == 'mpu_in_content_1') {
+  // Get the value of the 'mpu_option' field
+  $mpu_option = get_sub_field('mpu_option');
 
-      if ($mpu_option) {
-        switch ($mpu_option) {
-          case 'mpu1':
-            $mpu_in_content_1 = get_sub_field('mpu_in_content_1');
+  if ($mpu_option) {
+    switch ($mpu_option) {
+      case 'mpu1':
+        // Get the data for 'mpu1' from the subfield
+        $mpu_in_content_1 = get_sub_field('mpu_in_content_1');
 
-            if ($mpu_in_content_1) {
-              $start_date = strtotime($mpu_in_content_1['start_date']);
-              $end_date = strtotime($mpu_in_content_1['end_date']);
-              $campaign_name = $mpu_in_content_1['campaign_name'];
-              $delivering = $mpu_in_content_1['delivering'];
-              $CategoryTarget = $mpu_in_content_1['category'];
-              $PostIDTarget = $mpu_in_content_1['postid'];
-              $OrderNum = $mpu_in_content_1['campaign_order_id'];
-              $Image = $mpu_in_content_1['image'];
-              $Url = $mpu_in_content_1['url'];
-              $current_date = time();
+        if ($mpu_in_content_1) {
+          // Extract data from the 'mpu_in_content_1' subfield
+          $start_date = strtotime($mpu_in_content_1['start_date']);
+          $end_date = strtotime($mpu_in_content_1['end_date']);
+          $campaign_name = $mpu_in_content_1['campaign_name'];
+          $delivering = $mpu_in_content_1['delivering'];
+          $CategoryTarget = $mpu_in_content_1['category'];
+          $PostIDTarget = $mpu_in_content_1['postid'];
+          $OrderNum = $mpu_in_content_1['campaign_order_id'];
+          $Image = $mpu_in_content_1['image'];
+          $Url = $mpu_in_content_1['url'];
+          $current_date = time();
 
-              if ($delivering === 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
-                if ($mpu_in_content_1['mpu_in_content_script1']) {
-                  echo $mpu_in_content_1['mpu_in_content_script1'];
-                } else {
-                  echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name . '"></a>';
-                }
-
-                echo "<!-- Advert details: " . $campaign_name . " | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
-              } else {
-                // Assuming these variables are defined elsewhere in the code
-                echo '<a href="' . $mpu_in_content_subs_ad_url . '" target="_blank"><img src="' . $mpu_in_content_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
-              }
+          if ($delivering === 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
+            // Display the ad script or image based on the availability of 'mpu_in_content_script1'
+            if ($mpu_in_content_1['mpu_in_content_script1']) {
+              echo $mpu_in_content_1['mpu_in_content_script1'];
+            } else {
+              echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name . '"></a>';
             }
-            break;
 
-          // Add other cases for 'mpu2', 'mpu3', ..., 'mpu10' if needed.
-
-          default:
-            // Handle the case where 'mpu_option' doesn't match any of the specified cases.
-            break;
+            // Output the advert details in an HTML comment for debugging or tracking purposes
+            echo "<!-- Advert details: " . $campaign_name . " | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
+          } else {
+            // Display an alternate ad if not delivering or outside the campaign duration
+            echo '<a href="' . $mpu_in_content_subs_ad_url . '" target="_blank"><img src="' . $mpu_in_content_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
+          }
         }
-      }
+        break;
+
+      // Add other cases for 'mpu2', 'mpu3', ..., 'mpu10' if needed.
+
+      default:
+        // Handle the case where 'mpu_option' doesn't match any of the specified cases.
+        break;
     }
   }
 }
 ?>
+
 
 
 
