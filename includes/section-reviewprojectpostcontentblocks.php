@@ -28,7 +28,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 // Assuming this code block is inside a loop for flexible content (e.g., repeater field or flexible content field)
 
 // Check if the row layout is 'mpu_in_content_1'
-if (get_row_layout() == 'mpu_in_content_1') {
+if (get_row_layout() == 'mpu_in_content_ads') {
   // Get the value of the 'mpu_option' field
   $mpu_option = get_sub_field('mpu_option');
 
