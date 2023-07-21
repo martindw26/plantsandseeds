@@ -37,15 +37,15 @@ $link_target = $link['target'] ? $link['target'] : '_self';
           <div class="d-flex justify-content-center p-2 text-dark position-relative" style="margin: 0 auto; background-color: #dee2e6;">
             Advertisment
             <span class="px-2" style="position: absolute; top: 0; right: 0;">
-              <a class="text-decoration-none text-dark" href="<?php the_field('adinformation', 'option') ?>" target='_blank'>
+              <a class="text-decoration-none text-dark" href="<?php the_field('adinformation') ?>" target='_blank'>
                 &#128712;
               </a>
             </span>
           </div>
           <div class="d-flex align-items-center justify-content-center mb-2" style="height:305px; margin: 0 auto; background-color: #dee2e6;">
             <?php
-            // Get the 'mpu_in_content_1' field from the 'option' object
-            $mpu_in_content_1 = get_field('mpu_in_content_1', 'option');
+            // Get the 'mpu_in_content_1' field from the object
+            $mpu_in_content_1 = get_field('mpu_in_content_1');
 
             // Check if the banner field exists
             if ($mpu_in_content_1) {
@@ -61,8 +61,8 @@ $link_target = $link['target'] ? $link['target'] : '_self';
               $Url = $mpu_in_content_1['url'];
 
               // Get the desktop header backup image and URL from the 'option' object
-              $mpu_in_content_subs_ad_image = get_field('mpu_in_content_image', 'option');
-              $mpu_in_content_subs_ad_url = get_field('mpu_in_content_url', 'option');
+              $mpu_in_content_subs_ad_image = get_field('mpu_in_content_image');
+              $mpu_in_content_subs_ad_url = get_field('mpu_in_content_url');
 
               // Get the current date and time
               $current_date = time();
@@ -121,7 +121,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
     <?php endif; ?>
   <?php endwhile; ?>
 <?php endif; ?>
-v
+
 
 
 
