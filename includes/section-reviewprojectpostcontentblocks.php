@@ -85,15 +85,15 @@ if (get_row_layout() == 'mpu_in_content_ads') {
   
           if ($mpu_in_content_2) {
             // Extract data from the 'mpu_in_content_1' subfield
-            $start_date = strtotime($mpu_in_content_2['start_date']);
-            $end_date = strtotime($mpu_in_content_2['end_date']);
-            $campaign_name = $mpu_in_content_2['campaign_name'];
-            $delivering = $mpu_in_content_2['delivering'];
-            $CategoryTarget = $mpu_in_content_2['category'];
-            $PostIDTarget = $mpu_in_content_2['postid'];
-            $OrderNum = $mpu_in_content_2['campaign_order_id'];
-            $Image = $mpu_in_content_2['image'];
-            $Url = $mpu_in_content_2['url'];
+            $start_date = strtotime($mpu_in_content_2['start_date_2']);
+            $end_date = strtotime($mpu_in_content_2['end_date_2']);
+            $campaign_name = $mpu_in_content_2['campaign_name_2'];
+            $delivering = $mpu_in_content_2['delivering_2'];
+            $CategoryTarget = $mpu_in_content_2['category_2'];
+            $PostIDTarget = $mpu_in_content_2['postid_2'];
+            $OrderNum = $mpu_in_content_2['campaign_order_id_2'];
+            $Image = $mpu_in_content_2['image_2'];
+            $Url = $mpu_in_content_2['url_2'];
             $current_date = time();
   
             if ($delivering === 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
@@ -106,9 +106,9 @@ if (get_row_layout() == 'mpu_in_content_ads') {
               // Check if the $mpu_in_content_1 array exists and has necessary data
               if (isset($mpu_in_content_2) && is_array($mpu_in_content_1)) {
                 // Check if 'mpu_in_content_script1' exists and has a value
-                if (!empty($mpu_in_content_2['mpu_in_content_script2'])) {
+                if (!empty($mpu_in_content_2['mpu_in_content_script_2'])) {
                   // If the 'mpu_in_content_script1' has a value, display the script
-                  echo $mpu_in_content_2['mpu_in_content_script2'];
+                  echo $mpu_in_content_2['mpu_in_content_script_2'];
                 } else {
                   // If the 'mpu_in_content_script1' doesn't have a value, display the ad image
                   echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name . '"></a>';
