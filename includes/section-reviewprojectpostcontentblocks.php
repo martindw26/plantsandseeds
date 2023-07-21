@@ -23,11 +23,12 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 <?php endif; ?>
 <!-- End Single internal button Block-->
 
-<?php if (have_rows('mpu_in_content_ads')) : ?>
-  <?php while (have_rows('mpu_in_content_ads')) : the_row(); ?>
-    <?php if (get_row_layout() === 'mpu_in_content_1') : ?>
+<?php
+if (have_rows('mpu_in_content_ads')) {
+  while (have_rows('mpu_in_content_ads')) {
+    the_row();
+    if (get_row_layout() === 'mpu_in_content_1') {
 
-      <?php
       $mpu_option = get_sub_field('mpu_option'); // Get the value of the 'mpu_option' field
 
       if ($mpu_option) {
@@ -56,6 +57,7 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 
                 echo "<!-- Advert details: " . $campaign_name . " | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
               } else {
+                // Assuming these variables are defined elsewhere in the code
                 echo '<a href="' . $mpu_in_content_subs_ad_url . '" target="_blank"><img src="' . $mpu_in_content_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
               }
             }
@@ -68,11 +70,11 @@ $link_target = $link['target'] ? $link['target'] : '_self';
             break;
         }
       }
-      ?>
+    }
+  }
+}
+?>
 
-    <?php endif; ?>
-  <?php endwhile; ?>
-<?php endif; ?>
 
 
 <!-- Single internal button Block post object-->
