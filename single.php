@@ -85,9 +85,18 @@
              <!-- End Social share icons-->
 
               	
-             <!-- Start of posts related posts-->
-             <?php get_template_part( 'template-parts/related_new' );?>
-             <!-- End of posts related posts-->
+            <?php
+            // Get the value of the custom field 'post_id' for the current post
+            $post_id = get_field('post_id');
+
+            // Check if the 'post_id' has data (i.e., it is not empty or null)
+            if ($post_id) {
+            // If there is data, include the template file to display related posts
+            // Assuming the template file is 'related_new.php' located in the 'template-parts' directory
+            get_template_part('template-parts/related_new');
+            }
+            ?>
+
 
           </div>
 
