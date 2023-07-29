@@ -1,37 +1,98 @@
-<!--########################################
-############## Dirtectory block ################
-######################################## -->
-
-
-<div class="col-lg-8 p-lg-2 bg-white text-dark p-1"><h4 class="card-title font-weight-bold">Deals</h4></div>
-<table class="table table-striped table-dark">
-
-
-<?php if( have_rows('prodcuts') ):?>
-
-    <?php while( have_rows('prodcuts') ) : the_row();?>
-
-<?php
-$retailer = get_sub_field('dir_retailer');
-?>
-	
-<div class="container-fluid">
+<div class="container mt-4">
   <div class="row">
-  <div class="col-md-4 text-white bg-dark p-2"><img class="img-fluid" src="<?php the_sub_field('dir_image');?>"/></div>
-    <div class="col-md-8 text-white bg-dark pb-2">
-      <h2 class="pt-2"><?php the_sub_field('dir_product');?></h2>
-      <div class="">
-        <div class="col text-white bg-dark  p-2"><?php the_sub_field('dir_description');?></div>
-        <div class="col text-white bg-dark  p-2"><h5>Retailer: <?php echo $retailer['label'];?></h5></div>
-      </div>
-      <button type="button" class="btn btn-success float-end "><a class="text-white text-decoration-none" href="<?php the_sub_field('dir_buy_now');?>"?>Get yours now</a></button>
-    </div>
-  </div>
+
+    <?php if (have_rows('products')) : ?>
+      <?php while (have_rows('products')) : the_row(); ?>
+        <?php
+        $retailer = get_sub_field('dir_retailer');
+        $item_image = get_sub_field('dir_image');
+        $item_name = get_sub_field('dir_product');
+        $item_description = get_sub_field('dir_description');
+	$product_title = get_field( 'product_title');
+        ?>
+
+        <!-- Item in the directory -->
+        <div class="col-md-4 mb-4">
+          <div class="card rounded-rounded-0" style="height: 300px;">
+<div style="height: 120px; width: 100%; overflow: hidden;">
+    <img src="<?php echo esc_url($item_image); ?>" class="card-img-top" alt="<?php echo esc_attr($item_name); ?>" style="height: 100%; width: 100%; object-fit: contain; object-position: center;">
 </div>
 
 
-<?php endwhile;  else :  endif; ?>
+            <div class="card-body">
+              <h5 class="card-title"><?php echo esc_html($item_name); ?></h5>
+<!-- catarrayrated -->
+				<?php
+// Get the rating value from the ACF field
+$rating = get_sub_field('product_rating');
 
-</table>			
+// Define the star symbols
+$star_full = '&#9733;';
+$star_empty = '&#9734;';
 
-    
+// Display the star rating
+if ($rating) {
+    for ($i = 1; $i <= 5; $i++) {
+        echo ($i <= $rating) ? $star_full : $star_empty;
+    }
+}
+?>
+
+				<!-- End catarrayrated -->
+              <p class="card-text"><?php echo esc_html($item_description); ?></p>
+              <a href="<?php the_sub_field('dir_buy_now'); ?>" class="btn btn-success float-end mt-2" target="_blank">Get yours now</a>
+
+            </div>
+          </div>
+        </div>
+
+      <?php endwhile; ?>
+    <?php else : ?>
+      <p>No products found.</p>
+    <?php endif; ?>
+
+  </div>
+</div>
+
+<div class="pb-2">
+<?php
+$product = get_field( 'product');
+?>
+<h5>Related Articles for <i><?php echo $product; ?></i></h5>
+</div>
+
+<div class="container mt-4">
+<?php
+// Get the post object field value
+$related_posts = get_field('director_related_posts');
+
+// Check if there are related posts
+if ($related_posts) {
+    // Output a list of related posts
+    echo '<ul class="list-unstyled">';
+    foreach ($related_posts as $post) {
+        setup_postdata($post);
+        ?>
+   <div class="container p-2 bg-dark text-white">
+  			<div class="row">
+	    		<div class="col-lg-9"><h5><a class="text-decoration-none link-dark text-white" href='<?php echo get_permalink();?>'/></><?php the_title(); ?></a></h5></div>
+	    		<div class="col-lg-4"><?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+                    <img class="img-fluid rounded pb-xs-4" src="<?php echo $url ?>" /></div>
+	    		<div class="col-lg-6 mb-3 mt-4 mt-md-0"><p class="text-white">&ldquo;<?php echo excerpt(100);?>&rdquo;</p><br><a class="text-white text-decoration-none align-content-end" href="<?php the_permalink() ?>">Read more →</a></div>
+  			</div>
+		</div><br>
+
+        <?php
+    }
+    echo '</ul>';
+
+    // Reset the post data to avoid conflicts with the main query
+    wp_reset_postdata();
+}
+?>
+</div>
+
+
+
+
+
