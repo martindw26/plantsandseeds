@@ -72,8 +72,8 @@ if ($banner_db_1) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_1['banner_db_script_bottom_bottom_1']) {
-      echo $banner_db_1['banner_db_script_bottom_bottom_1'];
+    if ($banner_db_1['banner_db_script_bottom_1']) {
+      echo $banner_db_1['banner_db_script_bottom_1'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
