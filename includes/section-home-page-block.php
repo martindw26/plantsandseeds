@@ -17,6 +17,7 @@
 
 <?php // Right large block posts projects loop begins here
 $large_post_featured_post = get_sub_field ( 'large_post_featured_post' );
+$post_button_text = get_sub_field('post_button_text');
 $block_posts_left = get_sub_field ( 'block_posts_left' );
 $tags_exclude = get_sub_field ( 'tags_exclude' );
 
@@ -51,7 +52,7 @@ while ($block->have_posts()) : $block->the_post();
 				?>
 				<!-- End catarrayrated -->
 						<p class="mb-3">&#34;<?php echo excerpt(35);?>&#34;</p>
-						<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark">Read More</button></a>
+										<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark"><?php echo $post_button_text;?></button></a>
   </div>
 </div>
 </div>
@@ -70,6 +71,7 @@ while ($block->have_posts()) : $block->the_post();
 		<?php // Left small block posts projects loop begins here
       
 		$small_posts_category = get_sub_field('small_posts_category');
+		$post_button_text = get_sub_field('post_button_text');
 		$block_offset = get_sub_field('block_right_offset');
 		$block_post_exclusion = get_sub_field('block_post_right_exclude');
 		$block_orderby = get_sub_field('orderby');
@@ -123,7 +125,7 @@ while ($block->have_posts()) : $block->the_post();
 				?>
 				<!-- End catarrayrated -->
 				</h5>
-				<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark">Read More</button></a>
+				<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark"><?php echo $post_button_text;?></button></a>
   </div>
 </div>
 </div>
@@ -141,7 +143,8 @@ while ($block->have_posts()) : $block->the_post();
 		echo '<p>No content found</p>';
 		endif; ?>
 		<?php // Left small mobile block posts projects loop begins here
-        $small_posts_category = get_sub_field('small_posts_category');
+        	$small_posts_category = get_sub_field('small_posts_category');
+		$post_button_text = get_sub_field('post_button_text');
 		$block_offset = get_sub_field('block_right_offset');
 		$block_post_exclusion = get_sub_field('block_post_right_exclude');
 		$block_orderby = get_sub_field('orderby');
@@ -177,7 +180,7 @@ while ($block->have_posts()) : $block->the_post();
 							Article by: <i><?php echo get_the_author();?></i>,  Posted: <i><?php echo get_the_date();?></i><?php if($read_time):?> | <?php echo $read_time ?><?php endif ?></i>
 						</div><br>
 
-	<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark">Read More</button></a>
+				<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark"><?php echo $post_button_text;?></button></a>
   </div>
 </div>
 </div>
