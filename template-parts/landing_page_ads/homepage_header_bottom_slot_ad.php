@@ -72,8 +72,8 @@ if ($banner_db_1) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_1['banner_db_script_bottom_1']) {
-      echo $banner_db_1['banner_db_script_bottom_1'];
+    if ($banner_db_1['banner_db_script_bottom_bottom_1']) {
+      echo $banner_db_1['banner_db_script_bottom_bottom_1'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -122,8 +122,8 @@ if ($banner_db_2) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_2['banner_db_script_2']) {
-      echo $banner_db_2['banner_db_script_2'];
+    if ($banner_db_2['banner_db_script_bottom_2']) {
+      echo $banner_db_2['banner_db_script_bottom_2'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -167,8 +167,8 @@ if ($banner_db_3) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_3['banner_db_script_3']) {
-      echo $banner_db_3['banner_db_script_3'];
+    if ($banner_db_3['banner_db_script_bottom_3']) {
+      echo $banner_db_3['banner_db_script_bottom_3'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -212,8 +212,8 @@ if ($banner_db_4) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_4['banner_db_script_4']) {
-      echo $banner_db_4['banner_db_script_4'];
+    if ($banner_db_4['banner_db_script_bottom_4']) {
+      echo $banner_db_4['banner_db_script_bottom_4'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -257,8 +257,8 @@ if ($banner_db_5) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_5['banner_db_script_5']) {
-      echo $banner_db_5['banner_db_script_5'];
+    if ($banner_db_5['banner_db_script_bottom_5']) {
+      echo $banner_db_5['banner_db_script_bottom_5'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -302,8 +302,8 @@ if ($banner_db_6) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_6['banner_db_script_6']) {
-      echo $banner_db_6['banner_db_script_6'];
+    if ($banner_db_6['banner_db_script_bottom_6']) {
+      echo $banner_db_6['banner_db_script_bottom_6'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -347,8 +347,8 @@ if ($banner_db_7) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_7['banner_db_script_7']) {
-      echo $banner_db_7['banner_db_script_7'];
+    if ($banner_db_7['banner_db_script_bottom_7']) {
+      echo $banner_db_7['banner_db_script_bottom_7'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -392,8 +392,8 @@ if ($banner_db_8) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_8['banner_db_script_8']) {
-      echo $banner_db_8['banner_db_script_8'];
+    if ($banner_db_8['banner_db_script_bottom_8']) {
+      echo $banner_db_8['banner_db_script_bottom_8'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -437,8 +437,8 @@ if ($banner_db_9) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_9['banner_db_script_9']) {
-      echo $banner_db_9['banner_db_script_9'];
+    if ($banner_db_9['banner_db_script_bottom_9']) {
+      echo $banner_db_9['banner_db_script_bottom_9'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -482,8 +482,8 @@ if ($banner_db_10) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_10['banner_db_script_10']) {
-      echo $banner_db_10['banner_db_script_10'];
+    if ($banner_db_10['banner_db_script_bottom_10']) {
+      echo $banner_db_10['banner_db_script_bottom_10'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
