@@ -20,8 +20,8 @@ if ($adinformation) {
 
 <?php
 
-$LowerLimit = get_field('bbldr_min','option');
-$UpperLimit = get_field('bbldr_max','option');
+$LowerLimit = get_field('bbldr_bottom_min','option');
+$UpperLimit = get_field('bbldr_bottom_max','option');
 
 $advert = rand($LowerLimit,$UpperLimit);
 

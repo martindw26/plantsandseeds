@@ -19,8 +19,8 @@ if ($adinformation) {
 
 <?php 
 
-$LowerLimit = 1;
-$UpperLimit = 10;
+$LowerLimit = get_field('mpu_top_min','option');
+$UpperLimit = get_field('mpu_top_max','option');
 
 $advert = rand($LowerLimit,$UpperLimit);
 
