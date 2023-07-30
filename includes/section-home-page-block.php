@@ -143,7 +143,7 @@ while ($block->have_posts()) : $block->the_post();
 		echo '<p>No content found</p>';
 		endif; ?>
 		<?php // Left small mobile block posts projects loop begins here
-        	$small_posts_category = get_sub_field('small_posts_category');
+        $small_posts_category = get_sub_field('small_posts_category');
 		$post_button_text = get_sub_field('post_button_text');
 		$block_offset = get_sub_field('block_right_offset');
 		$block_post_exclusion = get_sub_field('block_post_right_exclude');
@@ -195,7 +195,7 @@ while ($block->have_posts()) : $block->the_post();
 <div class="d-flex justify-content-center">
 <?php
 $BlockMoreURL = get_sub_field('block_more_url');
-$more_button_text = get_sub_field('more_button_text');
+$more_button_text = get_sub_field('more_button_block_text');
 ?>
 <a href="<?php echo $BlockMoreURL; ?>">
     <button type="button" class="btn btn-outline-dark"><?php echo $more_button_text; ?></button>
