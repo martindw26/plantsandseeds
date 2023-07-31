@@ -999,7 +999,7 @@ endif;
 
 //$advert = 1;
 
-switch ($advert) {
+switch ($Mobileadvert) {
   case "1":
   
   // Get the 'banner_desktop_1' field from the 'option' object
