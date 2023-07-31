@@ -1008,6 +1008,9 @@ switch ($advert) {
   
   // Get the 'banner_desktop_1' field from the 'option' object
   $banner_mobile_top_1 = get_field('banner_mobile_top_1', 'option');
+     // Get the desktop header backup image and URL from the 'option' object
+     $mobile_subs_ad_image = get_field('mobile_image', 'option');
+     $mobile_subs_ad_url = get_field('mobile_url', 'option');
   
   // Check if the banner field exists
   if ($banner_mobile_top_1) {
