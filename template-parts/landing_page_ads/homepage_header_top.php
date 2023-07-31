@@ -1059,15 +1059,15 @@ case "2":
  if ($banner_mobile_top_2) {
  
    // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-   $start_date = strtotime($banner_mobile_top_2['start_date']);
-   $end_date = strtotime($banner_mobile_top_2['end_date']);
-   $campaign_name = $banner_mobile_top_2['campaign_name'];
-   $delivering = $banner_mobile_top_2['delivering'];
-   $CategoryTarget = $banner_mobile_top_2['category'];
-   $PostIDTarget = $banner_mobile_top_2['postid'];
-   $OrderNum = $banner_mobile_top_2['campaign_order_id'];
-   $Image = $banner_mobile_top_2['image'];
-   $Url = $banner_mobile_top_2['url'];
+   $start_date = strtotime($banner_mobile_top_2['start_date2']);
+   $end_date = strtotime($banner_mobile_top_2['end_date2']);
+   $campaign_name = $banner_mobile_top_2['campaign_name2'];
+   $delivering = $banner_mobile_top_2['delivering2'];
+   $CategoryTarget = $banner_mobile_top_2['category2'];
+   $PostIDTarget = $banner_mobile_top_2['postid2'];
+   $OrderNum = $banner_mobile_top_2['campaign_order_id2'];
+   $Image = $banner_mobile_top_2['image2'];
+   $Url = $banner_mobile_top_2['url2'];
  
    // Get the desktop header backup image and URL from the 'option' object
    $mobile_subs_ad_image = get_field('mobile_image', 'option');
