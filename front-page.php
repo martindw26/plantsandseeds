@@ -7,7 +7,6 @@
 
  <!-- Header adslot-->
 <?php get_template_part( 'template-parts/landing_page_ads/homepage_header_top' );?><br>
-<?php get_template_part( 'template-parts/landing_page_ads/homepage_header_top_mobile' );?><br>
 <!-- End Featured Post-->
 
 <?php if( have_rows('home_page_blocks') ):
