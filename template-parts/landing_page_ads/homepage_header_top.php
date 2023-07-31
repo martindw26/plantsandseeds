@@ -1003,21 +1003,21 @@ switch ($advert) {
   case "1":
   
   // Get the 'banner_desktop_1' field from the 'option' object
-  $banner_dt_1 = get_field('banner_desktop_1', 'option');
+  $banner_mobile_top_1 = get_field('banner_mbt_script_1', 'option');
   
   // Check if the banner field exists
   if ($banner_dt_1) {
   
     // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-    $start_date = strtotime($banner_dt_1['start_date']);
-    $end_date = strtotime($banner_dt_1['end_date']);
-    $campaign_name = $banner_dt_1['campaign_name'];
-    $delivering = $banner_dt_1['delivering'];
-    $CategoryTarget = $banner_dt_1['category'];
-    $PostIDTarget = $banner_dt_1['postid'];
-    $OrderNum = $banner_dt_1['campaign_order_id'];
-    $Image = $banner_dt_1['image'];
-    $Url = $banner_dt_1['url'];
+    $start_date = strtotime($banner_mobile_top_1['start_date']);
+    $end_date = strtotime($banner_mobile_top_1['end_date']);
+    $campaign_name = $banner_mobile_top_1['campaign_name'];
+    $delivering = $banner_mobile_top_1['delivering'];
+    $CategoryTarget = $banner_mobile_top_1['category'];
+    $PostIDTarget = $banner_mobile_top_1['postid'];
+    $OrderNum = $banner_mobile_top_1['campaign_order_id'];
+    $Image = $banner_mobile_top_1['image'];
+    $Url = $banner_mobile_top_1['url'];
   
     // Get the desktop header backup image and URL from the 'option' object
     $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -1030,8 +1030,8 @@ switch ($advert) {
      if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
   
       // If the banner has a script, display it
-      if ($banner_dt_1['banner_dt_script_1']) {
-        echo $banner_dt_1['banner_dt_script_1'];
+      if ($banner_mobile_top_1['banner_mbt_script_1']) {
+        echo $banner_mobile_top_1['banner_mbt_script_1'];
       } else {
         // Otherwise, display the banner image
         echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
