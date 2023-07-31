@@ -1034,12 +1034,15 @@ switch ($advert) {
      if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
   
       // If the banner has a script, display it
-      if ($banner_mobile_top_1['banner_mbt_script_1']) {
-        echo $banner_mobile_top_1['banner_mbt_script_1'];
-      } else {
-        // Otherwise, display the banner image
-        echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
-      }
+    if ($banner_mobile_top_1['banner_mbt_script_1']) {
+      echo $banner_mobile_top_1['banner_mbt_script_1'];
+    } elseif (isset($Url) && isset($Image) && isset($campaign_name)) {
+      // Otherwise, display the banner image
+      echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
+    } else {
+      echo '<a href="' . $mobile_subs_ad_url . '" target="_blank"><img src="' . $mobile_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
+    }
+
   
       // Display additional information about the banner
       echo "<!-- Advert details: " . $campaign_name ." | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
