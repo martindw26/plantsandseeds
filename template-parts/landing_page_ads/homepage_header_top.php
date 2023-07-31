@@ -1006,7 +1006,7 @@ switch ($advert) {
   $banner_mobile_top_1 = get_field('banner_mbt_script_1', 'option');
   
   // Check if the banner field exists
-  if ($banner_dt_1) {
+  if ($banner_mobile_top_1) {
   
     // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
     $start_date = strtotime($banner_mobile_top_1['start_date']);
