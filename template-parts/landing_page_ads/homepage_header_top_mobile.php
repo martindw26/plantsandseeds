@@ -63,8 +63,8 @@ if ($banner_mobile_1) {
   $Url = $banner_mobile_1['url'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -113,8 +113,8 @@ if ($banner_mobile_2) {
   $Url = $banner_mobile_2['url2'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -158,8 +158,8 @@ if ($banner_mobile_3) {
   $Url = $banner_mobile_3['url3'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -203,8 +203,8 @@ if ($banner_mobile_4) {
   $Url = $banner_mobile_4['url4'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -248,8 +248,8 @@ if ($banner_mobile_5) {
   $Url = $banner_mobile_5['url5'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -293,8 +293,8 @@ if ($banner_mobile_6) {
   $Url = $banner_mobile_6['url6'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -338,8 +338,8 @@ if ($banner_mobile_7) {
   $Url = $banner_mobile_7['url7'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -383,8 +383,8 @@ if ($banner_mobile_8) {
   $Url = $banner_mobile_8['url8'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -428,8 +428,8 @@ if ($banner_mobile_9) {
   $Url = $banner_mobile_9['url9'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -473,8 +473,8 @@ if ($banner_mobile_10) {
   $Url = $banner_mobile_10['url10'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -518,8 +518,8 @@ if ($banner_mobile_11) {
   $Url = $banner_mobile_11['url11'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -563,8 +563,8 @@ if ($banner_mobile_12) {
   $Url = $banner_mobile_12['url12'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -609,8 +609,8 @@ if ($banner_mobile_13) {
 
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -654,8 +654,8 @@ if ($banner_mobile_14) {
   $Url = $banner_mobile_14['url14'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -699,8 +699,8 @@ if ($banner_mobile_15) {
   $Url = $banner_mobile_15['url15'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -744,8 +744,8 @@ if ($banner_mobile_16) {
   $Url = $banner_mobile_16['url16'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -789,8 +789,8 @@ if ($banner_mobile_17) {
   $Url = $banner_mobile_17['url17'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -834,8 +834,8 @@ if ($banner_mobile_18) {
   $Url = $banner_mobile_18['url18'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -879,8 +879,8 @@ if ($banner_mobile_19) {
   $Url = $banner_mobile_19['url19'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
@@ -924,8 +924,8 @@ if ($banner_mobile_20) {
   $Url = $banner_mobile_20['url20'];
 
   // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('desktop_image', 'option');
-  $mobile_subs_ad_url = get_field('desktop_url', 'option');
+  $mobile_subs_ad_image = get_field('mobile_image', 'option');
+  $mobile_subs_ad_url = get_field('mobile_url', 'option');
 
   // Get the current date and time
   $current_date = time();
