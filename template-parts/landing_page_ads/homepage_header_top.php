@@ -979,7 +979,7 @@ if ($adinformation) {
 <?php
 
 $LowerLimitMobile = 1;
-$UpperLimitMobile = 1;
+$UpperLimitMobile = 10;
 
 $advert = rand($LowerLimitMobile,$UpperLimitMobile);
 
