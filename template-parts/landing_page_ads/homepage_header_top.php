@@ -978,8 +978,12 @@ if ($adinformation) {
 
 <?php
 
-$LowerLimit = 1;
-$UpperLimit = 10;
+//$LowerLimit = 1;
+//$UpperLimit = 10;
+
+$LowerLimit = get_field('mobile_banner_min','option');
+$UpperLimit = get_field('mobile_banner_max','option');
+
 
 $advert = rand($LowerLimit,$UpperLimit);
 
