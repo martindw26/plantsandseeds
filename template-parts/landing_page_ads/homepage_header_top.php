@@ -978,10 +978,10 @@ if ($adinformation) {
 
 <?php
 
-$LowerLimitMobile = 1;
-$UpperLimitMobile = 10;
+$LowerLimit = 1;
+$UpperLimit = 10;
 
-$Mobileadvert = rand($LowerLimitMobile,$UpperLimitMobile);
+$advert = rand($LowerLimit,$UpperLimit);
 
 //Gets Post category name
 $category = get_the_category();
@@ -999,7 +999,7 @@ endif;
 
 //$advert = 1;
 
-switch ($Mobileadvert) {
+switch ($advert) {
   case "1":
   
   // Get the 'banner_desktop_1' field from the 'option' object
