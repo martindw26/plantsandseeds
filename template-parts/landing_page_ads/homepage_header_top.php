@@ -981,7 +981,7 @@ if ($adinformation) {
 $LowerLimitMobile = 1;
 $UpperLimitMobile = 10;
 
-$advert = rand($LowerLimitMobile,$UpperLimitMobile);
+$Mobileadvert = rand($LowerLimitMobile,$UpperLimitMobile);
 
 //Gets Post category name
 $category = get_the_category();
@@ -999,7 +999,7 @@ endif;
 
 //$advert = 1;
 
-switch ($advert) {
+switch ($Mobileadvert) {
 case "1":
 
 // Get the 'banner_mobile_1' field from the 'option' object
