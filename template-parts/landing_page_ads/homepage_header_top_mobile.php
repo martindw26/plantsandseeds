@@ -21,8 +21,8 @@ if ($adinformation) {
 
 <?php
 
-$LowerLimit = 1;
-$UpperLimit = 10;
+$LowerLimit = get_field('mobile_banner_top_min','option');
+$UpperLimit = get_field('mobile_banner_top_max','option');
 
 $advert = rand($LowerLimit,$UpperLimit);
 
@@ -45,8 +45,8 @@ endif;
 switch ($advert) {
 case "1":
 
-// Get the 'banner_desktop_1' field from the 'option' object
-$banner_mobile_1 = get_field('banner_desktop_1', 'option');
+// Get the 'banner_mobile_1' field from the 'option' object
+$banner_mobile_1 = get_field('banner_mobile_1', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_1) {
@@ -95,8 +95,8 @@ if ($banner_mobile_1) {
 
 break;
 case "2":
- // Get the 'banner_desktop_2' field from the 'option' object
-$banner_mobile_2 = get_field('banner_desktop_2', 'option');
+ // Get the 'banner_mobile_2' field from the 'option' object
+$banner_mobile_2 = get_field('banner_mobile_2', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_2) {
@@ -140,8 +140,8 @@ if ($banner_mobile_2) {
 }
 break;
 case "3":
-   // Get the 'banner_desktop_3' field from the 'option' object
-$banner_mobile_3 = get_field('banner_desktop_3', 'option');
+   // Get the 'banner_mobile_3' field from the 'option' object
+$banner_mobile_3 = get_field('banner_mobile_3', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_3) {
@@ -185,8 +185,8 @@ if ($banner_mobile_3) {
 }
 break;
 case "4":
-   // Get the 'banner_desktop_4' field from the 'option' object
-$banner_mobile_4 = get_field('banner_desktop_4', 'option');
+   // Get the 'banner_mobile_4' field from the 'option' object
+$banner_mobile_4 = get_field('banner_mobile_4', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_4) {
@@ -230,8 +230,8 @@ if ($banner_mobile_4) {
 }
 break;
 case "5":
-  // Get the 'banner_desktop_5' field from the 'option' object
-$banner_mobile_5 = get_field('banner_desktop_5', 'option');
+  // Get the 'banner_mobile_5' field from the 'option' object
+$banner_mobile_5 = get_field('banner_mobile_5', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_5) {
@@ -275,8 +275,8 @@ if ($banner_mobile_5) {
 }
 break;
 case "6":
-  // Get the 'banner_desktop_6' field from the 'option' object
-$banner_mobile_6 = get_field('banner_desktop_6', 'option');
+  // Get the 'banner_mobile_6' field from the 'option' object
+$banner_mobile_6 = get_field('banner_mobile_6', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_6) {
@@ -320,8 +320,8 @@ if ($banner_mobile_6) {
 }
 break;
 case "7":
-  // Get the 'banner_desktop_7' field from the 'option' object
-$banner_mobile_7 = get_field('banner_desktop_7', 'option');
+  // Get the 'banner_mobile_7' field from the 'option' object
+$banner_mobile_7 = get_field('banner_mobile_7', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_7) {
@@ -365,8 +365,8 @@ if ($banner_mobile_7) {
 }
 break;
 case "8":
-  // Get the 'banner_desktop_8' field from the 'option' object
-$banner_mobile_8 = get_field('banner_desktop_8', 'option');
+  // Get the 'banner_mobile_8' field from the 'option' object
+$banner_mobile_8 = get_field('banner_mobile_8', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_8) {
@@ -410,8 +410,8 @@ if ($banner_mobile_8) {
 }
 break;
 case "9":
-   // Get the 'banner_desktop_9' field from the 'option' object
-$banner_mobile_9 = get_field('banner_desktop_9', 'option');
+   // Get the 'banner_mobile_9' field from the 'option' object
+$banner_mobile_9 = get_field('banner_mobile_9', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_9) {
@@ -455,8 +455,8 @@ if ($banner_mobile_9) {
 }
 break;
 case "10":
-   // Get the 'banner_desktop_10' field from the 'option' object
-$banner_mobile_10 = get_field('banner_desktop_10', 'option');
+   // Get the 'banner_mobile_10' field from the 'option' object
+$banner_mobile_10 = get_field('banner_mobile_10', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_10) {
@@ -500,8 +500,8 @@ if ($banner_mobile_10) {
 }
 break;
 case"11":
-   // Get the 'banner_desktop_11' field from the 'option' object
-$banner_mobile_11 = get_field('banner_desktop_11', 'option');
+   // Get the 'banner_mobile_11' field from the 'option' object
+$banner_mobile_11 = get_field('banner_mobile_11', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_11) {
@@ -545,8 +545,8 @@ if ($banner_mobile_11) {
 }
 break;
 case"12":
-  // Get the 'banner_desktop_12' field from the 'option' object
-$banner_mobile_12 = get_field('banner_desktop_12', 'option');
+  // Get the 'banner_mobile_12' field from the 'option' object
+$banner_mobile_12 = get_field('banner_mobile_12', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_12) {
@@ -590,8 +590,8 @@ if ($banner_mobile_12) {
 }
 break;
 case"13":
-  // Get the 'banner_desktop_13' field from the 'option' object
-$banner_mobile_13 = get_field('banner_desktop_13', 'option');
+  // Get the 'banner_mobile_13' field from the 'option' object
+$banner_mobile_13 = get_field('banner_mobile_13', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_13) {
@@ -636,8 +636,8 @@ if ($banner_mobile_13) {
 }
 break;
 case"14":
-  // Get the 'banner_desktop_14' field from the 'option' object
-$banner_mobile_14 = get_field('banner_desktop_14', 'option');
+  // Get the 'banner_mobile_14' field from the 'option' object
+$banner_mobile_14 = get_field('banner_mobile_14', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_14) {
@@ -681,8 +681,8 @@ if ($banner_mobile_14) {
 }
 break;
 case"15":
-  // Get the 'banner_desktop_15' field from the 'option' object
-$banner_mobile_15 = get_field('banner_desktop_15', 'option');
+  // Get the 'banner_mobile_15' field from the 'option' object
+$banner_mobile_15 = get_field('banner_mobile_15', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_15) {
@@ -726,8 +726,8 @@ if ($banner_mobile_15) {
 }
 break;
 case"16":
-  // Get the 'banner_desktop_16' field from the 'option' object
-$banner_mobile_16 = get_field('banner_desktop_16', 'option');
+  // Get the 'banner_mobile_16' field from the 'option' object
+$banner_mobile_16 = get_field('banner_mobile_16', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_16) {
@@ -771,8 +771,8 @@ if ($banner_mobile_16) {
 }
 break;
 case"17":
-  // Get the 'banner_desktop_17' field from the 'option' object
-$banner_mobile_17 = get_field('banner_desktop_17', 'option');
+  // Get the 'banner_mobile_17' field from the 'option' object
+$banner_mobile_17 = get_field('banner_mobile_17', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_17) {
@@ -816,8 +816,8 @@ if ($banner_mobile_17) {
 }
 break;
 case"18":
-  // Get the 'banner_desktop_18' field from the 'option' object
-$banner_mobile_18 = get_field('banner_desktop_18', 'option');
+  // Get the 'banner_mobile_18' field from the 'option' object
+$banner_mobile_18 = get_field('banner_mobile_18', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_18) {
@@ -861,8 +861,8 @@ if ($banner_mobile_18) {
 }
 break;
 case"19":
-  // Get the 'banner_desktop_19' field from the 'option' object
-$banner_mobile_19 = get_field('banner_desktop_19', 'option');
+  // Get the 'banner_mobile_19' field from the 'option' object
+$banner_mobile_19 = get_field('banner_mobile_19', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_19) {
@@ -906,8 +906,8 @@ if ($banner_mobile_19) {
 }
 break;
 case"20":
-  // Get the 'banner_desktop_20' field from the 'option' object
-$banner_mobile_20 = get_field('banner_desktop_20', 'option');
+  // Get the 'banner_mobile_20' field from the 'option' object
+$banner_mobile_20 = get_field('banner_mobile_20', 'option');
 
 // Check if the banner field exists
 if ($banner_mobile_20) {
