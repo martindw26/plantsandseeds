@@ -961,7 +961,7 @@ echo "No advert selected";
 </div>
 </div>
 
-<div class="">
+<div class="commerce_hp_mobile">
 <div class="commerce_ldr">
 <div class="py-2">
 <?php
