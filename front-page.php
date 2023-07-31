@@ -5,9 +5,17 @@
 <?php get_header();?>
 
 
- <!-- Header adslot-->
+ <!-- Desktop Header adslot-->
+ <div class="commerce_hp_desktop">
 <?php get_template_part( 'template-parts/landing_page_ads/homepage_header_top' );?><br>
 <!-- End Featured Post-->
+</div>
+
+<div class="commerce_hp_mobile">
+ <!-- Mobile Header adslot-->
+ <?php get_template_part( 'template-parts/landing_page_ads/homepage_header_top_mobile' );?><br>
+<!-- End Featured Post-->
+</div>
 
 <?php if( have_rows('home_page_blocks') ):
     while ( have_rows('home_page_blocks') ) : the_row();
