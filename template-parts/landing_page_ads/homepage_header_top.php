@@ -978,10 +978,10 @@ if ($adinformation) {
 
 <?php
 
-$LowerLimit = 1;
-$UpperLimit = 10;
+$LowerLimitMobile = 1;
+$UpperLimitMobile = 1;
 
-$advert = rand($LowerLimit,$UpperLimit);
+$advert = rand($LowerLimitMobile,$UpperLimitMobile);
 
 //Gets Post category name
 $category = get_the_category();
