@@ -603,48 +603,51 @@ if ($banner_mbb_1) {
 break;
 case "2":
  // Get the 'banner_mobile_bottom2' field from the 'option' object
-$banner_mbb_2 = get_field('banner_mobile_bottom_2', 'option');
+ $banner_mbb_2 = get_field('banner_mobile_bottom_2', 'option');
 
-// Check if the banner field exists
-if ($banner_mbb_2) {
-
-  // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_mbb_2['start_date2']);
-  $end_date = strtotime($banner_mbb_2['end_date2']);
-  $campaign_name = $banner_mbb_2['campaign_name2'];
-  $delivering = $banner_mbb_2['delivering2'];
-  $CategoryTarget = $banner_mbb_2['category2'];
-  $PostIDTarget = $banner_mbb_2['postid2'];
-  $OrderNum = $banner_mbb_2['campaign_order_id2'];
-  $Image = $banner_mbb_2['image2'];
-  $Url = $banner_mbb_2['url2'];
-
-  // Get the desktop header backup image and URL from the 'option' object
-  $mobile_subs_ad_image = get_field('mobile_image', 'option');
-  $mobile_subs_ad_url = get_field('mobile_url', 'option');
-
-  // Get the current date and time
-  $current_date = time();
-
-  // Check if the banner is being delivered, the current date is between the start and end dates, and if the category or post ID matches the target
-   if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
-
-    // If the banner has a script, display it
-    if ($banner_mbb_2['banner_mbb_script_2']) {
-      echo $banner_mbb_2['banner_mbb_script_2'];
-    } else {
-      // Otherwise, display the banner image
-      echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
-    }
-
-    // Display additional information about the banner
-    echo "<!-- Advert details: " . $campaign_name ." | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
-
-  } else {
-    // If the banner is not being delivered or the current date is not within the start and end dates, display the desktop header backup image
-    echo '<a href="' . $mobile_subs_ad_url . '" target="_blank"><img src="' . $mobile_subs_ad_image . '" alt="' . $campaign_name  . '"></a>';
-  }
-}
+ // Check if the banner field exists
+ if ($banner_mbb_2) {
+ 
+   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
+   $start_date = strtotime($banner_mbb_2['start_date2']);
+   $end_date = strtotime($banner_mbb_2['end_date2']);
+   $campaign_name = $banner_mbb_2['campaign_name2'];
+   $delivering = $banner_mbb_2['delivering2'];
+   $CategoryTarget = $banner_mbb_2['category2'];
+   $PostIDTarget = $banner_mbb_2['postid2'];
+   $OrderNum = $banner_mbb_2['campaign_order_id2'];
+   $Image = $banner_mbb_2['image2'];
+   $Url = $banner_mbb_2['url2'];
+ 
+   // Get the desktop header backup image and URL from the 'option' object
+   $mobile_subs_ad_image = get_field('mobile_image', 'option');
+   $mobile_subs_ad_url = get_field('mobile_url', 'option');
+ 
+   // Get the current date and time
+   $current_date = time();
+ 
+   // Check if the banner is being delivered, the current date is between the start and end dates, and if the category or post ID matches the target
+    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
+ 
+     // If the banner has a script, display it
+     if ($banner_mbb_2['banner_mbb_script_2']) {
+       echo $banner_mbb_2['banner_mbb_script_2'];
+     } else {
+       // Otherwise, display the banner image
+       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
+     }
+ 
+     // Display additional information about the banner
+     echo "<!-- Advert details: " . $campaign_name ." | Order number: " . $OrderNum . " | Start date: " . date('F j, Y', $start_date) . " | End date: " . date('F j, Y', $end_date) . " -->";
+ 
+   } else {
+     // If the banner is not being delivered or the current date is not within the start and end dates, display the desktop header backup image
+     echo '<a href="' . $mobile_subs_ad_url . '" target="_blank"><img src="' . $mobile_subs_ad_image . '" alt="' . $campaign_name  . '"></a>';
+ 
+ 
+ 
+   }
+ }
 break;
 case "3":
    // Get the 'banner_mobile_bottom3' field from the 'option' object
