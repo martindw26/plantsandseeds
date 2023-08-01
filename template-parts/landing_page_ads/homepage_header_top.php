@@ -1201,22 +1201,22 @@ if ($banner_mobile_top_4) {
 }
 break;
 case "5":
-  // Get the 'banner_mobile_5' field from the 'option' object
-$banner_mbt_5 = get_field('banner_mobile_5', 'option');
-
+// Get the 'banner_desktop_5' field from the 'option' object
+$banner_mobile_top_5 = get_field('banner_mobile_top_5', 'option');
+  
 // Check if the banner field exists
-if ($banner_mbt_5) {
+if ($banner_mobile_top_5) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_mbt_5['start_date5']);
-  $end_date = strtotime($banner_mbt_5['end_date5']);
-  $campaign_name = $banner_mbt_5['campaign_name5'];
-  $delivering = $banner_mbt_5['delivering5'];
-  $CategoryTarget = $banner_mbt_5['category5'];
-  $PostIDTarget = $banner_mbt_5['postid5'];
-  $OrderNum = $banner_mbt_5['campaign_order_id5'];
-  $Image = $banner_mbt_5['image5'];
-  $Url = $banner_mbt_5['url5'];
+  $start_date = strtotime($banner_mobile_top_5['start_date5']);
+  $end_date = strtotime($banner_mobile_top_5['end_date5']);
+  $campaign_name = $banner_mobile_top_5['campaign_name5'];
+  $delivering = $banner_mobile_top_5['delivering5'];
+  $CategoryTarget = $banner_mobile_top_5['category5'];
+  $PostIDTarget = $banner_mobile_top_5['postid5'];
+  $OrderNum = $banner_mobile_top_5['campaign_order_id5'];
+  $Image = $banner_mobile_top_5['image5'];
+  $Url = $banner_mobile_top_5['url5'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $mobile_subs_ad_image = get_field('mobile_image', 'option');
@@ -1229,8 +1229,8 @@ if ($banner_mbt_5) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mbt_5['banner_mbt_script_5']) {
-      echo $banner_mbt_5['banner_mbt_script_5'];
+    if ($banner_mobile_top_5['banner_mbt_script_5']) {
+      echo $banner_mobile_top_5['banner_mbt_script_5'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -1242,6 +1242,9 @@ if ($banner_mbt_5) {
   } else {
     // If the banner is not being delivered or the current date is not within the start and end dates, display the desktop header backup image
     echo '<a href="' . $mobile_subs_ad_url . '" target="_blank"><img src="' . $mobile_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
+
+
+
   }
 }
 break;
