@@ -1440,6 +1440,7 @@ if ($banner_mobile_top_9) {
   }
 }
 break;
+case "10":
 // Get the 'banner_desktop_10' field from the 'option' object
 $banner_mobile_top_10 = get_field('banner_mobile_top_10', 'option');
   
