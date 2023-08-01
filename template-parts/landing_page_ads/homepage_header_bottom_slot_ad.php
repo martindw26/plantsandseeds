@@ -513,7 +513,7 @@ echo "No advert selected";
 
 <div class="commerce_hp_mobile">
 <div class="commerce_ldr">
-<div class="py-2">
+<div class="py-1">
 <?php
 if ($adinformation) {
     $adinformation = get_field('adinformation', 'option');
