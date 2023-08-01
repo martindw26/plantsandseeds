@@ -528,8 +528,8 @@ if ($adinformation) {
 
 <?php
 
-$LowerLimit = 1;
-$UpperLimit = 10;
+$LowerLimit = get_field('mobile_banner_bottom_min','option');
+$UpperLimit = get_field('mobile_banner_bottom_max','option');
 
 $advert = rand($LowerLimit,$UpperLimit);
 
@@ -643,8 +643,6 @@ case "2":
    } else {
      // If the banner is not being delivered or the current date is not within the start and end dates, display the desktop header backup image
      echo '<a href="' . $mobile_subs_ad_url . '" target="_blank"><img src="' . $mobile_subs_ad_image . '" alt="' . $campaign_name  . '"></a>';
- 
- 
  
    }
  }
