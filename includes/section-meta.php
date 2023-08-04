@@ -1,4 +1,4 @@
-
+<div class="container">
     <div class="row">
         <div class="card mb-3 rounded-0">
             <div class="row g-0">
@@ -26,3 +26,4 @@
         </div>
     </div>
     <hr>
+    </div>
