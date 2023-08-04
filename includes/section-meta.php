@@ -21,7 +21,7 @@
                             ?>
                             <!-- social icons -->
                             <section class="d-flex justify-content-start align-items-center">
-                            <div class="p-2">
+                            <div class="p-2 me-4">
     <i class="bi bi-person-fill" width="48" height="48"></i>
     <i class="bi bi-plus" width="48" height="48"></i>
 </div>
