@@ -58,7 +58,9 @@
                                                 
              <!-- End header image block-->
 
-
+            <div>
+              <p>header ads</p>
+            </div>
 
              <!-- Article content blocks -->
              <?php get_template_part('includes/section','reviewprojectpostcontentblocks');?>
