@@ -6,10 +6,9 @@
 
 
  <!-- Desktop Header adslot-->
- <div class="commerce_hp_desktop">
+
 <?php get_template_part( 'template-parts/landing_page_ads/homepage_header_top' );?><br>
-<!-- End Featured Post-->
-</div>
+
 
 
 <?php if( have_rows('home_page_blocks') ):
