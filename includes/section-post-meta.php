@@ -43,15 +43,14 @@ if ($tags) {
     echo '</div>';
 }
 
-
-
-
-
-
 ?>
 
 
 <br><br>
 </section>
 
+
+<?php if (get_field('affiliate_disclaimer','option')) : ?>
+<p class="affiliate-text-title text-secondary"><?php echo get_field('affiliate_disclaimer','option'); ?></p>
+<?php endif; ?>
 

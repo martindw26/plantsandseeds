@@ -71,10 +71,6 @@
              <?php get_template_part('includes/section','post-meta');?>
              <!-- End content disclaimer block-->
 
-             <?php if (get_field('affiliate_disclaimer','option')) : ?>
-            <p class="affiliate-text-title text-secondary"><?php echo get_field('affiliate_disclaimer','option'); ?></p>
-            <?php endif; ?>
-
             <!-- Article content disclaimer block -->
             <?php get_template_part('includes/section','disclaimer');?>
             <!-- End content disclaimer block-->
