@@ -8,11 +8,7 @@
   
   <div class="row">
 	
-  <!-- Desktop Header adslot-->
-  <div class="commerce_hp_desktop">
-<?php get_template_part( 'template-parts/landing_page_ads/content_header_ads' );?><br>
-<!-- End Featured Post-->
-</div>
+
 
           <div class="col-lg-8 p-lg-2 bg-white text-dark">
 
