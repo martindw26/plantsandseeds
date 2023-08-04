@@ -8,11 +8,13 @@
   
   <div class="row">
 	
-          <div class="col-lg-8 p-lg-2 bg-white text-dark">
-
-          <div>
+  <div>
               <p>header ads</p>
             </div>
+
+          <div class="col-lg-8 p-lg-2 bg-white text-dark">
+
+       
 
             <h1 class=" display-2 font-weight-bold text-dark" style=""><?php echo esc_html( get_the_title() );?><hr></h1>
 
