@@ -21,10 +21,10 @@
                             ?>
                             <!-- social icons -->
                             <section class="d-flex justify-content-start align-items-center">
-                            <a class="bi bi-facebook text-dark me-2" width="48" height="48" href="<?php the_field('facebook','option'); ?>" target="_blank"></a>
-                            <a class="bi bi-twitter text-dark me-2" width="48" height="48" href="<?php the_field('twitter','option'); ?>" target="_blank"></a>
-                            <a class="bi bi-reddit text-dark me-2" width="48" height="48" href="<?php the_field('reddit','option'); ?>" target="_blank"></a>
-                            <a class="bi bi-linkedin text-dark me-2" width="48" height="48" href="<?php the_field('linkedin','option'); ?>" target="_blank"></a>
+                            <a class="bi bi-facebook text-dark me-4" width="48" height="48" href="<?php the_field('facebook','option'); ?>" target="_blank"></a>
+                            <a class="bi bi-twitter text-dark me-4" width="48" height="48" href="<?php the_field('twitter','option'); ?>" target="_blank"></a>
+                            <a class="bi bi-reddit text-dark me-4" width="48" height="48" href="<?php the_field('reddit','option'); ?>" target="_blank"></a>
+                            <a class="bi bi-linkedin text-dark me-4" width="48" height="48" href="<?php the_field('linkedin','option'); ?>" target="_blank"></a>
                             </section>
                         </p>
                     </div>
