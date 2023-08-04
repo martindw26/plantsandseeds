@@ -10,6 +10,10 @@
 	
           <div class="col-lg-8 p-lg-2 bg-white text-dark">
 
+          <div>
+              <p>header ads</p>
+            </div>
+
             <h1 class=" display-2 font-weight-bold text-dark" style=""><?php echo esc_html( get_the_title() );?><hr></h1>
 
             <?php if (get_field('affiliate_disclaimer','option')) : ?>
@@ -48,6 +52,7 @@
 				<?php endif;?>
 				<!-- End Social share icons-->
 
+        
 
                <?php get_template_part('includes/section','reviewrating');?><br><br>
 
@@ -57,10 +62,6 @@
              <?php get_template_part('includes/section','header-image block');?>
                                                 
              <!-- End header image block-->
-
-            <div>
-              <p>header ads</p>
-            </div>
 
              <!-- Article content blocks -->
              <?php get_template_part('includes/section','reviewprojectpostcontentblocks');?>
