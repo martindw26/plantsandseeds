@@ -952,6 +952,7 @@ default:
 echo "No advert selected";
 }
 ?>
+</div>
 
 
 
