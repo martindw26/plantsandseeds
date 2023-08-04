@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">By <?php the_author_meta('display_name', 1); ?></h5>
+                        <h5 class="card-title">By <strong><?php the_author_meta('display_name', 1); ?></strong></h5>
                         <p class="card-text">
                             <?php 
                             $author_id = get_the_author_meta('ID', 1);
