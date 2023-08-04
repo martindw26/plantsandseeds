@@ -20,7 +20,9 @@
                             echo esc_html($author_bio);
                             ?>
                             <!-- social icons -->
+                            <section class="card-text">
                             <a class="bi bi-facebook text-dark  p-2" width="48" height="48" href="<?php the_field ('facebook','option');?>"target="_blank" /></a>
+                            </section>
                         </p>
                     </div>
                 </div>
