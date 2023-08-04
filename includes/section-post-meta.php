@@ -46,7 +46,7 @@ if ($tags) {
 ?>
 
 
-<br><br>
+<br>
 </section>
 
 
