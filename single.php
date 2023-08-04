@@ -20,11 +20,6 @@
                 By <?php the_author_meta('display_name', 1); ?> | Posted <?php echo get_the_date();?>
             </p>
 
-
-            <?php if (get_field('affiliate_disclaimer','option')) : ?>
-            <p class="affiliate-text-title text-secondary"><?php echo get_field('affiliate_disclaimer','option'); ?></p>
-            <?php endif; ?>
-
             <?php
               $featured_post_label_text = get_field('featured_post_label_text');
               $featured_post_label_alt_text = get_field('featured_post_label_alt_text');
@@ -75,6 +70,10 @@
              <!-- Article content disclaimer block -->
              <?php get_template_part('includes/section','post-meta');?>
              <!-- End content disclaimer block-->
+
+             <?php if (get_field('affiliate_disclaimer','option')) : ?>
+            <p class="affiliate-text-title text-secondary"><?php echo get_field('affiliate_disclaimer','option'); ?></p>
+            <?php endif; ?>
 
             <!-- Article content disclaimer block -->
             <?php get_template_part('includes/section','disclaimer');?>
