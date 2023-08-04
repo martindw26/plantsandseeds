@@ -1,6 +1,6 @@
 
     <div class="row">
-        <div class="card mb-3 rounded-0" style="max-width: 540px;">
+        <div class="card mb-3 rounded-0">
             <div class="row g-0">
                 <div class="col-md-4" style="padding:0;">
                     <?php
