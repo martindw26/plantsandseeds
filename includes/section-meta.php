@@ -26,10 +26,22 @@
                             <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"></path>
                             </svg>
                             <i class="bi bi-chevron-double-right me-4"></i>
-                            <a class="bi bi-facebook text-dark me-4" width="48" height="48" href="<?php the_field('facebook','option'); ?>" target="_blank"></a>
-                            <a class="bi bi-twitter text-dark me-4" width="48" height="48" href="<?php the_field('twitter','option'); ?>" target="_blank"></a>
-                            <a class="bi bi-reddit text-dark me-4" width="48" height="48" href="<?php the_field('reddit','option'); ?>" target="_blank"></a>
-                            <a class="bi bi-linkedin text-dark me-4" width="48" height="48" href="<?php the_field('linkedin','option'); ?>" target="_blank"></a>
+                            <?php if( get_field('facebook','option') ): ?>
+    <a class="bi bi-facebook text-dark me-4" width="48" height="48" href="<?php the_field('facebook','option'); ?>" target="_blank"></a>
+<?php endif; ?>
+
+<?php if( get_field('twitter','option') ): ?>
+    <a class="bi bi-twitter text-dark me-4" width="48" height="48" href="<?php the_field('twitter','option'); ?>" target="_blank"></a>
+<?php endif; ?>
+
+<?php if( get_field('reddit','option') ): ?>
+    <a class="bi bi-reddit text-dark me-4" width="48" height="48" href="<?php the_field('reddit','option'); ?>" target="_blank"></a>
+<?php endif; ?>
+
+<?php if( get_field('linkedin','option') ): ?>
+    <a class="bi bi-linkedin text-dark me-4" width="48" height="48" href="<?php the_field('linkedin','option'); ?>" target="_blank"></a>
+<?php endif; ?>
+
                             </section>
                         </p>
                     </div>
