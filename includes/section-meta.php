@@ -1,4 +1,4 @@
-<div class="container-fluid border border-dark border-1 pb-1 bg-light">
+
     <div class="row">
         <div class="card mb-3 rounded-0" style="max-width: 540px;">
             <div class="row g-0">
@@ -26,4 +26,3 @@
         </div>
     </div>
     <hr>
-</div>
