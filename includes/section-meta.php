@@ -21,7 +21,11 @@
                             ?>
                             <!-- social icons -->
                             <section class="d-flex justify-content-start align-items-center">
-                            <i class="bi bi-person-fill-add p-2" width="48" height="48"></i>
+                            <div class="p-2">
+    <i class="bi bi-person-fill" width="48" height="48"></i>
+    <i class="bi bi-plus" width="48" height="48"></i>
+</div>
+
                             <a class="bi bi-facebook text-dark me-4" width="48" height="48" href="<?php the_field('facebook','option'); ?>" target="_blank"></a>
                             <a class="bi bi-twitter text-dark me-4" width="48" height="48" href="<?php the_field('twitter','option'); ?>" target="_blank"></a>
                             <a class="bi bi-reddit text-dark me-4" width="48" height="48" href="<?php the_field('reddit','option'); ?>" target="_blank"></a>
