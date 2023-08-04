@@ -1,6 +1,7 @@
-<div class="container-fluid border border-dark border-1 pb-1 bg-light">
+<div class="container-fluid border border-dark border border-1 pb-1 bg-light">
     <div class="row">
-        <div class="card mb-3 rounded-0" style="max-width: 540px;">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="card mb-3 rounded-0" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4" style="padding:0;">
                     <?php
@@ -24,6 +25,7 @@
                 </div>
             </div>
         </div>
+      </div>
     </div>
-    <hr>
-</div>
+  </div>
+  <hr>
