@@ -19,6 +19,8 @@
                             $author_bio = get_the_author_meta('description', $author_id);
                             echo esc_html($author_bio);
                             ?>
+                            <!-- social icons -->
+                            <a class="bi bi-facebook text-dark  p-2" width="48" height="48" href="<?php the_field ('facebook','option');?>"target="_blank" /></a>
                         </p>
                     </div>
                 </div>
