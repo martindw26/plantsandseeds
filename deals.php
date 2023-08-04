@@ -14,6 +14,11 @@
 
             <h1 class="display-4 font-weight-bold text-dark"><?php echo esc_html( get_the_title() );?><i> Deals</i></h1><hr>
 
+            
+            <p class="card-text" style="color: grey; font-size: small;">
+                By <?php the_author_meta('display_name', 1); ?> | Posted <?php echo get_the_date();?>
+            </p>
+
 				<!-- Social share icons-->
 				<?php $enable_in_article = get_field('on_article','option');?>
 				<?php if($enable_in_article):?>

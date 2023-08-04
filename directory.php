@@ -15,6 +15,11 @@ get_header();
 
             <h1 class="display-2 font-weight-bold"><?php echo esc_html(get_the_title()); ?></h1>
 
+            
+            <p class="card-text" style="color: grey; font-size: small;">
+                By <?php the_author_meta('display_name', 1); ?> | Posted <?php echo get_the_date();?>
+            </p>
+
             <!-- Social share icons-->
             <?php $enable_in_article = get_field('on_article', 'option'); ?>
             <?php if ($enable_in_article) : ?>
