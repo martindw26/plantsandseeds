@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid ps-2 pe-2">
     <div class="row">
         <div class="card mb-3 rounded-0">
             <div class="row g-0">
