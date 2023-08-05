@@ -26,7 +26,7 @@
 
 <blockquote class="blockquote"><?php echo $Product_description; ?></blockquote>
 
-<div class="container">
+
             <div class="row horizontal-scroll">
 <?php if (have_rows('image_slider')): ?>
 
@@ -43,7 +43,7 @@
 <p>No jump points found.</p>
 <?php endif; ?>
 </div>
-</div>
+
 
 
 <?php if(have_rows('specs_column_horizontal_block')):?>
