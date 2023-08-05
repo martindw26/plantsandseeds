@@ -44,9 +44,13 @@ a.row.horizontal-scroll-anchor {
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
-<a class="row horizontal-scroll-anchor" href="#<?php echo esc_url(get_sub_field('anchor')); ?>">
-    <img class="img-fluid" src="<?php echo esc_url(get_sub_field('image')); ?>" alt="Image description" style="height:100px; width:200px;">
+<?php $anchor = esc_url(get_sub_field('anchor')); ?>
+<?php $image_url = esc_url(get_sub_field('image')); ?>
+
+<a class="row horizontal-scroll-anchor" href="#<?php echo $anchor; ?>">
+    <img class="img-fluid" src="<?php echo $image_url; ?>" alt="Image description" style="height:100px; width:200px;">
 </a>
+
     
 
 <?php endwhile; ?>
