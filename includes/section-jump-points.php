@@ -19,6 +19,10 @@
   margin-right: 10px;
 }
 
+a.row.horizontal-scroll-anchor {
+    max-width: 230px;
+}
+
 </style>
 
 <!--
@@ -40,8 +44,8 @@
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
-<a href="#">
-  <img class="img-fluid" src="https://techhobbyist.co.uk/wp-content/uploads/2023/07/Arduino-Nano-RP2040-Connect-with-headers.png" style="height:100px; width:200px;" />
+<a class="row horizontal-scroll-anchor" href="#">
+<img class="img-fluid" src="https://techhobbyist.co.uk/wp-content/uploads/2023/07/Arduino-Nano-RP2040-Connect-with-headers.png" style="height:100px; width:200px;">
 </a>
 
 
