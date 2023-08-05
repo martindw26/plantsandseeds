@@ -28,20 +28,7 @@
 
 
             
-<?php if (have_rows('image_slider')): ?>
-
-<?php while (have_rows('image_slider')): the_row(); ?>
-<div class="row horizontal-scroll">
-<?php $image_url = esc_url(get_sub_field('image_slides')); ?>
-
-    <img class="img-fluid" src="<?php echo $image_url; ?>" alt="Image description" style="height:100px; width:200px;">
-
-<?php endwhile; ?>
-</div>
-<?php else: ?>
-<!-- If there are no jump points -->
-<p>No jump points found.</p>
-<?php endif; ?>
+>
 
 
 
