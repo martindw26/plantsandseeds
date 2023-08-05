@@ -42,10 +42,11 @@
 				      <!-- End Social share icons-->
 
             
+              <br><br>    
+
                <!-- Jump points-->                                  
                <?php get_template_part('includes/section','jump-points');?>
-                                                
-                                                <!-- End header image block-->
+               <!-- End header image block-->
 
 
 
