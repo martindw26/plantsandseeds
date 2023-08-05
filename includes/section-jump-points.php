@@ -39,16 +39,13 @@
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
-	
-        <img src class="img-fluid"><?php the_sub_field('jump-image');?>/>
-        		
-
-<?php endwhile;?>	
-
-</table>			
-<?php endif; ?>
-
+    <img class="img-fluid" src="<?php the_sub_field('jump-image'); ?>" />
 
 <?php endwhile; ?>
+
+<?php else: ?>
+<!-- If there are no jump points -->
+<p>No jump points found.</p>
 <?php endif; ?>
+
 
