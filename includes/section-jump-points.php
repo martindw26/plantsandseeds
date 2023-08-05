@@ -35,7 +35,7 @@
             </div>
 -->
 <div class="container">
-            <div class="row horizontal-scroll">
+            <div class=" horizontal-scroll">
 <?php if (have_rows('jump_points')): ?>
 
 <?php while (have_rows('jump_points')): the_row(); ?>
