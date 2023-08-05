@@ -35,7 +35,7 @@
             </div>
 -->
 
-<?php var_dump($jump_image_url);?>
+
 
 
 <?php
@@ -52,7 +52,7 @@ if (have_rows('jump_points')) {
         $jump_image_alt = esc_attr($jump_image['alt']);
         $jump_anchor_escaped = esc_attr($jump_anchor);
         ?>
-
+<?php var_dump($jump_image_url);?>
         <!-- Output the jump point data -->
         <div class="jump-point">
             <?php if ($jump_image_url) : ?>
