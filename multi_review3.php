@@ -41,7 +41,7 @@
 				      <?php endif;?>
 				      <!-- End Social share icons-->
 
-            <?php $jump_points = get_field('jump_points'); ?>
+            <?php $jump_points = get_field('jump_points_toggle'); ?>
             <?php if ($jump_points === 'on'): ?>
             <div id="jumppoint">
             <div class="container">
