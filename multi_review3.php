@@ -12,12 +12,6 @@
 
             <h1 class="display-2 font-weight-bold"><?php echo esc_html( get_the_title() );?><hr></h1>
 
-            <?php if ($jump_point_acf === 'yes'): ?>
-              <div id="jumppoint">
-                <p>Jump points</p>
-              </div>
-            <?php endif; ?>
-            
             <p class="card-text" style="color: grey; font-size: small;">
                 By <?php the_author_meta('display_name', 1); ?> | Posted <?php echo get_the_date();?>
             </p>
@@ -39,16 +33,21 @@
               ?>
 
             				<!-- Social share icons-->
-				<?php $enable_in_article = get_field('on_article','option');?>
-				<?php if($enable_in_article):?>
-					<?php get_template_part('includes/section','social_sharefrontpagearticle');?>
-				<?php else:?>
-					<?php echo '<style>{ display:none;}</style>';?>
-				<?php endif;?>
-				<!-- End Social share icons-->
+      				<?php $enable_in_article = get_field('on_article','option');?>
+			      	<?php if($enable_in_article):?>
+					    <?php get_template_part('includes/section','social_sharefrontpagearticle');?>
+				      <?php else:?>
+					    <?php echo '<style>{ display:none;}</style>';?>
+				      <?php endif;?>
+				      <!-- End Social share icons-->
 
-             <!-- header image block-->
-                                                
+            <?php if ($jump_point_acf === 'on'): ?>
+            <div id="jumppoint">
+            <p>Jump points</p>
+            </div>
+            <?php endif; ?>
+
+             <!-- header image block-->                                  
              <?php get_template_part('includes/section','header-image block');?>
                                                 
              <!-- End header image block-->
