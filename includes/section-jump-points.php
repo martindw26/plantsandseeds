@@ -40,19 +40,7 @@
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
-<div class="container">
-  <div class="row horizontal-scroll">
-
-    <div class="col-6 col-sm-3">
-      <a href="<?php echo esc_url(the_sub_field('anchor')); ?>">
-        <img class="img-fluid" src="<?php echo esc_url(the_sub_field('image')); ?>" style="height: 100px; width: 200px;" />
-      </a>
-    </div>
-
-  </div>
-</div>
-
-
+    <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px;" />
     
 
 <?php endwhile; ?>
