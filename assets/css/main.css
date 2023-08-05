@@ -532,6 +532,7 @@ span.tag-cat-btns:visited {
   /* Other styling properties for the jumppoint div */
 }
 
+/* Custom CSS for the horizontal scroller */
 .horizontal-scroll {
   display: flex;
   flex-wrap: nowrap;
