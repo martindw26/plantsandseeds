@@ -39,7 +39,7 @@
 
 
 $post_id = get_the_ID();
-$jump_points = get_field('jump_points', $post_id);
+$jump_points = get_field('jump_points');
 
 if ($jump_points) {
     echo '<ul>';
