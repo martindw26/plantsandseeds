@@ -45,10 +45,10 @@ if ($jump_points) {
     echo '<ul>';
 
     foreach ($jump_points as $jump_point) {
-        if (isset($jump_point['jump-Image']['url']) && isset($jump_point['jump-anchor'])) {
+        if (get_sub_field('jump-Image') && get_sub_field('jump-anchor')) {
             echo '<li>';
-            $image = $jump_point['jump-Image'];
-            $anchor = $jump_point['jump-anchor'];
+            $image = get_sub_field('jump-Image');
+            $anchor = get_sub_field('jump-anchor');
 
             echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
             echo '<a href="#' . $anchor . '">' . $anchor . '</a>';
@@ -63,6 +63,7 @@ if ($jump_points) {
 } else {
     echo 'No jump points found for this post or page.';
 }
+
 
 
 
