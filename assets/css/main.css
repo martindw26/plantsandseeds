@@ -527,7 +527,7 @@ span.tag-cat-btns:visited {
 
 /* Jump Points */
 
-.jumppoints{
+div#jumppoint{
   height:100px;
-  background-color: #f1f1f1;
+
 }
