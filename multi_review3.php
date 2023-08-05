@@ -12,6 +12,12 @@
 
             <h1 class="display-2 font-weight-bold"><?php echo esc_html( get_the_title() );?><hr></h1>
 
+            <?php if ($jumppoint): ?>
+            <div id="jumppoint">
+            <p>Jump points</p>
+            </div>
+            <?php endif; ?>
+
             
             <p class="card-text" style="color: grey; font-size: small;">
                 By <?php the_author_meta('display_name', 1); ?> | Posted <?php echo get_the_date();?>
