@@ -525,3 +525,9 @@ span.tag-cat-btns:visited {
   text-decoration: none !important;
 }
 
+/* Jump Points */
+
+#jumppoints{
+  height:100px;
+  background-color: #f1f1f1;
+}
