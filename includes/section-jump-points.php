@@ -40,6 +40,8 @@
 
 $post_id = get_the_ID();
 $jump_points = get_field('jump_points');
+$image = get_sub_field('jump-Image');
+$anchor = get_sub_field('jump-anchor');
 
 if ($jump_points) {
     echo '<ul>';
@@ -58,7 +60,7 @@ if ($jump_points) {
             var_dump($anchor);
             echo "</pre>";
             
-            the_sub_field('jump-Image');
+            
 
             echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
 
