@@ -41,9 +41,10 @@
 <?php while (have_rows('jump_points')): the_row(); ?>
 
 <div style="display: flex; align-items: center;">
-  <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px;" />
+  <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px; margin-right: 10px;" />
   <i class="bi bi-arrow-down"></i>
 </div>
+
 
     
 
