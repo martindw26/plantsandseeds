@@ -38,13 +38,15 @@
 <?php
 
 
-$post_id = get_the_ID();
-$jump_points = get_field('jump_points');
-$image = get_sub_field('jump-Image');
-$anchor = get_sub_field('jump-anchor');
+
 
 if ($jump_points) {
     echo '<ul>';
+
+    $post_id = get_the_ID();
+    $jump_points = get_field('jump_points');
+    $image = get_sub_field('jump-Image');
+    $anchor = get_sub_field('jump-anchor');
 
     foreach ($jump_points as $jump_point) {
         if (get_sub_field('jump-Image') && get_sub_field('jump-anchor')) {
