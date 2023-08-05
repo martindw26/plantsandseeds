@@ -37,27 +37,30 @@
 
 
 <?php
-// Check if the repeater field has rows of data
-if (have_rows('jump_points')) {
-    // Loop through the rows of data
-    while (have_rows('jump_points')) {
-        the_row(); // This function sets up the row data
-        $jump_image = get_sub_field('jump-Image');
-        $jump_anchor = get_sub_field('jump-anchor');
-        ?>
+// Assuming you have the post ID or page ID
+$post_id = get_the_ID();
 
-        <!-- Output the jump point data -->
-        <div class="jump-point">
-            <?php if ($jump_image) : ?>
-                <img src="<?php echo esc_url($jump_image['url']); ?>" alt="<?php echo esc_attr($jump_image['alt']); ?>">
-            <?php endif; ?>
-            <?php if ($jump_anchor) : ?>
-                <a href="#<?php echo esc_attr($jump_anchor); ?>"><?php echo esc_html($jump_anchor); ?></a>
-            <?php endif; ?>
-        </div>
+// Get the 'jump-points' repeater field value
+$jump_points = get_field('jump_points', $post_id);
 
-        <?php
+// Check if there are any jump points
+if ($jump_points) {
+    echo '<ul>';
+
+    // Loop through the jump points
+    foreach ($jump_points as $jump_point) {
+        echo '<li>';
+        // Get the image URL and anchor text for each jump point
+        $image = $jump_point['jump-Image'];
+        $anchor = $jump_point['jump-anchor'];
+
+        // Display the image and anchor
+        echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
+        echo '<a href="#' . $anchor . '">' . $anchor . '</a>';
+
+        echo '</li>';
     }
+
+    echo '</ul>';
 }
 ?>
-
