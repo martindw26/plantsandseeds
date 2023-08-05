@@ -35,6 +35,8 @@
             </div>
 -->
 
+<?php var_dump($jump_image_url);?>
+
 
 <?php
 // Check if the repeater field has rows of data
