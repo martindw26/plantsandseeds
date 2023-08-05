@@ -47,11 +47,10 @@ a.row.horizontal-scroll-anchor {
 <?php $anchor = esc_url(get_sub_field('anchor')); ?>
 <?php $image_url = esc_url(get_sub_field('image')); ?>
 
-<div id="<?php echo $anchor; ?>">
-    <a class="row horizontal-scroll-anchor">
-        <img class="img-fluid" src="<?php echo $image_url; ?>" alt="Image description" style="height: 100px; width: 200px;">
-    </a>
-</div>
+
+<a class="row horizontal-scroll-anchor" href="#<?php echo $anchor; ?>">
+    <img class="img-fluid" src="<?php echo $image_url; ?>" alt="Image description" style="height:100px; width:200px;">
+</a>
 
     
 
