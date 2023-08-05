@@ -10,7 +10,7 @@
 <h2 class="p-2 card-title font-weight-bold"><u><?php echo $Product_title; ?></u></h2>
 
 <?php $section_link = ('section_link');?>
-<a href='<?php echo $section_link; ?>'></a>
+<a href="#<?php echo esc_attr($section_link;); ?>"></a>
 
 <?php $ProductRating = get_sub_field('p_rating');?>
 <div class="row">
