@@ -528,6 +528,6 @@ span.tag-cat-btns:visited {
 /* Jump Points */
 
 #jumppoint {
-  height: 100%;
+  height: 100px;
   /* Other styling properties for the jumppoint div */
 }
