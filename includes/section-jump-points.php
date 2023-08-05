@@ -42,8 +42,8 @@ if (have_rows('jump_points')) {
     // Loop through the rows of data
     while (have_rows('jump_points')) {
         the_row(); // This function sets up the row data
-        $jump_image = get_sub_field('jump_image');
-        $jump_anchor = get_sub_field('jump_anchor');
+        $jump_image = get_sub_field('jump-image');
+        $jump_anchor = get_sub_field('jump-anchor');
 
         // Escape the output using appropriate functions
         $jump_image_url = esc_url($jump_image['url']);
