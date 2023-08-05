@@ -26,13 +26,6 @@
 
 <blockquote class="blockquote"><?php echo $Product_description; ?></blockquote>
 
-
-            
->
-
-
-
-
 <?php if(have_rows('specs_column_horizontal_block')):?>
 
 <table class="table table-light table-bordered p-2">

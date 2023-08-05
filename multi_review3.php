@@ -60,12 +60,6 @@
              <div class=" bg-secondary text-light p-4 mb-4 border-dark lead">
              <?php the_field('seo_paragraph');?> 
              </div>
-
-             <!-- Article content blocks -->
-             <?php get_template_part('includes/section','multiproductjump');?>
-             <!-- End Article content blocks-->
-
-
        
              <!-- Article content blocks -->
              <?php get_template_part('includes/section','multiproduct3');?>
