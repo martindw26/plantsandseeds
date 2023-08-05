@@ -65,6 +65,15 @@ if ($jump_points) {
 
             echo '</li>';
         } else {
+
+          echo "<pre>";
+          echo "Image: ";
+          var_dump($image);
+          
+          echo "Anchor: ";
+          var_dump($anchor);
+          echo "</pre>";
+
             echo '<li>Jump point data missing or incomplete.</li>';
         }
     }
