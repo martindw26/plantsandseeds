@@ -28,7 +28,7 @@
 
 <?php while (have_rows('image_slider')): the_row(); ?>
 
-<?php $image_url = esc_url(get_sub_field('image')); ?>
+<?php $image_url = esc_url(get_sub_field('image_slides')); ?>
 
     <img class="img-fluid" src="<?php echo $image_url; ?>" alt="Image description" style="height:100px; width:200px;">
 
