@@ -26,22 +26,24 @@
 
 <blockquote class="blockquote"><?php echo $Product_description; ?></blockquote>
 
-<div class="image-slider-container">
-    <?php if (have_rows('image_slider')) : ?>
-        <div class="row horizontal-scroll">
-            <?php while (have_rows('image_slider')) : the_row(); ?>
-                <?php $image_url = esc_url(get_sub_field('image')); ?>
-                <?php if ($image_url) : ?>
-                    <img class="img-fluid" src="<?php echo $image_url; ?>" alt="Image" style="height:100px; width:200px;">
-                <?php endif; ?>
-            <?php endwhile; ?>
-        </div>
-    <?php else : ?>
-        <!-- If there are no jump points -->
-        <p>No jump points found.</p>
-    <?php endif; ?>
-</div>
+<div class="container">
+            <div class="row horizontal-scroll">
+<?php if (have_rows('image_slider')): ?>
 
+<?php while (have_rows('image_slider')): the_row(); ?>
+
+<?php $image_url = esc_url(get_sub_field('image_slides')); ?>
+
+    <img class="img-fluid" src="<?php echo $image_url; ?>" alt="Image description" style="height:100px; width:200px;">
+
+<?php endwhile; ?>
+
+<?php else: ?>
+<!-- If there are no jump points -->
+<p>No jump points found.</p>
+<?php endif; ?>
+</div>
+</div>
 
 
 <?php if(have_rows('specs_column_horizontal_block')):?>
