@@ -41,7 +41,7 @@
 				      <?php endif;?>
 				      <!-- End Social share icons-->
 
-             
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
             <div class="container">
             <div class="row horizontal-scroll">
                 <!-- Add your scrollable content here -->
