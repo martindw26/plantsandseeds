@@ -41,7 +41,7 @@
 				      <?php endif;?>
 				      <!-- End Social share icons-->
 
-            <?php if ($jump_point_acf === 'on'): ?>
+            <?php if ($jump_points === 'on'): ?>
             <div id="jumppoint">
             <p>Jump points</p>
             </div>
