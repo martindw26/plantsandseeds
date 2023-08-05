@@ -119,6 +119,9 @@ if($currency == 'GBP') {
 <hr>
 <!-- End Social share icons-->
 
+
+
+
 </section>
 <?php endwhile; ?>
 <?php endif; ?>

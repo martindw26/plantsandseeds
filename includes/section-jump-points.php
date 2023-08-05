@@ -35,7 +35,20 @@
             </div>
 -->
 
+<?php if (have_rows('jump_points')): ?>
+
+<?php while (have_rows('jump_points')): the_row(); ?>
+
+	
+        <img src class="img-fluid"><?php the_sub_field('jump-image');?>/>
+        		
+
+<?php endwhile;?>	
+
+</table>			
+<?php endif; ?>
 
 
-
+<?php endwhile; ?>
+<?php endif; ?>
 
