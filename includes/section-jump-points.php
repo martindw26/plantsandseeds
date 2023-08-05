@@ -41,13 +41,9 @@
 <?php while (have_rows('jump_points')): the_row(); ?>
 
 <div style="position: relative; display: inline-block;">
-  <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height: 100px; width: 200px;" />
-  <div style="position: absolute; top: 0; left: 0;">
-    <!-- You can replace the arrow image URL with your own arrow image -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-</svg>
+  <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px;" />
+  <div style="position: absolute; top: 0; left: 0; padding: 5px;">
+    <i class="bi bi-chevron-double-down" style="width: 16px; height: 16px;"></i> 
   </div>
 </div>
 
