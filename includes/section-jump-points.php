@@ -9,7 +9,7 @@
 }
 
 /* Optional: Add styles for individual items */
-.horizontal-scroll .col-3 {
+.horizontal-scroll row {
   /* Customize styles for each item in the scroller */
   /* For example: */
   padding: 10px;
