@@ -45,7 +45,7 @@ a.row.horizontal-scroll-anchor {
 <?php while (have_rows('jump_points')): the_row(); ?>
 
 <a class="row horizontal-scroll-anchor" href="#">
-<img class="img-fluid" src="<?php echo esc_url(the_sub_field('image')); ?>" style="height:100px; width:200px;">
+<img class="img-fluid" src="<?php echo esc_url(the_sub_field('image')); ?>" style="height:100px; width:200px; padding:2px">
 </a>
 
 
