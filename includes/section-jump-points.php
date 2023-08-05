@@ -21,15 +21,46 @@
 
 </style>
 
-             
+<!--
             <div class="container">
             <div class="row horizontal-scroll">
-                <!-- Add your scrollable content here -->
+
                 <div class="col-6 col-sm-3">Item 1</div>
                 <div class="col-6 col-sm-3">Item 2</div>
                 <div class="col-6 col-sm-3">Item 3</div>
                 <div class="col-6 col-sm-3">Item 4</div>
                 <div class="col-6 col-sm-3">Item 5</div>
-                <!-- Add more items as needed -->
+
             </div>
             </div>
+-->
+
+
+<?php
+// Assuming you have the post ID or page ID
+$post_id = get_the_ID();
+
+// Get the 'jump-points' repeater field value
+$jump_points = get_field('jump_points', $post_id);
+
+// Check if there are any jump points
+if ($jump_points) {
+    echo '<ul>';
+
+    // Loop through the jump points
+    foreach ($jump_points as $jump_point) {
+        echo '<li>';
+        // Get the image URL and anchor text for each jump point
+        $image = $jump_point['jump_image'];
+        $anchor = $jump_point['jump_anchor'];
+
+        // Display the image and anchor
+        echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
+        echo '<a href="#' . $anchor . '">' . $anchor . '</a>';
+
+        echo '</li>';
+    }
+
+    echo '</ul>';
+}
+?>
