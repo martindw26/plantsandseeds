@@ -37,37 +37,38 @@
 
 <?php if (have_rows('jump_points')): ?>
 
-  <ul>
+<ul>
 
-  <?php while (have_rows('jump_points')): the_row(); ?>
+<?php while (have_rows('jump_points')): the_row(); ?>
 
-      <?php if (get_sub_field('jump-Image') && get_sub_field('jump-anchor')): ?>
+    <?php if (get_sub_field('jump-Image') && get_sub_field('jump-anchor')): ?>
 
-          <li>
-              <?php
-              $image = get_sub_field('jump-Image');
-              $anchor = get_sub_field('jump-anchor');
-              ?>
-              <a href="#<?php echo $anchor; ?>">
-                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-              </a>
-              <a href="#<?php echo $anchor; ?>"><?php echo $anchor; ?></a>
-          </li>
+        <li>
+            <?php
+            $image = get_sub_field('jump-Image');
+            $anchor = get_sub_field('jump-anchor');
+            ?>
+            <a href="#<?php echo $anchor; ?>">
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+            </a>
+            <a href="#<?php echo $anchor; ?>"><?php echo $anchor; ?></a>
+        </li>
 
-      <?php else: ?>
+    <?php else: ?>
 
-          <li>Jump point data missing or incomplete.</li>
+        <li>Jump point data missing or incomplete.</li>
 
-      <?php endif; ?>
+    <?php endif; ?>
 
-  <?php endwhile; ?>
+<?php endwhile; ?>
 
-  </ul>
+</ul>
 
 <?php else: ?>
 
-  No jump points found for this post or page.
+No jump points found for this post or page.
 
 <?php endif; ?>
+
 
 
