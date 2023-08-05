@@ -48,10 +48,9 @@ a.row.horizontal-scroll-anchor {
 <?php $image_url = esc_url(get_sub_field('image')); ?>
 
 
-     	
-
+<a class="row horizontal-scroll-anchor" href="#<?php echo $anchor; ?>">
     <img class="img-fluid" src="<?php echo $image_url; ?>" alt="Image description" style="height:100px; width:200px;">
-
+</a>
 
 
     
