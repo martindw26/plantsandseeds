@@ -35,32 +35,36 @@
             </div>
 -->
 
-
 <?php
-// Assuming you have the post ID or page ID
-$post_id = get_the_ID();
 
-// Get the 'jump-points' repeater field value
+
+$post_id = get_the_ID();
 $jump_points = get_field('jump_points', $post_id);
 
-// Check if there are any jump points
 if ($jump_points) {
     echo '<ul>';
 
-    // Loop through the jump points
     foreach ($jump_points as $jump_point) {
-        echo '<li>';
-        // Get the image URL and anchor text for each jump point
-        $image = $jump_point['jump-Image'];
-        $anchor = $jump_point['jump-anchor'];
+        if (isset($jump_point['jump-Image']['url']) && isset($jump_point['jump-anchor'])) {
+            echo '<li>';
+            $image = $jump_point['jump-Image'];
+            $anchor = $jump_point['jump-anchor'];
 
-        // Display the image and anchor
-        echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
-        echo '<a href="#' . $anchor . '">' . $anchor . '</a>';
+            echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
+            echo '<a href="#' . $anchor . '">' . $anchor . '</a>';
 
-        echo '</li>';
+            echo '</li>';
+        } else {
+            echo '<li>Jump point data missing or incomplete.</li>';
+        }
     }
 
     echo '</ul>';
+} else {
+    echo 'No jump points found for this post or page.';
 }
+
+
+
+
 ?>
