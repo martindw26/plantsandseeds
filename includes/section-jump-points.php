@@ -39,7 +39,7 @@
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
-    <img class="img-fluid" src="<?php the_sub_field('jump-image'); ?>" />
+    <img class="img-fluid" src="<?php the_sub_field('image'); ?>" />
 
 <?php endwhile; ?>
 
