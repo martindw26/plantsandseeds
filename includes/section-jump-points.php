@@ -19,6 +19,20 @@
   margin-right: 10px;
 }
 
+/* Custom CSS */
+.image-container {
+  position: relative;
+  display: inline-block; /* or use 'block' if you want the arrows to be on a separate line */
+}
+
+.arrow-icon-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
 </style>
 
 <!--
@@ -40,12 +54,13 @@
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
-<div style="position: relative; display: inline-block;">
-  <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px;" />
-  <div style="position: absolute; top: 0; left: 0; padding: 5px;">
-    <i class="bi bi-chevron-double-down" style="width: 16px; height: 16px;"></i> 
+<div class="image-container">
+  <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height: 100px; width: 200px;" />
+  <div class="arrow-icon-container">
+    <i class="bi bi-arrow-down"></i>
   </div>
 </div>
+
 
 <?php endwhile; ?>
 
