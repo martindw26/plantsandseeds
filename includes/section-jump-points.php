@@ -37,33 +37,22 @@
 
 <?php
 
-
-
+$post_id = get_the_ID();
+$jump_points = get_field('jump_points');
 
 if ($jump_points) {
     echo '<ul>';
+
     foreach ($jump_points as $jump_point) {
-        if (get_sub_field('jump-Image') && get_sub_field('jump-anchor')) {
+        $image = $jump_point['jump-Image'];
+        $anchor = $jump_point['jump-anchor'];
+
+        if ($image && $anchor) {
             echo '<li>';
-            $jump_points = get_field('jump_points');
-            $image = get_sub_field('jump-Image');
-            $anchor = get_sub_field('jump-anchor');
-
             echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
-
             echo '<a href="#' . $anchor . '">' . $anchor . '</a>';
-
             echo '</li>';
         } else {
-
-          echo "<pre>";
-          echo "Image: ";
-          var_dump($image);
-          
-          echo "Anchor: ";
-          var_dump($anchor);
-          echo "</pre>";
-
             echo '<li>Jump point data missing or incomplete.</li>';
         }
     }
@@ -72,9 +61,4 @@ if ($jump_points) {
 } else {
     echo 'No jump points found for this post or page.';
 }
-
-
-
-
-
 ?>
