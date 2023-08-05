@@ -41,12 +41,12 @@
 				      <?php endif;?>
 				      <!-- End Social share icons-->
 
-            <?php $jump_points = get_field('jump_points_toggle'); ?>
-            <?php if ($jump_points === 'on'): ?>
+            <?php $jump_points_toggle = get_field('jump_points_toggle'); ?>
+            <?php if ($jump_points_toggle === 'on'): ?>
             <div id="jumppoint">
             <div class="container">
             <div class="row horizontal-scroll">
-            <?php while (have_rows('jump')) : the_row(); ?>
+            <?php while (have_rows('jump_point')) : the_row(); ?>
             <?php
             $image = get_sub_field('image');
             $anchor = get_sub_field('anchor');
