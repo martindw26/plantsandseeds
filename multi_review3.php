@@ -42,56 +42,17 @@
 				      <!-- End Social share icons-->
 
              
-              <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizontal Scroller</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Add your custom CSS file if necessary -->
-  <!-- <link href="styles.css" rel="stylesheet"> -->
-
-<style>
-/* Custom CSS for the horizontal scroller */
-.horizontal-scroll {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
-  padding-bottom: 15px; /* Optional: Add some padding at the bottom to accommodate the scrollbar */
-}
-
-/* Optional: Add styles for individual items */
-.horizontal-scroll .col-3 {
-  /* Customize styles for each item in the scroller */
-  /* For example: */
-  padding: 10px;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-</style>
-
-</head>
-<body>
- <div class="container">
-    <div class="row horizontal-scroll">
-      <!-- Add your scrollable content here -->
-      <div class="col-6 col-sm-3">Item 1</div>
-      <div class="col-6 col-sm-3">Item 2</div>
-      <div class="col-6 col-sm-3">Item 3</div>
-      <div class="col-6 col-sm-3">Item 4</div>
-      <div class="col-6 col-sm-3">Item 5</div>
-      <!-- Add more items as needed -->
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+            <div class="container">
+            <div class="row horizontal-scroll">
+                <!-- Add your scrollable content here -->
+                <div class="col-6 col-sm-3">Item 1</div>
+                <div class="col-6 col-sm-3">Item 2</div>
+                <div class="col-6 col-sm-3">Item 3</div>
+                <div class="col-6 col-sm-3">Item 4</div>
+                <div class="col-6 col-sm-3">Item 5</div>
+                <!-- Add more items as needed -->
+            </div>
+            </div>
   
 
 
