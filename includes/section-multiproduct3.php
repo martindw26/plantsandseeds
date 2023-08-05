@@ -9,7 +9,7 @@
 
 <h2 class="p-2 card-title font-weight-bold"><u><?php echo $Product_title; ?></u></h2>
 
-<?php $section_link = 'section_link'; ?>
+<?php $section_link get_sub_field ('section_link'); ?>
 <a href="#<?php echo esc_attr($section_link); ?>"></a>
 
 
