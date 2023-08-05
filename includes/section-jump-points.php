@@ -34,7 +34,8 @@
             </div>
             </div>
 -->
-
+<div class="container">
+            <div class="row horizontal-scroll">
 <?php if (have_rows('jump_points')): ?>
 
 <?php while (have_rows('jump_points')): the_row(); ?>
@@ -47,5 +48,6 @@
 <!-- If there are no jump points -->
 <p>No jump points found.</p>
 <?php endif; ?>
-
+</div>
+</div>
 
