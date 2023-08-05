@@ -35,15 +35,16 @@
             </div>
 -->
 <div class="container">
-            <div class="row horizontal-scroll">
+            
 <?php if (have_rows('jump_points')): ?>
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
+<div class="row horizontal-scroll">
 <a href="YOUR_LINK_HERE">
   <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px;" />
 </a>
-
+</div>
     
 
 <?php endwhile; ?>
@@ -52,6 +53,6 @@
 <!-- If there are no jump points -->
 <p>No jump points found.</p>
 <?php endif; ?>
-</div>
+
 </div>
 
