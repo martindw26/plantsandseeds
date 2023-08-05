@@ -47,7 +47,7 @@ a.row.horizontal-scroll-anchor {
 <a class="row horizontal-scroll-anchor" href="#">
 <img class="img-fluid" src="<?php echo esc_url(the_sub_field('image')); ?>" style="height:100px; width:200px; padding:2px">
 </a>
-
+<i class="bi bi-arrow-down"></i>
 
     
 
