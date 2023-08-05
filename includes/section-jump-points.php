@@ -53,10 +53,10 @@ if (have_rows('jump_points')) {
 
         <!-- Output the jump point data -->
         <div class="jump-point">
-            <?php if ($jump_image) : ?>
+            <?php if ($jump_image_url) : ?>
                 <img src="<?php echo $jump_image_url; ?>" alt="<?php echo $jump_image_alt; ?>">
             <?php endif; ?>
-            <?php if ($jump_anchor) : ?>
+            <?php if ($jump_anchor_escaped) : ?>
                 <a href="#<?php echo $jump_anchor_escaped; ?>"><?php echo $jump_anchor_escaped; ?></a>
             <?php endif; ?>
         </div>
@@ -65,5 +65,6 @@ if (have_rows('jump_points')) {
     }
 }
 ?>
+
 
 
