@@ -46,7 +46,7 @@
             <div id="jumppoint">
             <div class="container">
             <div class="row horizontal-scroll">
-            <?php while (have_rows('jump_point')) : the_row(); ?>
+            <?php while (have_rows('jump_points')) : the_row(); ?>
             <?php
             $image = get_sub_field('image');
             $anchor = get_sub_field('anchor');
