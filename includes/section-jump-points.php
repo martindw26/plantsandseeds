@@ -40,18 +40,13 @@
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
-<!-- Container for the image and arrow -->
-<div style="position: relative; display: inline-block;">
-  <!-- Image with PHP source -->
-  <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height: 100px; width: 200px;" />
-
-  <!-- Down arrow using CSS -->
-  <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 21l-12-18h24z"/></svg>
+<div class="row row-cols-2 bg-danger">
+    <div class="col"><img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px;" /></div>
   </div>
+  <div class="row row-cols-2 bg-dark">
+    <div class="col"><i class="bi bi-arrow-down"></i></div>
+  </div>  
 </div>
-
-
     
 
 <?php endwhile; ?>
