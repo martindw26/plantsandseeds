@@ -36,8 +36,6 @@
 -->
 
 
-
-
 <?php
 // Check if the repeater field has rows of data
 if (have_rows('jump_points')) {
@@ -51,22 +49,21 @@ if (have_rows('jump_points')) {
         $jump_image_url = esc_url($jump_image['url']);
         $jump_image_alt = esc_attr($jump_image['alt']);
         $jump_anchor_escaped = esc_attr($jump_anchor);
-
-        // Output the jump point data
         ?>
+
+        <!-- Output the jump point data -->
         <div class="jump-point">
-            <?php if ($jump_image_url) : ?>
+            <?php if ($jump_image) : ?>
                 <img src="<?php echo $jump_image_url; ?>" alt="<?php echo $jump_image_alt; ?>">
             <?php endif; ?>
-            <?php if ($jump_anchor_escaped) : ?>
+            <?php if ($jump_anchor) : ?>
                 <a href="#<?php echo $jump_anchor_escaped; ?>"><?php echo $jump_anchor_escaped; ?></a>
             <?php endif; ?>
         </div>
+
         <?php
     }
 }
 ?>
-
-
 
 
