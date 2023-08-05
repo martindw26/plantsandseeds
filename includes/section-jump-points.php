@@ -40,9 +40,10 @@
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
-<a href="<?php the_sub_field('anchor'); ?>">
-    <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px;" />
+<a href="<?php echo esc_url(the_sub_field('anchor')); ?>">
+    <img class="img-fluid" src="<?php echo esc_url(the_sub_field('image')); ?>" style="height:100px; width:200px;" />
 </a>
+
 
     
 
