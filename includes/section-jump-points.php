@@ -58,6 +58,7 @@ if ($jump_points) {
             var_dump($anchor);
             echo "</pre>";
             
+            the_sub_field('jump-Image');
 
             echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
 
