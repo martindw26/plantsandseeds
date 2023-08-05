@@ -45,34 +45,35 @@
 $jump_points_toggle = get_field('jump_points_toggle');
 
 if ($jump_points_toggle === 'on') :
+    $jump_points = get_field('jump_points');
     ?>
     <div id="jumppoint">
         <div class="container">
             <div class="row horizontal-scroll">
                 <?php
-                while (have_rows('jump_points')) :
-                    the_row();
-                    $image = get_sub_field('image');
-                    $anchor = get_sub_field('anchor');
-                ?>
+                foreach ($jump_points as $index => $jump_point) :
+                    $image = $jump_point['image'];
+                    $anchor = $jump_point['anchor'];
+                    ?>
                     <div class="col-6 col-sm-3">
                         <?php if ($image) : ?>
                             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                         <?php endif; ?>
-
                         <?php if ($anchor) : ?>
                             <a href="<?php echo esc_url($anchor); ?>">
-                                Item <?php echo get_row_index(); ?>
+                                Item <?php echo $index + 1; ?>
                             </a>
                         <?php else : ?>
-                            Item <?php echo get_row_index(); ?>
+                            Item <?php echo $index + 1; ?>
                         <?php endif; ?>
                     </div>
-                <?php endwhile; ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
 <?php endif; ?>
+              
+  
 
 
 
