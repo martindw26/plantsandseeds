@@ -50,7 +50,11 @@ if ($jump_points) {
             $image = get_sub_field('jump-Image');
             $anchor = get_sub_field('jump-anchor');
 
+            var_dump($image);
+            var_dump($anchor);
+
             echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
+
             echo '<a href="#' . $anchor . '">' . $anchor . '</a>';
 
             echo '</li>';
