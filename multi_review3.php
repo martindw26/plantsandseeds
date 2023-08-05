@@ -41,34 +41,36 @@
 				      <?php endif;?>
 				      <!-- End Social share icons-->
 
-            <?php $jump_points = get_field('jump_points_toggle'); ?>
-            <?php if ($jump_points === 'on'): ?>
-            <div id="jumppoint">
-            <div class="container">
+              <?php
+$jump_points = get_field('jump_points_toggle'); // Get the jump points toggle value
+?>
+<?php if ($jump_points === 'on') : ?>
+    <div id="jumppoint">
+        <div class="container">
             <div class="row horizontal-scroll">
-            <?php while (have_rows('jump_points')) : the_row(); ?>
-            <?php
-            $image = get_sub_field('image');
-            $anchor = get_sub_field('anchor');
-            ?>
-            <div class="col-6 col-sm-3">
-                <?php if ($image) : ?>
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                <?php endif; ?>
-                <?php if ($anchor) : ?>
-                    <a href="<?php echo esc_url($anchor); ?>">
-                        Item <?php echo get_row_index(); ?>
-                    </a>
-                <?php else : ?>
-                    Item <?php echo get_row_index(); ?>
-                <?php endif; ?>
+                <?php while (have_rows('jump_points')) : the_row(); ?>
+                    <?php
+                    $image = get_sub_field('image'); // Get the image field value
+                    $anchor = get_sub_field('anchor'); // Get the anchor field value
+                    ?>
+                    <div class="col-6 col-sm-3">
+                        <?php if ($image) : ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+                        <?php if ($anchor) : ?>
+                            <a href="<?php echo esc_url($anchor); ?>">
+                                Item <?php echo get_row_index(); ?>
+                            </a>
+                        <?php else : ?>
+                            Item <?php echo get_row_index(); ?>
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; ?>
             </div>
-            <?php endwhile; ?>
-            </div>
-            </div>
+        </div>
+    </div>
+<?php endif; ?>
 
-            </div>
-            <?php endif; ?>
 
              <!-- header image block-->                                  
              <?php get_template_part('includes/section','header-image block');?>
