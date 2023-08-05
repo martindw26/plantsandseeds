@@ -40,41 +40,7 @@
 					    <?php echo '<style>{ display:none;}</style>';?>
 				      <?php endif;?>
 				      <!-- End Social share icons-->
-              <?php
-// Get the value of the jump_points_toggle field
-$jump_points = get_field('jump_points_toggle');
 
-// Check if jump points are turned on
-if ($jump_points === 'on') :
-?>
-<div id="jumppoint">
-    <div class="container">
-        <div class="row horizontal-scroll">
-            <?php while (have_rows('jump_points')) : the_row(); ?>
-                <?php
-                // Get the image and anchor fields from the jump_points repeater
-                $image = get_sub_field('image');
-                $anchor = get_sub_field('anchor');
-                ?>
-
-                <div class="col-6 col-sm-3">
-                    <?php if ($image) : ?>
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <?php endif; ?>
-
-                    <?php if ($anchor) : ?>
-                        <a href="<?php echo esc_url($anchor); ?>">
-                            Item <?php echo get_row_index(); ?>
-                        </a>
-                    <?php else : ?>
-                        Item <?php echo get_row_index(); ?>
-                    <?php endif; ?>
-                </div>
-            <?php endwhile; ?>
-        </div>
-    </div>
-</div>
-<?php endif; ?>
 
 
 
