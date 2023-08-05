@@ -42,8 +42,8 @@ if (have_rows('jump_points')) {
     // Loop through the rows of data
     while (have_rows('jump_points')) {
         the_row(); // This function sets up the row data
-        $jump_image = get_sub_field('jump_Image');
-        $jump_anchor = get_sub_field('jump_anchor');
+        $jump_image = get_sub_field('jump-Image');
+        $jump_anchor = get_sub_field('jump-anchor');
         ?>
 
         <!-- Output the jump point data -->
