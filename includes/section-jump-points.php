@@ -35,35 +35,39 @@
             </div>
 -->
 
-<?php
+<?php if (have_rows('jump_points')): ?>
 
-$jump_points = get_field('jump_points');
+  <ul>
 
-if ($jump_points) {
-    echo '<ul>';
+  <?php while (have_rows('jump_points')): the_row(); ?>
 
-    foreach ($jump_points as $jump_point) {
-        if (get_sub_field('jump-Image') && get_sub_field('jump-anchor')) {
-            echo '<li>';
-            $image = get_sub_field('jump-Image');
-            $anchor = get_sub_field('jump-anchor');
+      <?php if (get_sub_field('jump-Image') && get_sub_field('jump-anchor')): ?>
 
-            echo '<a href="#' . $anchor . '">';
-            echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
-            echo '</a>';
+          <li>
+              <?php
+              $image = get_sub_field('jump-Image');
+              $anchor = get_sub_field('jump-anchor');
+              ?>
+              <a href="#<?php echo $anchor; ?>">
+                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+              </a>
+              <a href="#<?php echo $anchor; ?>"><?php echo $anchor; ?></a>
+          </li>
 
-            echo '<a href="#' . $anchor . '">' . $anchor . '</a>';
+      <?php else: ?>
 
-            echo '</li>';
-        } else {
-            echo '<li>Jump point data missing or incomplete.</li>';
-        }
-    }
+          <li>Jump point data missing or incomplete.</li>
 
-    echo '</ul>';
-} else {
-    echo 'No jump points found for this post or page.';
-}
+      <?php endif; ?>
 
-?>
+  <?php endwhile; ?>
+
+  </ul>
+
+<?php else: ?>
+
+  No jump points found for this post or page.
+
+<?php endif; ?>
+
 
