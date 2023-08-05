@@ -44,15 +44,20 @@ if (have_rows('jump_points')) {
         the_row(); // This function sets up the row data
         $jump_image = get_sub_field('jump_image');
         $jump_anchor = get_sub_field('jump_anchor');
+
+        // Escape the output using appropriate functions
+        $jump_image_url = esc_url($jump_image['url']);
+        $jump_image_alt = esc_attr($jump_image['alt']);
+        $jump_anchor_escaped = esc_attr($jump_anchor);
         ?>
 
         <!-- Output the jump point data -->
         <div class="jump-point">
             <?php if ($jump_image) : ?>
-                <img src="<?php echo esc_url($jump_image['url']); ?>" alt="<?php echo esc_attr($jump_image['alt']); ?>">
+                <img src="<?php echo $jump_image_url; ?>" alt="<?php echo $jump_image_alt; ?>">
             <?php endif; ?>
             <?php if ($jump_anchor) : ?>
-                <a href="#<?php echo esc_attr($jump_anchor); ?>"><?php echo esc_html($jump_anchor); ?></a>
+                <a href="#<?php echo $jump_anchor_escaped; ?>"><?php echo $jump_anchor_escaped; ?></a>
             <?php endif; ?>
         </div>
 
@@ -60,4 +65,5 @@ if (have_rows('jump_points')) {
     }
 }
 ?>
+
 
