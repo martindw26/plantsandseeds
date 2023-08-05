@@ -40,11 +40,10 @@
 
 <?php while (have_rows('jump_points')): the_row(); ?>
 
-<div style="display: flex; align-items: center;">
-  <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px; margin-right: 10px;" />
-  <i class="bi bi-arrow-down"></i>
+    <div style="position: relative;">
+  <img class="img-fluid" src="<?php the_sub_field('image'); ?>" style="height:100px; width:200px;" />
+  <img class="down-arrow-icon" src="path/to/down-arrow.svg" alt="Down Arrow" style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); height: 20px; width: 20px;" />
 </div>
-
 
     
 
