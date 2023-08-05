@@ -38,23 +38,5 @@ a.row.horizontal-scroll-anchor {
             </div>
             </div>
 -->
-<div class="container">
-            <div class="row horizontal-scroll">
-<?php if (have_rows('jump_points')): ?>
 
-<?php while (have_rows('jump_points')): the_row(); ?>
-
-<?php $anchor = esc_url(get_sub_field('anchor')); ?>
-<?php $image_url = esc_url(get_sub_field('image')); ?>
-
-    <img class="img-fluid" src="<?php echo $image_url; ?>" alt="Image description" style="height:100px; width:200px;">
-
-<?php endwhile; ?>
-
-<?php else: ?>
-<!-- If there are no jump points -->
-<p>No jump points found.</p>
-<?php endif; ?>
-</div>
-</div>
 
