@@ -52,22 +52,6 @@
 </table>			
 <?php endif; ?>
 
-<div class="container-fluid p-2 bg-dark text-white text-center">
-  <h3>Where to buy an <?php echo $Product_title; ?></h3> 
-</div>
-  
-<div class="container-fluid  bg-dark text white">
-  <div class="row">
-    <div class="col-sm-4">
-<img class="img-fluid p-1" src="<?php echo $Product_image; ?>"/>
-    </div>
-    <div class="col">
-
-    </div>
-
-  </div>
-</div>
-<br>
 
 <!-- Social share icons-->
 <?php $enable_in_article = get_field('on_article','option');?>
