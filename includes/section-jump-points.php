@@ -21,8 +21,7 @@
   .horizontal-scroll-text-mobile {
     /* Remove horizontal scroll and make content flow vertically on smaller screens */
     display: block;
-    display: flex;
-    align-items: center; /* Align items vertically in the center */
+    
   }
 }
 
@@ -32,7 +31,23 @@
   }
 }
 
+.horizontal-scroll-text-mobile  {
+      font-size: 36px;
+      color: lightgrey;
+      animation: pulsate 2s linear infinite;
+    }
 
+    @keyframes pulsate {
+      0% {
+        color: lightgrey;
+      }
+      50% {
+        color: black;
+      }
+      100% {
+        color: lightgrey;
+      }
+    }
 
 </style>
 
