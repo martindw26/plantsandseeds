@@ -48,8 +48,6 @@
                <?php get_template_part('includes/section','jump-points');?>
                <!-- End header image block-->
 
-
-
              <!-- header image block-->                                  
              <?php get_template_part('includes/section','header-image block');?>
                                                 
