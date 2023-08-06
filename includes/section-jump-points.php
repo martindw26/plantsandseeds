@@ -32,19 +32,19 @@
 }
 
 .horizontal-scroll-text-mobile  {
-      color: lightgreen;
+      color: darkgreen;
       animation: pulsate 2s linear infinite;
     }
 
     @keyframes pulsate {
       0% {
-        color: lightgrey;
+        color: lightgreen;
       }
       50% {
-        color: black;
+        color: darkgreen;
       }
       100% {
-        color: lightgrey;
+        color: lightgreen;
       }
     }
 
