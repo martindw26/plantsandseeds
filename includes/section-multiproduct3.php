@@ -62,7 +62,7 @@
               'INR' => '&#8377'
             );
 
-            $currency_symbol = isset($currency_symbols[$currency]) ? $currency_symbols[$currency] : '';
+            $currency_symbols = isset($currency_symbols[$currency]) ? $currency_symbols[$currency] : '';
 
             ?>
             <table class="table table-borderless table-dark text-white">
