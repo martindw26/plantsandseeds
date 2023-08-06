@@ -30,7 +30,7 @@
 }
 
 /* For Firefox */
-scrollbar-color: blue;
+scrollbar-color: blue #f1f1f1;
 
 /* For Internet Explorer and Edge */
 -ms-overflow-style: none;
