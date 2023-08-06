@@ -26,7 +26,7 @@
 <?php $Product_image = get_sub_field('image');?>
 <img class="img-fluid" src="<?php echo $Product_image; ?>"/><br><br>
 <?php $imagesource= get_sub_field('image_source');?>
-<h6 class="card-title"><?php echo $imagesource; ?></h6>
+<h6 class="card-title text-mute">Image source <?php echo $imagesource; ?></h6>
 
 <?php $Product_description = get_sub_field('product_description');?>
 
