@@ -38,16 +38,16 @@
       <h3>Where to buy an <?php echo $Product_title; ?></h3>
     </div>
     <div class="container-fluid bg-dark text-white">
-      <div class="row">
-        <div class="col-sm-4">
+      <div class="row text-white">
+        <div class="col-sm-4 text-white">
           <img class="img-fluid p-1" src="<?php echo $Product_image; ?>" />
         </div>
         <div class="col">
           <?php if (have_rows('buy_now')): ?>
-            <table class="table table-borderless table-dark">
+            <table class="table table-borderless table-dark text-white">
           <tbody>
             <tr>
-              <th scope="row"></th>
+              <th scope="row text-white"></th>
               <td class="border-bottom border-secondary text-white"><?php echo $retailer['label']; ?></td>
               <td class="border-bottom border-secondary text-white"><?php echo $currency . $Price; ?></td>
               <td class="border-bottom border-secondary text-white"><?php echo $condition; ?></td>
