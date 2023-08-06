@@ -20,12 +20,15 @@
 @media (max-width: 480px) {
   .horizontal-scroll-text-mobile {
     /* Remove horizontal scroll and make content flow vertically on smaller screens */
-    overflow-x: hidden;
-    white-space: normal;
+    display: block;
   }
 }
 
-
+@media (min-width: 481px) {
+  .horizontal-scroll-text-mobile {
+    display: none;
+  }
+}
 
 </style>
 
