@@ -35,7 +35,8 @@ scrollbar-color: blue #f1f1f1;
 
 </style>
 
-
+<?php get_field ( ' jump_point_label ','option' );?>
+<h5><?php $jump_point_label ;?></h5>
 
 <div class="horizontal-scroll">
 <?php if (have_rows('jumps')): ?>
