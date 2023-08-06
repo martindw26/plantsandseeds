@@ -44,7 +44,9 @@
             
               <br><br>    
 
-
+               <!-- Jump points-->                                  
+               <?php get_template_part('includes/section','jump-points');?>
+               <!-- End header image block-->
 
              <!-- header image block-->                                  
              <?php get_template_part('includes/section','header-image block');?>
@@ -53,17 +55,10 @@
 
              <!-- SEO text-->
 
-             <?php
-            $seo_paragraph = get_field('seo_paragraph'); // Assuming the_field() function gets the value of the 'seo_paragraph' field
-            if ($seo_paragraph) { // Check if $seo_paragraph has a value
-            ?>
-            <div class="bg-secondary text-light p-4 mb-4 border-dark lead">
-            <?php echo $seo_paragraph; ?>
-            </div>
-            <?php
-            }
-            ?>
- 
+             <div class=" bg-secondary text-light p-4 mb-4 border-dark lead">
+             <?php the_field('seo_paragraph');?> 
+             </div>
+       
              <!-- Article content blocks -->
              <?php get_template_part('includes/section','multiproduct3');?>
              <!-- End Article content blocks-->
