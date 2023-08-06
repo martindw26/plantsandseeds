@@ -1,5 +1,6 @@
 <style>
 /* Custom CSS for the horizontal scroller */
+/* General styles for horizontal scrolling container */
 .horizontal-scroll {
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -8,28 +9,38 @@
   padding: 10px; /* Optional: Add some padding at the bottom to accommodate the scrollbar */
 }
 
-/* scrollbar css*/
+/* Scrollbar styles */
 
 /* For WebKit (Safari, Google Chrome, etc.) */
-::-webkit-scrollbar {
-  width: 10px;
-}
+/* Add this media query to show the scrollbar only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .horizontal-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
 
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-  border-radius: 5px;
-}
+  .horizontal-scroll::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: blue;
-  border-radius: 5px;
+  .horizontal-scroll::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 5px;
+  }
 }
 
 /* For Firefox */
-scrollbar-color: blue #f1f1f1;
+/* Note: Firefox supports scrollbar-color directly without the need for media queries */
+.horizontal-scroll {
+  scrollbar-color: blue #f1f1f1;
+}
 
 /* For Internet Explorer and Edge */
--ms-overflow-style: none;
+/* Note: This only hides the scrollbar in IE and Edge */
+.horizontal-scroll {
+  -ms-overflow-style: none;
+}
+
 
 
 
