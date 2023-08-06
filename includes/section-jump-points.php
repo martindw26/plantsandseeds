@@ -48,7 +48,7 @@ a.row.horizontal-scroll-anchor {
 <?php $image_url = esc_url(get_sub_field('jump_image')); ?>
 
 <a href="#<?php echo $anchor; ?>">
-  <img class="img-fluid" src="<?php echo $image_url; ?>" style="height:100px; width:200px;">
+<img class="img-fluid" src="<?php echo $image_url; ?>" style="height:100px; width:200px;">
 </a>
 
 
