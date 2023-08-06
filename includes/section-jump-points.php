@@ -8,20 +8,31 @@
   padding: 10px; /* Optional: Add some padding at the bottom to accommodate the scrollbar */
 }
 
-body::-webkit-scrollbar {
-      width: 12px;
-    }
+/* scrollbar css*/
 
-    body::-webkit-scrollbar-track {
-      background: transparent; /* Use a transparent background to keep the content visible behind the scrollbar */
-    }
+/* For WebKit (Safari, Google Chrome, etc.) */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-    /* Style the scrollbar thumb (the draggable part) */
-    body::-webkit-scrollbar-thumb {
-      background-color: blue; /* Set the scrollbar thumb color to blue */
-      border-radius: 5px; /* Set the radius to 5px to make it appear rounded */
-      border: 2px solid transparent; /* This is necessary for the border-radius to take effect */
-    }
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 5px;
+}
+
+/* For Firefox */
+scrollbar-color: blue #f1f1f1;
+
+/* For Internet Explorer and Edge */
+-ms-overflow-style: none;
+
+
+
 </style>
 
 <!--
