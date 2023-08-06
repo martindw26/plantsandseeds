@@ -25,11 +25,16 @@
   border-radius: 5px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 /* For Firefox */
 scrollbar-color: blue #f1f1f1;
 
 /* For Internet Explorer and Edge */
 -ms-overflow-style: none;
+scrollbar-width: none; /* This is for hiding the scrollbar in IE and Edge */
 
 
 
