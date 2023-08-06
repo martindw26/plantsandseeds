@@ -13,7 +13,7 @@
 /* For WebKit (Safari, Google Chrome, etc.) */
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: blue;
+  
 }
 
 ::-webkit-scrollbar-track {
