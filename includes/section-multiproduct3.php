@@ -44,6 +44,28 @@
         </div>
         <div class="col">
           <?php if (have_rows('buy_now')): ?>
+            <?php
+            $retailer = get_sub_field('dir_retailer');
+            $Price = get_sub_field('price');
+            $condition = get_sub_field('condition');
+            $Single_buy_now_button = get_sub_field('dir_buy_now');
+            $currency = get_sub_field('currency');
+            //Handles the currecy symbol selection
+
+            if($currency == 'GBP') {
+            $currency = '&#163';
+            } else if($currency == 'USD') {
+            $currency = '&#36';
+            } else if($currency == 'Euro') {
+            $currency = '&#8364';
+            } else if($currency == 'JPY') {
+            $currency = '&#165';
+            } else if($currency == 'KWR') {
+            $currency = '&#8361';
+            } else if($currency == 'INR') {
+            $currency = '&#8377';
+            }
+            ?>
             <table class="table table-borderless table-dark text-white">
           <tbody>
             <tr>
