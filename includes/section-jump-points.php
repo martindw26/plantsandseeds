@@ -1,45 +1,35 @@
 <style>
 /* Custom CSS for the horizontal scroller */
-
 .horizontal-scroll {
   flex-wrap: nowrap;
-  overflow-x: scroll; /* Change 'auto' to 'scroll' */
+  overflow-x: auto;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  padding: 10px;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+  padding: 10px; /* Optional: Add some padding at the bottom to accommodate the scrollbar */
 }
 
-/* Scrollbar styles for WebKit (Safari, Google Chrome, etc.) */
-/* Horizontal scrollbar */
-.horizontal-scroll::-webkit-scrollbar {
+/* scrollbar css*/
+
+/* For WebKit (Safari, Google Chrome, etc.) */
+::-webkit-scrollbar {
   width: 10px;
 }
 
-.horizontal-scroll::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background-color: #f1f1f1;
   border-radius: 5px;
 }
 
-.horizontal-scroll::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: blue;
   border-radius: 5px;
 }
 
-/* For Firefox and other browsers supporting the scrollbar-color property */
-.horizontal-scroll {
-  scrollbar-color: blue #f1f1f1;
-}
+/* For Firefox */
+scrollbar-color: blue #f1f1f1;
 
 /* For Internet Explorer and Edge */
-.horizontal-scroll {
-  -ms-overflow-style: none; /* Hide default scrollbar */
-}
-
-.horizontal-scroll::-webkit-scrollbar {
-  display: none; /* Hide scrollbar on WebKit browsers (optional) */
-}
-
-
+-ms-overflow-style: none;
 
 
 
