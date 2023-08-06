@@ -45,7 +45,7 @@ scrollbar-color: blue #f1f1f1;
 <?php $anchor = esc_url(get_sub_field('jump_anchor')); ?>
 <?php $image_url = esc_url(get_sub_field('jump_image')); ?>
 
-<a class="text-decoration-none" href="#<?php echo ltrim($anchor, 'http://'); ?>
+<a href="#<?php echo ltrim($anchor, 'http://'); ?>
 <img class="img-fluid" src="<?php echo $image_url; ?>" style="height:100px; width:200px;">
 </a>
 
