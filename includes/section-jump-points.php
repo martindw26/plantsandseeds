@@ -53,6 +53,6 @@ scrollbar-color: blue #f1f1f1;
 <?php else: ?>
 <p>No jump points found.</p>
 <?php endif; ?>
-</div>
+</div><br>
 
 
