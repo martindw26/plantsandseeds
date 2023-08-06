@@ -10,27 +10,7 @@
 
 /* scrollbar css*/
 
-/* For WebKit (Safari, Google Chrome, etc.) */
-::-webkit-scrollbar {
-  width: 10px;
-  
-}
 
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: blue;
-  border-radius: 5px;
-}
-
-/* For Firefox */
-scrollbar-color: blue #f1f1f1;
-
-/* For Internet Explorer and Edge */
--ms-overflow-style: none;
 
 
 
@@ -54,6 +34,6 @@ scrollbar-color: blue #f1f1f1;
 <?php else: ?>
 <p>No jump points found.</p>
 <?php endif; ?>
-</div><>
+</div><br>
 
 
