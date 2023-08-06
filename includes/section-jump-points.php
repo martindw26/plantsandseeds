@@ -8,14 +8,24 @@
   padding: 10px; /* Optional: Add some padding at the bottom to accommodate the scrollbar */
 }
 
-/* scrollbar css*/
-.horizontal-scroll{
-  /* Set the height and overflow properties to create a scrolling area */
-  overflow: auto; /* This will show a scrollbar when content overflows */
-
-  /* For smooth scrolling on iOS */
-  -webkit-overflow-scrolling: touch;
+/* scrollbar css*//* For WebKit-based browsers (including Safari and iOS) */
+::-webkit-scrollbar {
+  width: 10px;
 }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 
 
