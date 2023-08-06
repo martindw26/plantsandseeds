@@ -55,62 +55,57 @@
 <?php endif; ?>
 
 <div class="container-fluid p-2 bg-dark text-white text-center">
-  <h3>Where to buy an <?php echo $Product_title; ?></h3>
+  <h3>Where to buy an <?php echo $Product_title; ?></h3> 
 </div>
-
-<div class="container-fluid bg-dark text-white"> <!-- Added "white" to the class -->
+  
+<div class="container-fluid  bg-dark text white">
   <div class="row">
     <div class="col-sm-4">
-      <img class="img-fluid p-1" src="<?php echo $Product_image; ?>" />
+<img class="img-fluid p-1" src="<?php echo $Product_image; ?>"/>
     </div>
     <div class="col">
-      <?php if(have_rows('buy_now')): ?>
-      <table class="table table-borderless table-dark">
-        <caption>
-          <p>This site contains affiliate links to products. We may receive a commission for purchases made through these links. Please also report price issues at <a class="text-muted font-weight-light" href="mailto:data@techhobbyist.co.uk?subject=Price issue report">Report Price Issues</a></p>
-        </caption>
-        <?php while(have_rows('buy_now')): the_row(); ?>
-          <?php
-            $retailer = get_sub_field('dir_retailer');
-            $Price = get_sub_field('price');
-            $condition = get_sub_field('condition');
-            $Single_buy_now_button = get_sub_field('buy_now_button');
-            $currency = get_sub_field('currency');
+<?php if(have_rows('buy_now')):?>
+<table class="table table-borderless table-dark">
+<caption>
+<p>This site contains affiliate links to products. We may receive a commission for purchases made through these links. Please also report price issues at <a class="text-muted font-weight-ligh" href="mailto:data@techhobbyist.co.uk?subject=Price issue report">Report Price Issues</a></p>
+</caption>
+<?php while( have_rows('buy_now')): the_row();?>
+<?php
+$retailer = get_sub_field('dir_retailer');
+$Price = get_sub_field('price');
+$condition = get_sub_field('condition');
+$Single_buy_now_button = get_sub_field('buy_now_button');
+$currency = get_sub_field('currency');
+//Handles the currecy symbol selection
 
-            //Handles the currency symbol selection
-            if($currency == 'GBP') {
-              $currency = '£';
-            } else if($currency == 'USD') {
-              $currency = '$';
-            } else if($currency == 'Euro') {
-              $currency = '€';
-            } else if($currency == 'JPY') {
-              $currency = '¥';
-            } else if($currency == 'KWR') {
-              $currency = '₩';
-            } else if($currency == 'INR') {
-              $currency = '₹';
-            }
-          ?>
-          <tbody>
-            <tr>
-              <th scope="row"></th>
-              <td class="border-bottom border-secondary"><?php echo $retailer['label']; ?></td>
-              <td class="border-bottom border-secondary"><?php echo $currency . $Price; ?></td>
-              <td class="border-bottom border-secondary"><?php echo $condition; ?></td>
-              <td class="border-bottom border-secondary">
-                <button type="button" class="btn btn-success float-end p-2">
-                  <a class="text-white text-decoration-none" href="<?php echo $Single_buy_now_button; ?>" target="_blank">Buy</a>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        <?php endwhile; ?>
-      </table>
-      <?php endif; ?>
+if($currency == 'GBP') {
+  $currency = '&#163';
+} else if($currency == 'USD') {
+  $currency = '&#36';
+} else if($currency == 'Euro') {
+  $currency = '&#8364';
+} else if($currency == 'JPY') {
+  $currency = '&#165';
+} else if($currency == 'KWR') {
+  $currency = '&#8361';
+} else if($currency == 'INR') {
+  $currency = '&#8377';
+}
+?>
+  <tbody>
+
+    <tr>
+      <th scope="row"></th>
+      <td class="border-bottom border-secondary"><?php echo $retailer['label'];?></td>
+      <td class="border-bottom border-secondary"><?php echo $currency;?><?php echo $Price;?></td>
+      <td class="border-bottom border-secondary"><?php echo $condition;?></td>
+      <td class="border-bottom border-secondary"><button type="button" class="btn btn-success float-end p-2"><a class="text-white text-decoration-none" href="<?php echo $Single_buy_now_button; ?>" target="_blank"></>Buy</a></button></td>
+    </tr>
+  </tbody>
+<?php endwhile;?>	
+</table>
+<?php endif; ?>
     </div>
-  </div>
-</div>
 
   </div>
 </div>
