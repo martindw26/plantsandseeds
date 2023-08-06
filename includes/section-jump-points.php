@@ -9,7 +9,14 @@
 }
 
 /* scrollbar css*/
+.horizontal-scroll{
+  /* Set the height and overflow properties to create a scrolling area */
+  height: 300px; /* Adjust the height as needed */
+  overflow: auto; /* This will show a scrollbar when content overflows */
 
+  /* For smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
 
 
 
