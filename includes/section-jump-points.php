@@ -40,12 +40,12 @@ a.row.horizontal-scroll-anchor {
 -->
 <div class="container">
             <div class="row horizontal-scroll">
-<?php if (have_rows('jump_points')): ?>
+<?php if (have_rows('jumps')): ?>
 
-<?php while (have_rows('jump_points')): the_row(); ?>
+<?php while (have_rows('jumps')): the_row(); ?>
 
-<?php $anchor = esc_url(get_sub_field('anchor')); ?>
-<?php $image_url = esc_url(get_sub_field('image')); ?>
+<?php $anchor = esc_url(get_sub_field('jump_anchor')); ?>
+<?php $image_url = esc_url(get_sub_field('jump_image')); ?>
 
     <img class="img-fluid" src="#<?php echo $image_url; ?>" style="height:100px; width:200px;">
 
