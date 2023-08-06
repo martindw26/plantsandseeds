@@ -17,7 +17,7 @@
 }
 
 /* Media query for mobile devices */
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .horizontal-scroll {
     /* Remove horizontal scroll and make content flow vertically on smaller screens */
     overflow-x: hidden;
@@ -31,10 +31,6 @@
 
 <?php $jump_point_label = get_field('jump_point_label', 'option'); ?>
 <h5><?php echo $jump_point_label; ?></h5>
-<div class="horizontal-scroll">
-<h6>Scroll >></h6>
-</div>
-
 
 <div class="horizontal-scroll">
 <?php if (have_rows('jumps')): ?>
@@ -52,4 +48,7 @@
 <?php endif; ?>
 </div><br>
 
+<div class="horizontal-scroll">
+<h6>Scroll >></h6>
+</div>
 
