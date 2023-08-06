@@ -1,31 +1,16 @@
 <style>
-/* Custom CSS for the horizontal scroller */
+
+/* Flex container to hold the images horizontally */
 .image-container {
   display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth; /* Optional: Smooth scrolling */
-  white-space: nowrap; /* Prevent images from wrapping to new lines */
-  padding: 10px; /* Optional: Add some padding around the images */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  max-width: calc(200px * 4); /* Maximum width to display 4 columns without scrolling */
 }
 
+/* Optional: Add some space between images */
 .image-container a {
-  display: inline-block; /* Ensure each image/link is on the same line */
-  margin-right: 10px; /* Optional: Add some spacing between images */
+  margin-right: 10px;
 }
-
-/* Optional: Hide the scrollbar and show it only when scrolling */
-.image-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.image-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.image-container::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
 
 
 </style>
