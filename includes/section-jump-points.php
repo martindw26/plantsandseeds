@@ -33,7 +33,8 @@
 </style>
 
 <?php $jump_point_label = get_field('jump_point_label', 'option'); ?>
-<h5><?php echo $jump_point_label; ?></h5>
+<h5><?php echo $jump_point_label; ?>
+<h6 class="horizontal-scroll-text-mobile">Scroll >></h6></h5>
 
 <div class="horizontal-scroll">
 <?php if (have_rows('jumps')): ?>
@@ -51,7 +52,5 @@
 <?php endif; ?>
 </div><br>
 
-<div class="horizontal-scroll-text-mobile">
-<h6>Scroll >></h6>
-</div>
+
 
