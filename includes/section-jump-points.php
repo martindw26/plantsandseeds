@@ -32,7 +32,7 @@
 }
 
 .horizontal-scroll-text-mobile  {
-      color: lightgrey;
+      color: lightgreen;
       animation: pulsate 2s linear infinite;
     }
 
