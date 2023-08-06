@@ -19,6 +19,7 @@
         <?php endforeach; ?>		
 </div>
 <br>
+<?php $Single_buy_now_button = get_sub_field('buy_now');?>
 <button type="button" class="btn btn-success"><a class="text-white text-decoration-none" href="<?php echo $Single_buy_now_button; ?>" target="_blank"></>Get your <?php echo $Product_title; ?> now</a></button>
 
 <br><br>
