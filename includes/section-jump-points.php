@@ -18,7 +18,7 @@
 
 /* Media query for mobile devices */
 @media (max-width: 480px) {
-  .horizontal-scroll {
+  .horizontal-scroll-text-mobile {
     /* Remove horizontal scroll and make content flow vertically on smaller screens */
     overflow-x: hidden;
     white-space: normal;
@@ -48,7 +48,7 @@
 <?php endif; ?>
 </div><br>
 
-<div class="horizontal-scroll">
+<div class="horizontal-scroll-text-mobile">
 <h6>Scroll >></h6>
 </div>
 
