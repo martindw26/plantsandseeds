@@ -44,7 +44,7 @@
         </div>
         <div class="col">
           <?php if (have_rows('buy_now')): ?>
-            <table class="table-dark">
+            <table class="table table-borderless table-dark text-white">
           <tbody>
             <tr>
               <th scope="row text-white"></th>
