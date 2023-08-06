@@ -32,7 +32,6 @@
 }
 
 .horizontal-scroll-text-mobile  {
-      font-size: 36px;
       color: lightgrey;
       animation: pulsate 2s linear infinite;
     }
