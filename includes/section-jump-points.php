@@ -35,19 +35,7 @@ scrollbar-color: blue #f1f1f1;
 
 </style>
 
-<!--
-            <div class="container">
-            <div class="row horizontal-scroll">
 
-                <div class="col-6 col-sm-3">Item 1</div>
-                <div class="col-6 col-sm-3">Item 2</div>
-                <div class="col-6 col-sm-3">Item 3</div>
-                <div class="col-6 col-sm-3">Item 4</div>
-                <div class="col-6 col-sm-3">Item 5</div>
-
-            </div>
-            </div>
--->
 
 <div class="horizontal-scroll">
 <?php if (have_rows('jumps')): ?>
