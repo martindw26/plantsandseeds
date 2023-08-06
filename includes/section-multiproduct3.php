@@ -22,6 +22,7 @@
 <?php $Product_image = get_sub_field('image');?>
 <img class="img-fluid" src="<?php echo $Product_image; ?>"/><br><br>
 
+
 <?php $Product_description = get_sub_field('product_description');?>
 
 <blockquote class="blockquote"><?php echo $Product_description; ?></blockquote>
@@ -117,9 +118,6 @@ if($currency == 'GBP') {
 <?php endif;?>
 <hr>
 <!-- End Social share icons-->
-
-
-
 
 </section>
 <?php endwhile; ?>
