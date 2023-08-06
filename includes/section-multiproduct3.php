@@ -45,16 +45,16 @@
         <div class="col">
           <?php if (have_rows('buy_now')): ?>
             <table class="table table-borderless table-dark">
-              <tbody>
-                <tr>
-                  <th scope="row text-white"></th>
-                  <td class="border-bottom border-secondary"><?php echo $retailer['label']; ?></td>
-                  <td class="border-bottom border-secondary"><?php echo $currency . $Price; ?></td>
-                  <td class="border-bottom border-secondary"><?php echo $condition; ?></td>
-                  <td class="border-bottom border-secondary"><button type="button" class="btn btn-success float-end p-2"><a class="text-white text-decoration-none" href="<?php echo $Single_buy_now_button; ?>" target="_blank">Buy</a></button></td>
-                </tr>
-              </tbody>
-            </table>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <td class="border-bottom border-secondary text-white"><?php echo $retailer['label']; ?></td>
+              <td class="border-bottom border-secondary text-white"><?php echo $currency . $Price; ?></td>
+              <td class="border-bottom border-secondary text-white"><?php echo $condition; ?></td>
+              <td class="border-bottom border-secondary"><button type="button" class="btn btn-success float-end p-2"><a class="text-white text-decoration-none" href="<?php echo $Single_buy_now_button; ?>" target="_blank">Buy</a></button></td>
+            </tr>
+          </tbody>
+          </table>
           <?php endif; ?>
         </div>
       </div>
