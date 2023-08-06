@@ -8,25 +8,22 @@
   padding: 10px; /* Optional: Add some padding at the bottom to accommodate the scrollbar */
 }
 
-/* scrollbar css*//* For WebKit-based browsers (including Safari and iOS) */
-::-webkit-scrollbar {
-  width: 10px;
+/* scrollbar css*//* For WebKit-based browsers (including Safari and iOS) *
+
+/* Apply the horizontal scroll for larger screens */
+.horizontal-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .horizontal-scroll {
+    /* Remove horizontal scroll and make content flow vertically on smaller screens */
+    overflow-x: hidden;
+    white-space: normal;
+  }
 }
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-
 
 
 
@@ -34,6 +31,9 @@
 
 <?php $jump_point_label = get_field('jump_point_label', 'option'); ?>
 <h5><?php echo $jump_point_label; ?></h5>
+<div class="horizontal-scroll">
+<h6>Scroll >></h6>
+</div>
 
 
 <div class="horizontal-scroll">
