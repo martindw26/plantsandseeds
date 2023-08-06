@@ -13,10 +13,11 @@
 /* For WebKit (Safari, Google Chrome, etc.) */
 ::-webkit-scrollbar {
   width: 10px;
+  background-color: blue;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: blue;
+  background-color: #f1f1f1;
   border-radius: 5px;
 }
 
@@ -25,16 +26,11 @@
   border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: blue;
-}
-
 /* For Firefox */
 scrollbar-color: blue #f1f1f1;
 
 /* For Internet Explorer and Edge */
 -ms-overflow-style: none;
-scrollbar-width: none; /* This is for hiding the scrollbar in IE and Edge */
 
 
 
@@ -58,6 +54,6 @@ scrollbar-width: none; /* This is for hiding the scrollbar in IE and Edge */
 <?php else: ?>
 <p>No jump points found.</p>
 <?php endif; ?>
-</div><br>
+</div><>
 
 
