@@ -21,6 +21,8 @@
   .horizontal-scroll-text-mobile {
     /* Remove horizontal scroll and make content flow vertically on smaller screens */
     display: block;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
   }
 }
 
@@ -29,6 +31,8 @@
     display: none;
   }
 }
+
+
 
 </style>
 
