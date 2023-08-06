@@ -16,7 +16,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+  background-color: blue;
   border-radius: 5px;
 }
 
@@ -26,11 +26,11 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background-color: blue;
 }
 
 /* For Firefox */
-scrollbar-color: blue #f1f1f1;
+scrollbar-color: blue;
 
 /* For Internet Explorer and Edge */
 -ms-overflow-style: none;
