@@ -23,7 +23,6 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 <?php endif; ?>
 <!-- End Single internal button Block-->
 
-
 <!-- Single internal button Block post object-->
 <?php if (get_row_layout() == 'featured_post'):
 $featured_post = get_sub_field('internal_link_button_object');
