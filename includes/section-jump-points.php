@@ -43,14 +43,11 @@ scrollbar-color: blue #f1f1f1;
 <?php if (have_rows('jumps')): ?>
 <?php while (have_rows('jumps')): the_row(); ?>
 <?php $anchor = esc_url(get_sub_field('jump_anchor')); ?>
-<?php $jump_to_text = esc_url(get_sub_field('jump_to_text')); ?>
 <?php $image_url = esc_url(get_sub_field('jump_image')); ?>
 
-<span><?php echo htmlspecialchars($jump_point_label); ?></span>
-<a href="<?php echo htmlspecialchars(ltrim($anchor, 'http://')); ?>">
-    <img class="img-fluid" src="<?php echo htmlspecialchars($image_url); ?>" style="height:100px; width:200px;">
+<a href="#<?php echo ltrim($anchor, 'http://'); ?>">
+<img class="img-fluid" src="<?php echo $image_url; ?>" style="height:100px; width:200px;">
 </a>
-
 
 <?php endwhile; ?>
 <?php else: ?>
