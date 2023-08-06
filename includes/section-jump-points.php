@@ -1,14 +1,12 @@
 <style>
 /* Custom CSS for the horizontal scroller */
 .horizontal-scroll {
-  display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  white-space: nowrap;
   -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
-  padding-bottom: 15px; /* Optional: Add some padding at the bottom to accommodate the scrollbar */
+  padding: 10px; /* Optional: Add some padding at the bottom to accommodate the scrollbar */
 }
-
-
 </style>
 
 <!--
@@ -33,7 +31,7 @@
 <?php $anchor = esc_url(get_sub_field('jump_anchor')); ?>
 <?php $image_url = esc_url(get_sub_field('jump_image')); ?>
 
-<div>
+<div class="scroll-container">
 <a href="#<?php echo ltrim($anchor, 'http://'); ?>">
 <img class="img-fluid" src="<?php echo $image_url; ?>" style="height:100px; width:200px;">
 </a>
