@@ -47,7 +47,7 @@
             <table class="table table-borderless table-dark">
               <tbody>
                 <tr>
-                  <th scope="row"></th>
+                  <th scope="row text-white"></th>
                   <td class="border-bottom border-secondary"><?php echo $retailer['label']; ?></td>
                   <td class="border-bottom border-secondary"><?php echo $currency . $Price; ?></td>
                   <td class="border-bottom border-secondary"><?php echo $condition; ?></td>
