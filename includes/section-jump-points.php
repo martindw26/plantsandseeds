@@ -34,6 +34,7 @@
 .horizontal-scroll-text-mobile  {
       color: darkgreen;
       animation: pulsate 2s linear infinite;
+      font-weight: bold;
     }
 
     @keyframes pulsate {
