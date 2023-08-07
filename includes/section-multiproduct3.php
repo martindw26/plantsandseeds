@@ -101,19 +101,23 @@ $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
         ?>
     </td>
     <td class="align-middle">
-        <?php
-            if (the_sub_field('item_url')): 
-        ?>
+    <?php
+    $item_url = get_sub_field('item_url');
+    $item_buy_now_CTA = "Your Button Text Here"; // You need to replace 'Your Button Text Here' with actual text or get the text dynamically
+
+    if ($item_url): 
+?>
         <h6>
             <button type="button" class="btn btn-success">
-                <a class="text-white text-decoration-none" href="<?php get_sub_field('item_url');?>" target="_blank">
-                <?php echo $item_buy_now_CTA; ?>
+                <a class="text-white text-decoration-none" href="<?php echo esc_url($item_url); ?>" target="_blank">
+                <?php echo esc_html($item_buy_now_CTA); ?>
                 </a> 
             </button>
         </h6>
-        <?php 
-            endif;
-        ?>
+<?php 
+    endif;
+?>
+
     </td>
 </tr>
 
