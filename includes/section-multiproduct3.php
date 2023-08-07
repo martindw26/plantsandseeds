@@ -95,7 +95,6 @@ $item_condition = get_sub_field ('item_condition');
     </td>
     <td class="align-middle">
     <?php
-        $item_condition = get_sub_field('item_condition');
         if($item_condition): 
     ?>
         <h6><?php echo esc_html($item_condition); ?></h6>
