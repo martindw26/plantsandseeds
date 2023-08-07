@@ -60,6 +60,26 @@
 
 <?php if(have_rows('buy_now_list')):?>
 
+<?php
+
+$currency = get_sub_field('item_currency');
+//Handles the currecy symbol selection
+
+if($currency == 'GBP') {
+$currency = '&#163';
+} else if($currency == 'USD') {
+$currency = '&#36';
+} else if($currency == 'Euro') {
+$currency = '&#8364';
+} else if($currency == 'JPY') {
+$currency = '&#165';
+} else if($currency == 'KWR') {
+$currency = '&#8361';
+} else if($currency == 'INR') {
+$currency = '&#8377';
+}
+?>
+
 <div class="table-responsive">
   <table class="table">
     <thead class="table-success">
@@ -80,10 +100,10 @@
             <img class="img-fluid" src="<?php echo get_sub_field('item_image');?>" style="width:100px; height:100px; object-fit: cover;">
           </th>
           <td class="align-middle">
-            <?php the_sub_field('item_model');?>
+            <h4><?php the_sub_field('item_model');?></h4>
           </td>
           <td class="align-middle">
-            <?php the_sub_field('item_price');?>
+          <h4><?php echo $currency;?><?php the_sub_field('item_price');?></h4>
           </td>
         </tr>
       <?php endwhile;?>	
