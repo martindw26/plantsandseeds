@@ -61,7 +61,7 @@
 <?php  
 $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');
 $buy_now_list_retailer = get_sub_field('buy_now_list_retailer');
-$Product_image = get_sub_field('image');?>
+$Product_image = get_sub_field('image');
 ?>
 
 <div class="table-responsive">
