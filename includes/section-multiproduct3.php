@@ -69,7 +69,7 @@ $Product_image = get_sub_field('image');
         <thead class="table-success">
             <tr>
                 <th><?php echo $buy_now_list_manufacturer;?></th>
-                <th><?php echo $buy_now_list_retailer;?></th>
+                <th>Retailer</th>
                 <th>Price</th>
             </tr>
         </thead>
