@@ -60,8 +60,10 @@
 
 <?php if(have_rows('buy_now_list')):?>
 
-    <?php  $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');?>
+<?php while(have_rows('buy_now_list')): the_row();?>
 
+    <?php  $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');?>
+    
     <div class="table-responsive">
         <table class="table">
             <thead class="table-success">
@@ -72,44 +74,45 @@
                 </tr>
             </thead>
             <tbody>
-                <?php while(have_rows('buy_now_list')): the_row();
-                   
-                    $buy_now_list_title = get_sub_field('buy_now_list_title');
-                    $currency = get_sub_field('item_currency');
-                    //Handles the currecy symbol selection
+               
+            <?php 
+                $buy_now_list_title = get_sub_field('buy_now_list_title');
+                $currency = get_sub_field('item_currency');
+                //Handles the currecy symbol selection
 
-                    if($currency == 'GBP') {
-                        $currency = '&#163';
-                    } else if($currency == 'USD') {
-                        $currency = '&#36';
-                    } else if($currency == 'Euro') {
-                        $currency = '&#8364';
-                    } else if($currency == 'JPY') {
-                        $currency = '&#165';
-                    } else if($currency == 'KWR') {
-                        $currency = '&#8361';
-                    } else if($currency == 'INR') {
-                        $currency = '&#8377';
-                    }
-                ?>
+                if($currency == 'GBP') {
+                    $currency = '&#163';
+                } else if($currency == 'USD') {
+                    $currency = '&#36';
+                } else if($currency == 'Euro') {
+                    $currency = '&#8364';
+                } else if($currency == 'JPY') {
+                    $currency = '&#165';
+                } else if($currency == 'KWR') {
+                    $currency = '&#8361';
+                } else if($currency == 'INR') {
+                    $currency = '&#8377';
+                }
+            ?>
 
-                <tr>
-                    <th>
-                        <h4><?php echo $buy_now_list_title;?></h4>
-                        <img class="img-fluid" src="<?php echo get_sub_field('item_image');?>" style="width:100px; height:100px; object-fit: cover;">
-                    </th>
-                    <td class="align-middle">
-                        <h6><?php the_sub_field('item_model');?></h6>
-                    </td>
-                    <td class="align-middle">
-                        <h6><?php echo $currency;?><?php the_sub_field('item_price');?></h6>
-                    </td>
-                </tr>
-                <?php endwhile;?>    
-            </tbody>
-        </table>
-    </div>
+            <tr>
+                <th>
+                    <h4><?php echo $buy_now_list_title;?></h4>
+                    <img class="img-fluid" src="<?php echo get_sub_field('item_image');?>" style="width:100px; height:100px; object-fit: cover;">
+                </th>
+                <td class="align-middle">
+                    <h6><?php the_sub_field('item_model');?></h6>
+                </td>
+                <td class="align-middle">
+                    <h6><?php echo $currency;?><?php the_sub_field('item_price');?></h6>
+                </td>
+            </tr>
+            <?php endwhile;?>    
+        </tbody>
+    </table>
+</div>
 <?php endif; ?>
+
 
 
 
