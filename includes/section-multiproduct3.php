@@ -91,11 +91,9 @@ $item_buy_now_CTA = ('item_buy_now_cta_text');
             <td class="align-middle">
             <h6>
             <button type="button" class="btn btn-success">
-            Get your 
             <a class="text-white text-decoration-none" href="<?php the_sub_field('item_url');?>" target="_blank">
             <?php echo $item_buy_now_CTA; ?>
             </a> 
-            now 
             </button>
             </h6>
             </td>
