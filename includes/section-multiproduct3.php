@@ -60,42 +60,39 @@
 
 <?php if(have_rows('buy_now_list')):?>
 
-<?php $buy_now_list_title = get_sub_field('buy_now_list_title');?>
-<?php $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');?>
-
-<h4><?php echo $buy_now_list_title;?></h4>
 <div class="table-responsive">
   <table class="table">
-  <thead class="table-success">
-    <tr>
-        <th><h4><?php echo $buy_now_list_manufacturer;?></h4></th>
-        <th><h4>Model</h4></th>
-        <th><h4>Price</h4></th>
-    </tr>	
+    <thead class="table-success">
+      <tr>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php while( have_rows('buy_now_list')): the_row();?>
+        <?php $buy_now_list_title = get_sub_field('buy_now_list_title');?>
+        <?php $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');?>
 
-
-<?php while( have_rows('buy_now_list')): the_row();?>
-
-<tr>
-    <th>
-        <img class="img-fluid" src="<?php echo get_sub_field('item_image');?>" style="width:100px; height:100px; object-fit: cover;">
-    </th>
-    <th class="align-middle">
-        <?php the_sub_field('item_model');?>
-    </th>
-    <th class="align-middle">
-        <?php the_sub_field('item_price');?>
-    </th>
-</tr>
-		
-
-<?php endwhile;?>	
-
+        <tr>
+          <th>
+            <h4><?php echo $buy_now_list_title;?></h4>
+            <img class="img-fluid" src="<?php echo get_sub_field('item_image');?>" style="width:100px; height:100px; object-fit: cover;">
+          </th>
+          <td class="align-middle">
+            <?php the_sub_field('item_model');?>
+          </td>
+          <td class="align-middle">
+            <?php the_sub_field('item_price');?>
+          </td>
+        </tr>
+      <?php endwhile;?>	
     </tbody>
   </table>
-
+</div>
 
 <?php endif; ?>
+
 
 <!-- Social share icons-->
 <?php $enable_in_article = get_field('on_article','option');?>
