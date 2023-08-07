@@ -98,7 +98,7 @@ $Product_image = get_sub_field('image');
                 <img class="img-fluid" src="<?php echo $Product_image; ?>" style="width:100px; height:100px; object-fit: cover;">
             </th>
             <td class="align-middle">
-                <h6><?php the_sub_field('item_model');?></h6>
+                <h6><?php the_sub_field('buy_now_list_retailer');?></h6>
             </td>
             <td class="align-middle">
             <button type="button" class="btn btn-success">Get your<a class="text-white text-decoration-none" href="" target="_blank">Get your <?php the_sub_field('item_model');?> now </button><?php echo $currency;?><?php the_sub_field('item_price');?></a></h6>
