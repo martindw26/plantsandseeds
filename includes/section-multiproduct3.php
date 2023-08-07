@@ -45,7 +45,9 @@
 
 
 <?php while( have_rows('specs_column_horizontal_block')): the_row();?>
-	
+
+<?php $buy_now_list_title = get_sub_field('buy_now_list_title');?>
+<?php $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');?>
 
 <tr>
         <th class=""><?php the_sub_field('component');?></th>
@@ -61,12 +63,12 @@
 
 <?php if(have_rows('buy_now_list')):?>
 
-<h4><?php $buy_now_list_title = get_sub_field('buy_now_list_title');?></h4>
+<h4><?php echo $buy_now_list_title;?></h4>
 <div class="table-responsive">
   <table class="table">
   <thead class="table-success">
     <tr>
-        <th><h4><?php $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');?></h4></th>
+        <th><h4><?php echo $buy_now_list_manufacturer;?></h4></th>
         <th><h4>Model</h4></th>
         <th><h4>Price</h4></th>
     </tr>	
