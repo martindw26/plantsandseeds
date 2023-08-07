@@ -65,12 +65,12 @@ $Product_image = get_sub_field('image');
 $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
 
 ?>
-
+<h6>Where to purchase your: <th><?php echo $Product_title; ?></th></h6>
 <div class="table-responsive">
     <table class="table">
         <thead class="table-success">
             <tr>
-                <th><?php echo $Product_title; ?></th>
+
                 <th>Retailer</th>
                 <th>Condition</th>
                 <th>Purchase</th>
@@ -84,15 +84,6 @@ $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
     ?>
 
 <tr>
-    <td class="align-middle">
-        <?php
-            if($Product_image): 
-        ?>
-            <img class="img-fluid" src="<?php echo $Product_image; ?>" style="width:100px; height:100px; object-fit: cover;">
-        <?php 
-            endif;
-        ?>
-    </td>
     <td class="align-middle">
         <?php
             if (the_sub_field('buy_now_list_retailer')): 
