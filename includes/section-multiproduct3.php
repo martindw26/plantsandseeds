@@ -95,15 +95,6 @@ $item_condition = get_sub_field ('item_condition');
         ?>
     </td>
     <td class="align-middle">
-    <?php
-        if($item_condition): 
-    ?>
-        <h6><?php echo esc_html($item_condition); ?></h6>
-    <?php 
-        endif;
-    ?>
-    </td>
-    <td class="align-middle">
         <?php
             if (the_sub_field('buy_now_list_retailer')): 
         ?>
@@ -111,6 +102,15 @@ $item_condition = get_sub_field ('item_condition');
         <?php 
             endif;
         ?>
+    </td>
+    <td class="align-middle">
+    <?php
+        if($item_condition): 
+    ?>
+        <h6><?php echo esc_html($item_condition); ?></h6>
+    <?php 
+        endif;
+    ?>
     </td>
     <td class="align-middle">
     <?php
