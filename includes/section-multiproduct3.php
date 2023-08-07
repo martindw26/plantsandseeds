@@ -61,7 +61,7 @@
 
 <?php if(have_rows('buy_now_list')):?>
 
-<div class="container mt-3 col-lg-6 col-md-6 col-sm-6">
+
 <h4><?php the_field('buy_now_list_title');?></h4>
 <div class="table-responsive">
   <table class="table">
@@ -85,7 +85,7 @@
 
     </tbody>
   </table>
-</div>
+
 
 <?php endif; ?>
 
