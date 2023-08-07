@@ -103,7 +103,7 @@ $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
     <td class="align-middle">
     <?php
     $item_url = get_sub_field('item_url');
-    $item_buy_now_CTA = "Your Button Text Here"; // You need to replace 'Your Button Text Here' with actual text or get the text dynamically
+    $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
 
     if ($item_url): 
 ?>
