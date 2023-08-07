@@ -62,6 +62,7 @@
 $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');
 $Product_title = get_sub_field('multi_product_title');
 $Product_image = get_sub_field('image');
+$item_buy_now_CTA = ('item_buy_now_CTA');
 ?>
 
 <div class="table-responsive">
@@ -77,7 +78,7 @@ $Product_image = get_sub_field('image');
 
 <?php if(have_rows('buy_now_list')): ?>
     <?php while(have_rows('buy_now_list')): the_row();
-        $item_buy_now_CTA = ('item_buy_now_CTA');
+        
     ?>
 
         <tr>
