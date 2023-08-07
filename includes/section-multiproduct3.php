@@ -70,7 +70,7 @@ $Product_image = get_sub_field('image');
             <tr>
                 <th>Model: <?php echo $Product_title; ?></th>
                 <th>Retailer</th>
-                <th>Price</th>
+                <th>Buy now</th>
             </tr>
         </thead>
         <tbody>
@@ -78,18 +78,6 @@ $Product_image = get_sub_field('image');
 <?php if(have_rows('buy_now_list')): ?>
     <?php while(have_rows('buy_now_list')): the_row();
         $buy_now_list_title = get_sub_field('buy_now_list_title');
-        $currency = get_sub_field('item_currency');
-        
-        $currencySymbols = array(
-            'GBP' => '&#163;',
-            'USD' => '&#36;',
-            'Euro' => '&#8364;',
-            'JPY' => '&#165;',
-            'KWR' => '&#8361;',
-            'INR' => '&#8377;',
-        );
-
-        $currency = isset($currencySymbols[$currency]) ? $currencySymbols[$currency] : $currency;
     ?>
 
         <tr>
@@ -100,7 +88,7 @@ $Product_image = get_sub_field('image');
                 <h6><?php the_sub_field('buy_now_list_retailer');?></h6>
             </td>
             <td class="align-middle">
-            <button type="button" class="btn btn-success">Get your<a class="text-white text-decoration-none" href="" target="_blank">Get your <?php the_sub_field('item_model');?> now </button><?php echo $currency;?><?php the_sub_field('item_price');?></a></h6>
+            <button type="button" class="btn btn-success">Get your<a class="text-white text-decoration-none" href="" target="_blank">Get your <?php the_sub_field('item_model');?> now </button></a></h6>
             
             </td>
         </tr>
