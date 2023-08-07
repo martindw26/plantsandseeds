@@ -68,7 +68,7 @@ $Product_image = get_sub_field('image');
     <table class="table">
         <thead class="table-success">
             <tr>
-                <th><?php echo $Product_title; ?></th>
+                <th>Model: <?php echo $Product_title; ?></th>
                 <th>Retailer</th>
                 <th>Price</th>
             </tr>
