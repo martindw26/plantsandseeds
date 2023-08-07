@@ -76,11 +76,17 @@
 <?php while( have_rows('buy_now_list')): the_row();?>
 
 <tr>
-        <th><img class="img-fluid" src="<?php echo get_sub_field('item_image');?>" style="width:100px; height:100px; object-fit: cover;"></th>
-        <th><?php the_sub_field('item_model');?></th>
-        <th><?php the_sub_field('item_price');?></th>
-
-</tr>				
+    <th class="text-center">
+        <img class="img-fluid" src="<?php echo get_sub_field('item_image');?>" style="width:100px; height:100px; object-fit: cover;">
+    </th>
+    <th class="text-center">
+        <?php the_sub_field('item_model');?>
+    </th>
+    <th class="text-center">
+        <?php the_sub_field('item_price');?>
+    </th>
+</tr>
+		
 
 <?php endwhile;?>	
 
