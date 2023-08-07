@@ -67,7 +67,7 @@
   <table class="table">
   <thead class="table-success">
     <tr>
-        <th><h4><?php the_field('buy_now_list_manufacturer');?></h4></th>
+        <th><h4><?php echo get_field('buy_now_list_manufacturer'); ?></h4></th>
         <th><h4>Model</h4></th>
         <th><h4>Price</h4></th>
     </tr>	
