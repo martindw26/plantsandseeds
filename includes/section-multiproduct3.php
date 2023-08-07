@@ -59,6 +59,36 @@
 <?php endif; ?>
 
 
+<?php if(have_rows('buy_now_list')):?>
+
+<div class="container mt-3 col-lg-6 col-md-6 col-sm-6">
+<h4><?php the_field('buy_now_list_title');?></h4>
+<div class="table-responsive">
+  <table class="table">
+  <thead class="table-success">
+    <tr>
+        <th><h4><?php the_field('buy_now_list_category');?></h4></th>
+        <th><h4>Model</h4></th>
+        <th><h4>Price</h4></th>
+    </tr>	
+
+
+<?php while( have_rows('buy_now_list')): the_row();?>
+
+<tr>
+        <th><img class="img-fluid" src="<?php get_sub_field('item_image');?>"style="width:100px; height:100px; object-fit: cover;"></th>
+        <th><?php get_sub_field('item_model');?></th>
+        <th><?php get_sub_field('item_price');?></th>
+</tr>				
+
+<?php endwhile;?>	
+
+    </tbody>
+  </table>
+</div>
+
+<?php endif; ?>
+
 <!-- Social share icons-->
 <?php $enable_in_article = get_field('on_article','option');?>
 <?php if($enable_in_article):?>
