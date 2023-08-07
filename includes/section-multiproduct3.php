@@ -73,6 +73,7 @@ $item_condition = get_sub_field ('item_condition');
             <tr>
                 <th>Model: <?php echo $Product_title; ?></th>
                 <th>Retailer</th>
+                <th>Condition</th>
                 <th>Purchase</th>
             </tr>
         </thead>
