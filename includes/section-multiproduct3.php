@@ -99,7 +99,8 @@ $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');
                 <h6><?php the_sub_field('item_model');?></h6>
             </td>
             <td class="align-middle">
-                <h6><?php echo $currency;?><?php the_sub_field('item_price');?></h6>
+            <button type="button" class="btn btn-success">Get your<a class="text-white text-decoration-none" href="" target="_blank">Get your <?php the_sub_field('item_model');?> now </button><?php echo $currency;?><?php the_sub_field('item_price');?></a></h6>
+            
             </td>
         </tr>
 
