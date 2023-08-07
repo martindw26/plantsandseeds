@@ -62,6 +62,8 @@
 
 <?php
 
+$buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');
+
 $currency = get_sub_field('item_currency');
 //Handles the currecy symbol selection
 
@@ -84,7 +86,7 @@ $currency = '&#8377';
   <table class="table">
     <thead class="table-success">
       <tr>
-        <th>Manufacturer</th>
+        <th><?php echo $buy_now_list_manufacturer;?></th>
         <th>Model</th>
         <th>Price</th>
       </tr>
@@ -92,7 +94,7 @@ $currency = '&#8377';
     <tbody>
       <?php while( have_rows('buy_now_list')): the_row();?>
         <?php $buy_now_list_title = get_sub_field('buy_now_list_title');?>
-        <?php $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');?>
+
 
         <tr>
           <th>
