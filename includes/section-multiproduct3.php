@@ -70,7 +70,7 @@ $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
     <table class="table">
         <thead class="table-success">
             <tr>
-                <th>Model: <?php echo $Product_title; ?></th>
+                <th><?php echo $Product_title; ?></th>
                 <th>Retailer</th>
                 <th>Condition</th>
                 <th>Purchase</th>
