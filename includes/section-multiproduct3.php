@@ -77,7 +77,7 @@ $Product_image = get_sub_field('image');
 
 <?php if(have_rows('buy_now_list')): ?>
     <?php while(have_rows('buy_now_list')): the_row();
-        $buy_now_list_title = get_sub_field('buy_now_list_title');
+        $item_buy_now_CTA = ('item_buy_now_CTA');
     ?>
 
         <tr>
@@ -88,8 +88,15 @@ $Product_image = get_sub_field('image');
                 <h6><?php the_sub_field('buy_now_list_retailer');?></h6>
             </td>
             <td class="align-middle">
-            <button type="button" class="btn btn-success">Get your<a class="text-white text-decoration-none" href="" target="_blank">Get your <?php the_sub_field('item_model');?> now </button></a></h6>
-            
+            <h6>
+            <button type="button" class="btn btn-success">
+            Get your 
+            <a class="text-white text-decoration-none" href="<?php the_sub_field('item_url');?>" target="_blank">
+            <?php echo $item_buy_now_CTA; ?>
+            </a> 
+            now 
+            </button>
+            </h6>
             </td>
         </tr>
 
