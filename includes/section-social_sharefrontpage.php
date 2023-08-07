@@ -5,7 +5,7 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 <div class="container d-inline-flex bg-white pt-2 pb-2 border border-1 border-dark">
   <div class="row">
- 
+  Share this:
 
     <div class="col">
 	<a class="bi bi-facebook text-dark  p-2" width="48" height="48" href="http://www.facebook.com/sharer.php?u=<?php the_permalink() ?>" 				target="_blank" /></a>

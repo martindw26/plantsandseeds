@@ -5,7 +5,7 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   
   <div class="header-social container-fluid d-flex flex-row sm-3 justify-content-end">
       <div class="row m-2">
-      Share this:
+
     
 
         <div class="col">
