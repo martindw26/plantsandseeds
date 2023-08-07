@@ -106,7 +106,7 @@ $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
         ?>
         <h6>
             <button type="button" class="btn btn-success">
-                <a class="text-white text-decoration-none" href="<?php the_sub_field('item_url');?>" target="_blank">
+                <a class="text-white text-decoration-none" href="<?php get_sub_field('item_url');?>" target="_blank">
                 <?php echo $item_buy_now_CTA; ?>
                 </a> 
             </button>
