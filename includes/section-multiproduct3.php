@@ -68,7 +68,7 @@ $Product_image = get_sub_field('image');
     <table class="table">
         <thead class="table-success">
             <tr>
-                <th><?php echo $buy_now_list_manufacturer;?></th>
+                <th><?php echo $Product_title; ?></th>
                 <th>Retailer</th>
                 <th>Price</th>
             </tr>
@@ -94,7 +94,6 @@ $Product_image = get_sub_field('image');
 
         <tr>
             <th>
-                <h4><?php echo $Product_title; ?></h4>
                 <img class="img-fluid" src="<?php echo $Product_image; ?>" style="width:100px; height:100px; object-fit: cover;">
             </th>
             <td class="align-middle">
