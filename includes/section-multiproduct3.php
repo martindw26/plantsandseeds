@@ -59,10 +59,16 @@
 
 
 <?php  
+
+$item_buy_now_list_toggle = get_sub_field('item_buy_now_list_toggle');
+
+if ($item_buy_now_list_toggle === 'yes') {
+
 $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');
 $Product_title = get_sub_field('multi_product_title');
 $Product_image = get_sub_field('image');
 $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
+
 
 ?>
 <h6>Where to purchase your: <th><?php echo $Product_title; ?></th></h6>
@@ -129,7 +135,7 @@ $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
         </tbody>
     </table>
 </div>
-
+}
 
 <!-- Social share icons-->
 <?php $enable_in_article = get_field('on_article','option');?>
