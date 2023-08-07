@@ -62,7 +62,7 @@
 $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');
 $Product_title = get_sub_field('multi_product_title');
 $Product_image = get_sub_field('image');
-$item_buy_now_CTA = ('item_buy_now_cta_text');
+$item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
 ?>
 
 <div class="table-responsive">
