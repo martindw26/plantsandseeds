@@ -59,83 +59,76 @@
 
 
 <?php  
-
 $item_buy_now_list_toggle = get_sub_field('item_buy_now_list_toggle');
 
 if ($item_buy_now_list_toggle === 'yes') {
 
-$buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');
-$Product_title = get_sub_field('multi_product_title');
-$Product_image = get_sub_field('image');
-$item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
-
-
+    $item_buy_now_CTA = get_sub_field('item_buy_now_cta_text');
 ?>
-<h6>Where to purchase your: <th><?php echo $Product_title; ?></th></h6>
-<div class="table-responsive">
-    <table class="table">
-        <thead class="table-success">
-            <tr>
-
-                <th>Retailer</th>
-                <th>Condition</th>
-                <th>Purchase</th>
-            </tr>
-        </thead>
-        <tbody>
+    <h6>Where to purchase your: <?php echo esc_html($Product_title); ?></h6>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="table-success">
+                <tr>
+                    <th>Retailer</th>
+                    <th>Condition</th>
+                    <th>Purchase</th>
+                </tr>
+            </thead>
+            <tbody>
 
 <?php if(have_rows('buy_now_list')): ?>
     <?php while(have_rows('buy_now_list')): the_row();
         $item_condition = get_sub_field('item_condition');
     ?>
 
-<tr>
-    <td class="align-middle">
-        <?php
-            if (the_sub_field('buy_now_list_retailer')): 
-        ?>
-            <h6><?php the_sub_field('buy_now_list_retailer');?></h6>
-        <?php 
-            endif;
-        ?>
-    </td>
-    <td class="align-middle">
-    <?php
-        if($item_condition): 
-    ?>
-        <h6><?php echo esc_html($item_condition); ?></h6>
-    <?php 
-        endif;
-    ?>
-    </td>
-    <td class="align-middle">
-    <?php
-    $item_url = get_sub_field('item_url');
-
-    if ($item_url): 
-?>
-        <h6>
-            <button type="button" class="btn btn-success">
-                <a class="text-white text-decoration-none" href="<?php echo esc_url($item_url); ?>" target="_blank">
-                <?php echo esc_html($item_buy_now_CTA); ?>
-                </a> 
-            </button>
-        </h6>
-<?php 
-    endif;
-?>
-
-    </td>
-</tr>
-
-
-    <?php endwhile;?>    
+    <tr>
+        <td class="align-middle">
+            <?php
+                $retailer = get_sub_field('buy_now_list_retailer');
+                if ($retailer): 
+            ?>
+                <h6><?php echo esc_html($retailer); ?></h6>
+            <?php 
+                endif;
+            ?>
+        </td>
+        <td class="align-middle">
+            <?php
+                if($item_condition): 
+            ?>
+            <h6><?php echo esc_html($item_condition); ?></h6>
+            <?php 
+                endif;
+            ?>
+        </td>
+        <td class="align-middle">
+            <?php
+                $item_url = get_sub_field('item_url');
+                if ($item_url): 
+            ?>
+                <h6>
+                    <button type="button" class="btn btn-success">
+                        <a class="text-white text-decoration-none" href="<?php echo esc_url($item_url); ?>" target="_blank">
+                        <?php echo esc_html($item_buy_now_CTA); ?>
+                        </a> 
+                    </button>
+                </h6>
+            <?php 
+                endif;
+            ?>
+        </td>
+    </tr>
+    <?php endwhile; ?>    
 <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
 
-        </tbody>
-    </table>
-</div>
-}
+<?php
+} 
+?>
+
 
 <!-- Social share icons-->
 <?php $enable_in_article = get_field('on_article','option');?>
