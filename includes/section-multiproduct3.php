@@ -60,22 +60,20 @@
 
 <?php if(have_rows('buy_now_list')):?>
 
-<?php while(have_rows('buy_now_list')): the_row();?>
+<?php  $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');?>
 
-    <?php  $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');?>
-    
-    <div class="table-responsive">
-        <table class="table">
-            <thead class="table-success">
-                <tr>
-                    <th><?php echo $buy_now_list_manufacturer;?></th>
-                    <th>Model</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
+<div class="table-responsive">
+    <table class="table">
+        <thead class="table-success">
+            <tr>
+                <th><?php echo $buy_now_list_manufacturer;?></th>
+                <th>Model</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while(have_rows('buy_now_list')): the_row();
                
-            <?php 
                 $buy_now_list_title = get_sub_field('buy_now_list_title');
                 $currency = get_sub_field('item_currency');
                 //Handles the currecy symbol selection
@@ -112,7 +110,6 @@
     </table>
 </div>
 <?php endif; ?>
-
 
 
 
