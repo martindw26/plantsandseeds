@@ -108,6 +108,7 @@ $item_condition = get_sub_field ('item_condition');
         if($item_condition): 
     ?>
         <h6><?php echo esc_html($item_condition); ?></h6>
+        <?php var_dump($item_condition);?>
     <?php 
         endif;
     ?>
