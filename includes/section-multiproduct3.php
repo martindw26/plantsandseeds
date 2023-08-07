@@ -60,7 +60,7 @@
 
 <?php  
 $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');
-$buy_now_list_retailer = get_sub_field('buy_now_list_retailer');
+$Product_title = get_sub_field('multi_product_title');
 $Product_image = get_sub_field('image');
 ?>
 
@@ -94,7 +94,7 @@ $Product_image = get_sub_field('image');
 
         <tr>
             <th>
-                <h4><?php echo $buy_now_list_title;?></h4>
+                <h4><?php echo $Product_title; ?></h4>
                 <img class="img-fluid" src="<?php echo $Product_image; ?>" style="width:100px; height:100px; object-fit: cover;">
             </th>
             <td class="align-middle">
