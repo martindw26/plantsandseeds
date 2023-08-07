@@ -81,23 +81,42 @@ $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
         
     ?>
 
-        <tr>
-            <th>
-                <img class="img-fluid" src="<?php echo $Product_image; ?>" style="width:100px; height:100px; object-fit: cover;">
-            </th>
-            <td class="align-middle">
-                <h6><?php the_sub_field('buy_now_list_retailer');?></h6>
-            </td>
-            <td class="align-middle">
-            <h6>
+<tr>
+    <td class="align-middle">
+        <?php
+            if($product_image_url): 
+        ?>
+            <img class="img-fluid" src="<?php echo $product_image_url; ?>" style="width:100px; height:100px; object-fit: cover;">
+        <?php 
+            endif;
+        ?>
+    </td>
+    <td class="align-middle">
+        <?php
+            if (the_sub_field('buy_now_list_retailer')): 
+        ?>
+            <h6><?php the_sub_field('buy_now_list_retailer');?></h6>
+        <?php 
+            endif;
+        ?>
+    </td>
+    <td class="align-middle">
+        <?php
+            if (the_sub_field('item_url')): 
+        ?>
+        <h6>
             <button type="button" class="btn btn-success">
-            <a class="text-white text-decoration-none" href="<?php the_sub_field('item_url');?>" target="_blank">
-            <?php echo $item_buy_now_CTA; ?>
-            </a> 
+                <a class="text-white text-decoration-none" href="<?php the_sub_field('item_url');?>" target="_blank">
+                <?php echo $item_buy_now_CTA; ?>
+                </a> 
             </button>
-            </h6>
-            </td>
-        </tr>
+        </h6>
+        <?php 
+            endif;
+        ?>
+    </td>
+</tr>
+
 
     <?php endwhile;?>    
 <?php endif; ?>
