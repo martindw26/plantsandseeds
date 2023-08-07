@@ -71,7 +71,7 @@ $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
             <tr>
                 <th>Model: <?php echo $Product_title; ?></th>
                 <th>Retailer</th>
-                <th>Buy now</th>
+                <th>Purchase</th>
             </tr>
         </thead>
         <tbody>
