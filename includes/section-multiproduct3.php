@@ -100,10 +100,10 @@ $currency = '&#8377';
             <img class="img-fluid" src="<?php echo get_sub_field('item_image');?>" style="width:100px; height:100px; object-fit: cover;">
           </th>
           <td class="align-middle">
-            <h4><?php the_sub_field('item_model');?></h4>
+            <h6><?php the_sub_field('item_model');?></h6>
           </td>
           <td class="align-middle">
-          <h4><?php echo $currency;?><?php the_sub_field('item_price');?></h4>
+          <h6><?php echo $currency;?><?php the_sub_field('item_price');?></h6>
           </td>
         </tr>
       <?php endwhile;?>	
