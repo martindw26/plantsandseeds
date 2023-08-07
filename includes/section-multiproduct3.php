@@ -123,9 +123,7 @@ if ($item_buy_now_list_toggle === 'yes') {
 <?php endif; ?>
             </tbody>
         </table>
-        <?php if (get_field('affiliate_disclaimer','option')) : ?>
-        <?php echo get_field('affiliate_disclaimer','option'); ?>
-<?php endif; ?>
+        
     </div>
 
 <?php
