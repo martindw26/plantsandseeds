@@ -84,9 +84,9 @@ $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
 <tr>
     <td class="align-middle">
         <?php
-            if($product_image_url): 
+            if($Product_image): 
         ?>
-            <img class="img-fluid" src="<?php echo $product_image_url; ?>" style="width:100px; height:100px; object-fit: cover;">
+            <img class="img-fluid" src="<?php echo $Product_image; ?>" style="width:100px; height:100px; object-fit: cover;">
         <?php 
             endif;
         ?>
