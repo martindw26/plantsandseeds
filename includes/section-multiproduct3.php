@@ -63,7 +63,6 @@ $buy_now_list_manufacturer = get_sub_field('buy_now_list_manufacturer');
 $Product_title = get_sub_field('multi_product_title');
 $Product_image = get_sub_field('image');
 $item_buy_now_CTA = get_sub_field ('item_buy_now_cta_text');
-$item_condition = get_sub_field ('item_condition');
 
 ?>
 
@@ -81,7 +80,7 @@ $item_condition = get_sub_field ('item_condition');
 
 <?php if(have_rows('buy_now_list')): ?>
     <?php while(have_rows('buy_now_list')): the_row();
-        
+        $item_condition = get_sub_field('item_condition');
     ?>
 
 <tr>
@@ -108,7 +107,6 @@ $item_condition = get_sub_field ('item_condition');
         if($item_condition): 
     ?>
         <h6><?php echo esc_html($item_condition); ?></h6>
-        <?php var_dump($item_condition);?>
     <?php 
         endif;
     ?>
