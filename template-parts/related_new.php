@@ -1,7 +1,7 @@
 <div>
     <h2>You may also <i>like</i></h2>
     <?php
-    if(get_field('show_related_posts', 'option') === 'yes') { 
+    if(get_field('related_post_override', 'option') === 'yes') { 
         // Get tags from the current post
         $tags = wp_get_post_tags($post->ID);
         if ($tags) {
