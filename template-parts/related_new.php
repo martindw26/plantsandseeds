@@ -5,6 +5,7 @@
 <?php
 $post_id = get_field('post_id');
 $related_order_by = get_field('related_order_by', 'option');
+$related_post_override  = get_field('related_post_override', 'option');
 $args = array(
 	'post_type' => 'post',
 	'post_status' => 'publish',
