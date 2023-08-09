@@ -6,10 +6,9 @@
     if(get_field('related_post_override', 'option') === 'yes') {
         // Get categories from the current post
         $categories = get_the_category($post->ID);
-        if ($categories) {
-            $category_ids = array();
-            foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
 
+        if ($categories) {
+            $category_ids = wp_list_pluck($categories, 'term_id');
             $related_order_by = get_field('related_order_by', 'option');
 
             $args = array(
@@ -17,7 +16,7 @@
                 'post_status'   => 'publish',
                 'orderby'       => $related_order_by,
                 'category__in'  => $category_ids,
-                'post__not_in'  => array($post->ID) // Exclude current post
+                'post__not_in'  => array($post->ID)  // Exclude current post
             );
 
             $relatedPosts = new WP_Query($args);
@@ -26,33 +25,36 @@
                 while($relatedPosts->have_posts()) : $relatedPosts->the_post(); 
                     // Display related post content here...
 
-                    $posts_displayed = true;  // Mark that we've displayed some posts
+                    $posts_displayed = true;
                 endwhile;
-                wp_reset_query();
+                wp_reset_postdata();
             endif;
         }
     } else {
         $post_id = get_field('post_id');
         $related_order_by = get_field('related_order_by', 'option');
+
         $args = array(
-            'post_type' 			=> 'post',
-            'post_status' 			=> 'publish',
-            'orderby' 				=> $related_order_by,
-            'post__in'				=> $post_id
+            'post_type'     => 'post',
+            'post_status'   => 'publish',
+            'orderby'       => $related_order_by,
+            'post__in'      => array($post_id)
         );
+
         $relatedPosts = new WP_Query($args);
-        if ($relatedPosts->have_posts()) :
-            while ($relatedPosts->have_posts()) : $relatedPosts->the_post();
+
+        if($relatedPosts->have_posts()) :
+            while($relatedPosts->have_posts()) : $relatedPosts->the_post();
                 // Display post content based on post_id criteria here...
 
-                $posts_displayed = true;  // Mark that we've displayed some posts
+                $posts_displayed = true;
             endwhile;
-            wp_reset_query();
+            wp_reset_postdata();
         endif;
     }
 
     // If no related posts were displayed, show posts from the category
-    if(!$posts_displayed) {
+    if(!$posts_displayed && !empty($category_ids)) {
         $categoryPosts = new WP_Query(array(
             'post_type'     => 'post',
             'post_status'   => 'publish',
@@ -65,7 +67,7 @@
                 // Display posts from the category...
 
             endwhile;
-            wp_reset_query();
+            wp_reset_postdata();
         endif;
     }
     ?>
