@@ -13,7 +13,7 @@
                 'post__in' => $post_id
             );
         } else {
-            $related_post_override = get_field('related_post_override');
+            $related_post_override = get_field('related_post_override','option');
 
             if ($related_post_override === 'yes') {
                 $current_category = get_the_category();
