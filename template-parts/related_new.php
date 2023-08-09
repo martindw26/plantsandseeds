@@ -3,7 +3,7 @@
     <?php
     $posts_displayed = false;
 
-    if(get_field('show_related_posts', 'option') === 'yes') {
+    if(get_field('related_post_override', 'option') === 'yes') {
         // Get categories from the current post
         $categories = get_the_category($post->ID);
         if ($categories) {
