@@ -1,12 +1,14 @@
 <div>
     <h2>You may also <i>like</i></h2>
     <?php
-    if(get_field('related_post_override', 'option') === 'yes') { 
-        // Get tags from the current post
-        $tags = wp_get_post_tags($post->ID);
-        if ($tags) {
-            $tag_ids = array();
-            foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+    if(get_field('show_related_posts', 'option') === 'yes') { 
+
+        // Get categories from the current post
+        $categories = get_the_category($post->ID);
+        
+        if ($categories) {
+            $category_ids = array();
+            foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
 
             $related_order_by = get_field('related_order_by', 'option');
 
@@ -14,7 +16,7 @@
                 'post_type'     => 'post',
                 'post_status'   => 'publish',
                 'orderby'       => $related_order_by,
-                'tag__in'       => $tag_ids,
+                'category__in'  => $category_ids,  // This has changed
                 'post__not_in'  => array($post->ID) // Exclude current post
             );
 
@@ -37,12 +39,11 @@
                             </div>
                         </div>
                     </div><br>
-					<pre><?php var_dump($tag_ids);?></pre>
                 <?php endwhile;
                 wp_reset_query();
             endif;
         }
-    } else {  // This is the correct format for the else condition
+    } else {
         $post_id = get_field('post_id');
         $related_order_by = get_field('related_order_by', 'option');
         $args = array(
