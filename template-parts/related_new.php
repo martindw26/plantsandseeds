@@ -34,6 +34,7 @@
                             <div class="col-lg-6 mb-3 mt-4 mt-md-0">
                                 <p class="text-white">&ldquo;<?php echo get_the_excerpt(); ?>&rdquo;</p>
                                 <br><a class="text-white text-decoration-none align-content-end" href="<?php the_permalink() ?>">Read more →</a>
+								<?php var_dump($tag_ids);?>
                             </div>
                         </div>
                     </div><br>
