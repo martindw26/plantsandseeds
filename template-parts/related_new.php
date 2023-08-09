@@ -1,84 +1,56 @@
 <div>
-    <h2>You may also <i>like</i></h2>
-    <?php
-    $posts_displayed = false;
-    $categories = get_the_category($post->ID);
-    $category_ids = $categories ? wp_list_pluck($categories, 'term_id') : [];
 
-    $args = array(
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'post__not_in' => array($post->ID)  // Exclude current post
-    );
+<h2>You may also <i>like</i></h2>
 
-    // Define a function to display a post
-    function display_post() {
-        ?>
-        <div class="container p-2 bg-dark text-white">
-            <div class="row">
-                <div class="col-lg-9">
-                    <h5><a class="text-decoration-none link-dark text-white" href='<?php echo get_permalink(); ?>'><?php the_title(); ?></a></h5>
-                </div>
-                <div class="col-lg-4">
-                    <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-                    <img class="img-fluid rounded pb-xs-4" src="<?php echo $url ?>" />
-                </div>
-                <div class="col-lg-6 mb-3 mt-4 mt-md-0">
-                    <p class="text-white">&ldquo;<?php echo excerpt(100); ?>&rdquo;</p>
-                    <a class="text-white text-decoration-none align-content-end" href="<?php the_permalink() ?>">Read more →</a>
-                </div>
-            </div>
+<?php
+
+$post_id = get_field('post_id');
+$related_order_by = get_field('related_order_by', 'option');
+
+$related_post_override = get_field('related_post_override');  // Assuming you're using ACF
+
+$args = array(
+    'post_type'      => 'post',
+    'post_status'    => 'publish',
+    'orderby'        => $related_order_by,
+    'post__not_in'   => array($post_id)   // To exclude the current post
+);
+
+if (empty($post_id) && $related_post_override == 'yes') {
+    $categories = get_the_category($post_id);
+    if (!empty($categories)) {
+        $category_id = $categories[0]->term_id;
+        $args['cat'] = $category_id;
+    }
+} else {
+    $args['post__in'] = $post_id;
+}
+
+$relatedPosts = new WP_Query($args);
+
+if ($relatedPosts-> have_posts()) :
+
+    while ($relatedPosts->have_posts()) : $relatedPosts->the_post();
+?>
+
+    <div class="container p-2 bg-dark text-white">
+        <div class="row">
+            <div class="col-lg-9"><h5><a class="text-decoration-none link-dark text-white" href='<?php echo get_permalink();?>'/></><?php the_title(); ?></a></h5></div>
+            <div class="col-lg-4"><?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+                <img class="img-fluid rounded pb-xs-4" src="<?php echo $url ?>" /></div>
+            <div class="col-lg-6 mb-3 mt-4 mt-md-0"><p class="text-white">&ldquo;<?php echo get_the_excerpt();?>&rdquo;</p><br><a class="text-white text-decoration-none align-content-end" href="<?php the_permalink() ?>">Read more →</a></div>
         </div>
-        <br>
-        <?php
-    }
+    </div><br>
 
-    if (get_field('related_post_override', 'option') === 'yes') {
-        $related_order_by = get_field('related_order_by', 'option');
+    <?php
+    endwhile; 
+    wp_reset_postdata();
 
-        $args['orderby'] = $related_order_by;
-        $args['category__in'] = $category_ids;
+else :
 
-        $relatedPosts = new WP_Query($args);
+    echo "<p>No related posts found.</p>";
 
-        if ($relatedPosts->have_posts()) {
-            while ($relatedPosts->have_posts()) : $relatedPosts->the_post();
-                display_post();
-                $posts_displayed = true;
-            endwhile;
-            wp_reset_postdata();
-        }
-    } else {
-        $post_id = get_field('post_id');
-        $related_order_by = get_field('related_order_by', 'option');
+endif;
+?>
 
-        $args['orderby'] = $related_order_by;
-        $args['post__in'] = array($post_id);
-
-        $relatedPosts = new WP_Query($args);
-
-        if ($relatedPosts->have_posts()) {
-            while ($relatedPosts->have_posts()) : $relatedPosts->the_post();
-                display_post();
-                $posts_displayed = true;
-            endwhile;
-            wp_reset_postdata();
-        }
-    }
-
-    // Fallback: If no posts were displayed, show posts from the current post categories
-    if (!$posts_displayed) {
-        $categoryPosts = new WP_Query(array_merge($args, [
-            'orderby' => 'date',
-            'category__in' => $category_ids
-        ]));
-
-        if ($categoryPosts->have_posts()) {
-            while ($categoryPosts->have_posts()) : $categoryPosts->the_post();
-                display_post();
-            endwhile;
-            wp_reset_postdata();
-        }
-    }
-    ?>
 </div>
