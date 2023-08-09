@@ -2,27 +2,24 @@
     <h2>You may also <i>like</i></h2>
 
     <?php
-    $post_id = get_field('post_id');
-    $category_id = get_field('category_id');
-    $related_order_by = get_field('related_order_by', 'option');
+$post_id = get_field('post_id');
+$category_id = get_field('category_id');
+$related_order_by = get_field('related_order_by', 'option');
 
-    // Determine query args based on custom fields
-    $args = array(
-        'post_type' => 'post',
-        'post_status' => 'publish',
-    );
+$args = array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'orderby' => $related_order_by ? $related_order_by : 'rand', // default to random if no order is set
+);
 
-    if ($post_id) {
-        $args['post__in'] = array($post_id);
-        $args['orderby'] = $related_order_by;
-    } elseif ($category_id) {
-        $args['cat'] = $category_id;
-        $args['orderby'] = $related_order_by;
-    } else {
-        $args['orderby'] = 'rand';
-    }
+if ($post_id) {
+    $args['post__in'] = array($post_id);
+} elseif ($category_id) {
+    $args['cat'] = $category_id;
+}
 
-    $relatedPosts = new WP_Query($args);
+$relatedPosts = new WP_Query($args);
+
 
     if ($relatedPosts->have_posts()) :
         while ($relatedPosts->have_posts()) : $relatedPosts->the_post();
