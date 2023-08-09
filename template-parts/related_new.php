@@ -4,22 +4,25 @@
 
 <?php
 
-$post_id = get_field('post_id');
+$post_id = get_field('post_id'); // make sure this returns an ID or an array of IDs
 $related_order_by = get_field('related_order_by', 'option');
 $related_posts_total = get_field('related_posts_total', 'option');
 
-//relared post loop begins here
+// If $post_id is not an array, make it an array
+if(!is_array($post_id)){
+    $post_id = array($post_id);
+}
 
 $args = array(
-					'post_type' 			=> 'post',
-					'post_status' 			=> 'publish',
-					'orderby' 				=> $related_order_by,
-					'post__in'				=> $post_id,
-					'posts_per_page'		=> $related_posts_total
+    'post_type'         => 'post',
+    'post_status'       => 'publish',
+    'orderby'           => $related_order_by,
+    'post__in'          => $post_id,
+    'posts_per_page'    => $related_posts_total
+);
 
-					);
+$relatedPosts = new WP_Query($args);
 
-				$relatedPosts = new WP_Query($args);
 
 if ($relatedPosts-> have_posts()) :
 
