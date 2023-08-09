@@ -525,8 +525,3 @@ span.tag-cat-btns:visited {
   text-decoration: none !important;
 }
 
-/* ACF CSS */
-
-.acf-label {
-  word-wrap: break-word!important;
-}
