@@ -71,55 +71,55 @@
   <div class="table-responsive">
   <div class="container mt-3">
     <table class="table table-bordered">
-        <thead class="table-primary">
-            <tr>
-                <th>Make</th>
-                <th>Model</th>
-                <th>Retailer</th>
-                <th>Price</th>
-                <th>Rating</th>
-            </tr>
-        </thead>
-        <tbody>
+      <thead class="table-primary">
+        <tr>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Retailer</th>
+          <th>Price</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
         <?php if (have_rows('listings')) :
-            while (have_rows('listings')) : the_row();
-                $Make = get_sub_field('make');
-                $Model = get_sub_field('model');
-                $Retailer = get_sub_field('retailer');
-                $Price = get_sub_field('price');
-                $URL = get_sub_field('price_url');
-                $Rating = get_sub_field('rating');
-               }
+          while (have_rows('listings')) : the_row();
+            $Make = get_sub_field('make');
+            $Model = get_sub_field('model');
+            $Retailer = get_sub_field('retailer');
+            $Price = get_sub_field('price');
+            $URL = get_sub_field('price_url');
+            $Rating = get_sub_field('rating');
         ?>
-                <tr>
-                    <td><?php echo $Make; ?></td>
-                    <td><?php echo $Model; ?></td>
-                    <td><?php echo $Retailer; ?></td>
-                    <td><a href='<?php echo $url; ?>' target="_blank"><?php echo $Price; ?></a></td>
-                    <td>
-                      <?php
-                      $star_full = '&#9733;';
-                      $star_empty = '&#9734;';
-
-                      // Display the star rating
-                      if ($Rating) {
-                      for ($i = 1; $i <= 5; $i++) {
-                          echo ($i <= $Rating) ? $star_full : $star_empty;
-                      }
-                      }
-                      ?>
-                      </td>
-                </tr>
+            <tr>
+              <td><?php echo $Make; ?></td>
+              <td><?php echo $Model; ?></td>
+              <td><?php echo $Retailer; ?></td>
+              <td><a href='<?php echo $URL; ?>' target="_blank"><?php echo $Price; ?></a></td>
+              <td>
+                <?php
+                $star_full = '&#9733;';
+                $star_empty = '&#9734;';
+                
+                // Display the star rating
+                if ($Rating) {
+                  for ($i = 1; $i <= 5; $i++) {
+                    echo ($i <= $Rating) ? $star_full : $star_empty;
+                  }
+                }
+                ?>
+              </td>
+            </tr>
         <?php
-            endwhile;
+          endwhile;
         else :
-            // Do something if no rows exist.
+          // Do something if no rows exist.
         endif;
         ?>
-        </tbody>
+      </tbody>
     </table>
+  </div>
 </div>
-</div>
+
 
 
 
