@@ -59,5 +59,5 @@ if( $facebook || $twitter || $reddit || $linkedin ): ?>
             </div>
         </div>
     </div>
-    <hr>
+ 
     </div>
