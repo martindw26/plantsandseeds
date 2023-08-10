@@ -81,8 +81,8 @@
             </tr>
         </thead>
         <tbody>
-        <?php if (have_rows('repeater_field_name')) :
-            while (have_rows('repeater_field_name')) : the_row();
+        <?php if (have_rows('listings')) :
+            while (have_rows('listings')) : the_row();
                 $Make = get_sub_field('Make');
                 $Model = get_sub_field('model');
                 $Retailer = get_sub_field('Retailer');
