@@ -31,6 +31,15 @@ background-color:
 
 }
 
+/* hr */
+
+hr {
+  border: none;       /* Remove default border */
+  height: 0.2px;     /* Set thickness */
+  background-color: lightgrey;  /* Set color */
+  margin: 20px 0;    /* Add some spacing before and after the hr */
+}
+
 /*###### CSS ROOT ######*/
 
 :root {
