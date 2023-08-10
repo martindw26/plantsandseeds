@@ -2,7 +2,7 @@
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
 
-<hr>
+
 <div class="container d-inline-flex bg-white pt-2 pb-2 border border-1 border-dark">
   <div class="row">
   Share this:
@@ -30,4 +30,4 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     </div>
   </div>
 </div>
-<hr>
+
