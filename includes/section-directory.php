@@ -87,7 +87,7 @@
                 $Model = get_sub_field('model');
                 $Retailer = get_sub_field('retailer');
                 $Price = get_sub_field('price');
-                $URL = get_sub_field('url');
+                $URL = get_sub_field('price_url');
                 $Rating = get_sub_field('rating');
         ?>
                 <tr>
