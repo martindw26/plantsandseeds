@@ -144,11 +144,61 @@ function ww_load_dashicons(){
 add_action('wp_enqueue_scripts', 'ww_load_dashicons', 999);
 
 /* ------------------------------------------------
-    Lazy Loading
+   Directory importer
 --------------------------------------------------- */
 
 
+function import_data_into_acf_repeater() {
+    // Load WordPress functions and ACF
+    require_once(ABSPATH . 'wp-load.php');
+    if (function_exists('acf_add_local_field_group')) {
+        $repeater_field_key = 'field_64d54d1f3be1b';
 
+        // Path to CSV file
+        $csv_file_path = '/Directory/August 23/listings_august.csv';
+
+        // Read CSV file
+        if (($handle = fopen($csv_file_path, 'r')) !== false) {
+            while (($data = fgetcsv($handle)) !== false) {
+                // Assuming CSV columns: Make, Model, Retailer, Price, Price_URL, Rating
+                $make = $data[0];
+                $model = $data[1];
+                $retailer = $data[2];
+                $price = $data[3];
+                $price_url = $data[4];
+                $rating = $data[5];
+
+                // Create a new subfield array
+                $new_subfield = array(
+                    'make' => $make,
+                    'model' => $model,
+                    'retailer' => $retailer,
+                    'price' => $price,
+                    'price_url' => $price_url,
+                    'rating' => $rating,
+                );
+
+                // Get existing ACF repeater field value
+                $existing_repeater_data = get_field($repeater_field_key, 'option');
+
+                // Add the new subfield to the existing data
+                if (!empty($existing_repeater_data)) {
+                    $existing_repeater_data[] = $new_subfield;
+                } else {
+                    $existing_repeater_data = array($new_subfield);
+                }
+
+                // Update ACF repeater field
+                update_field($repeater_field_key, $existing_repeater_data, 'option');
+            }
+
+            fclose($handle);
+        }
+    }
+}
+
+// Run the import function
+import_data_into_acf_repeater();
 
 
 
