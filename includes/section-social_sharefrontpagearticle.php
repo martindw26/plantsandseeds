@@ -2,7 +2,7 @@
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
 
-<hr>
+
 <div class="d-inline-flex align-items-start p-3">
   <div class="row">
   Share this:
