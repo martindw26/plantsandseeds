@@ -33,7 +33,7 @@ background-color:
 
 /* hr */
 
-hr {
+horizontal-line {
   border: none !important;       /* Remove default border */
   height: 0.2px!important;     /* Set thickness */
   background-color!important: lightgrey;  /* Set color */
