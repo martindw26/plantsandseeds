@@ -59,7 +59,7 @@ get_header();
             <?php else : ?>
                 <?php echo '<style>{ display:none;}</style>'; ?>
             <?php endif; ?>
-            <hr>
+  
             <!-- End Social share icons-->
         </div>
 
