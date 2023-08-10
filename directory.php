@@ -44,7 +44,7 @@ get_header();
 	        <?php endif; ?>
 
 
-            <!-- directory content blocks -->
+            <!-- featured directory content blocks -->
             <?php get_template_part('includes/section', 'directory'); ?>
             <!-- End directory content blocks-->
 
