@@ -1,7 +1,7 @@
 <div class="container mt-4">
   <div class="row">
 
-  <h6>Directory featured listings</h6>
+  <h2>Directory featured listings</h2>
 
     <?php if (have_rows('products')) : ?>
       <?php while (have_rows('products')) : the_row(); ?>
