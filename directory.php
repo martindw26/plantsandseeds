@@ -44,9 +44,9 @@ get_header();
 	        <?php endif; ?>
 
 
-            <!-- Article content blocks -->
+            <!-- directory content blocks -->
             <?php get_template_part('includes/section', 'directory'); ?>
-            <!-- End Article content blocks-->
+            <!-- End directory content blocks-->
 
             <!-- meta block-->
             <?php get_template_part('includes/section', 'meta'); ?>

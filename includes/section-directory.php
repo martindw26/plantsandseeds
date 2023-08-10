@@ -8,35 +8,37 @@
         $item_image = get_sub_field('dir_image');
         $item_name = get_sub_field('dir_product');
         $item_description = get_sub_field('dir_description');
-	$product_title = get_field( 'product_title');
+	      $product_title = get_field( 'product_title');
         ?>
 
+<h6>Directory featured listings</h6>
+
         <!-- Item in the directory -->
-        <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4">
           <div class="card rounded-rounded-0" style="height: 300px;">
-<div style="height: 120px; width: 100%; overflow: hidden;">
-    <img src="<?php echo esc_url($item_image); ?>" class="card-img-top" alt="<?php echo esc_attr($item_name); ?>" style="height: 100%; width: 100%; object-fit: contain; object-position: center;">
-</div>
+          <div style="height: 120px; width: 100%; overflow: hidden;">
+          <img src="<?php echo esc_url($item_image); ?>" class="card-img-top" alt="<?php echo esc_attr($item_name); ?>" style="height: 100%; width: 100%; object-fit: contain; object-position: center;">
+      </div>
 
 
-            <div class="card-body">
-              <h5 class="card-title"><?php echo esc_html($item_name); ?></h5>
-<!-- catarrayrated -->
-				<?php
-// Get the rating value from the ACF field
-$rating = get_sub_field('product_rating');
+      <div class="card-body">
+      <h5 class="card-title"><?php echo esc_html($item_name); ?></h5>
+      <!-- catarrayrated -->
+      <?php
+      // Get the rating value from the ACF field
+      $rating = get_sub_field('product_rating');
 
-// Define the star symbols
-$star_full = '&#9733;';
-$star_empty = '&#9734;';
+      // Define the star symbols
+      $star_full = '&#9733;';
+      $star_empty = '&#9734;';
 
-// Display the star rating
-if ($rating) {
-    for ($i = 1; $i <= 5; $i++) {
-        echo ($i <= $rating) ? $star_full : $star_empty;
-    }
-}
-?>
+      // Display the star rating
+      if ($rating) {
+          for ($i = 1; $i <= 5; $i++) {
+          echo ($i <= $rating) ? $star_full : $star_empty;
+          }
+          }
+      ?>
 
 				<!-- End catarrayrated -->
               <p class="card-text"><?php echo esc_html($item_description); ?></p>
@@ -53,6 +55,9 @@ if ($rating) {
 
   </div>
 </div>
+
+<h6>Directory listings</h6>
+
 
 <div class="pb-2">
 <?php
