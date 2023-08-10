@@ -69,7 +69,6 @@
   <?php endif; ?>
 
   <div class="table-responsive">
-  <div class="container mt-3">
     <table class="table table-bordered">
       <thead class="table-primary">
         <tr>
@@ -117,7 +116,6 @@
         ?>
       </tbody>
     </table>
-  </div>
 </div>
 
 
