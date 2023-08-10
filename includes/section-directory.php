@@ -101,8 +101,6 @@
                }
                }
         ?>
-                
-        ?>
                 <tr>
                     <td><?php echo $Make; ?></td>
                     <td><?php echo $Model; ?></td>
