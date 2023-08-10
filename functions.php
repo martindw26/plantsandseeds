@@ -155,7 +155,7 @@ function import_data_into_acf_repeater() {
         $repeater_field_key = 'field_64d54d1f3be1b';
 
         // Path to CSV file
-        $csv_file_path = '/Directory/August 23/listings_august.csv';
+        $csv_file_path = 'https://techhobbyist.co.uk/Directory/August23/listings_august.csv';
 
         // Read CSV file
         if (($handle = fopen($csv_file_path, 'r')) !== false) {
