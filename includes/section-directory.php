@@ -61,6 +61,11 @@
   </div>
 </div>
 
+<?php 
+  $directory_featured_heading = get_field('directory_featured_heading', 'option');
+  if ($directory_featured_heading):
+  ?>
+
 <div class="pb-2">
 <?php
 $product = get_field( 'product');
