@@ -34,10 +34,9 @@ background-color:
 /* hr */
 
 hr {
-  border: none;       /* Remove default border */
-  height: 0.2px;     /* Set thickness */
-  background-color: lightgrey;  /* Set color */
-  margin: 20px 0;    /* Add some spacing before and after the hr */
+  border: none !important;       /* Remove default border */
+  height: 0.2px!important;     /* Set thickness */
+  background-color!important: lightgrey;  /* Set color */
 }
 
 /*###### CSS ROOT ######*/
