@@ -89,6 +89,19 @@
                 $Price = get_sub_field('price');
                 $URL = get_sub_field('price_url');
                 $Rating = get_sub_field('rating');
+
+                 // Define the star symbols
+                $star_full = '&#9733;';
+                $star_empty = '&#9734;';
+
+                // Display the star rating
+                if ($rating) {
+                for ($i = 1; $i <= 5; $i++) {
+                echo ($i <= $rating) ? $star_full : $star_empty;
+               }
+               }
+        ?>
+                
         ?>
                 <tr>
                     <td><?php echo $Make; ?></td>
