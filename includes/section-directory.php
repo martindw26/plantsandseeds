@@ -1,9 +1,12 @@
 <div class="container mt-4">
   <div class="row">
 
-  <?php $directory_featured_heading = get_field('directory_featured_heading','option');?>
-  <h2><?php echo $directory_featured_heading;?></h2>
-  
+  <?php 
+  $directory_featured_heading = get_field('directory_featured_heading', 'option');
+  if ($directory_featured_heading):
+  ?>
+  <h2><?php echo $directory_featured_heading; ?></h2>
+  <?php endif; ?>
 
     <?php if (have_rows('products')) : ?>
       <?php while (have_rows('products')) : the_row(); ?>
