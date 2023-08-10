@@ -83,11 +83,11 @@
         <tbody>
         <?php if (have_rows('listings')) :
             while (have_rows('listings')) : the_row();
-                $Make = get_sub_field('Make');
+                $Make = get_sub_field('make');
                 $Model = get_sub_field('model');
-                $Retailer = get_sub_field('Retailer');
-                $Price = get_sub_field('Price');
-                $Rating = get_sub_field('Rating');
+                $Retailer = get_sub_field('retailer');
+                $Price = get_sub_field('price');
+                $Rating = get_sub_field('rating');
         ?>
                 <tr>
                     <td><?php echo $Make; ?></td>
