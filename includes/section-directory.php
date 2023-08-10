@@ -87,13 +87,14 @@
                 $Model = get_sub_field('model');
                 $Retailer = get_sub_field('retailer');
                 $Price = get_sub_field('price');
+                $URL = get_sub_field('url');
                 $Rating = get_sub_field('rating');
         ?>
                 <tr>
                     <td><?php echo $Make; ?></td>
                     <td><?php echo $Model; ?></td>
                     <td><?php echo $Retailer; ?></td>
-                    <td><?php echo $Price; ?></td>
+                    <td><a href='<?php echo $url; ?>' target="_blank"><?php echo $Price; ?></a></td>
                     <td><?php echo $Rating; ?></td>
                 </tr>
         <?php
