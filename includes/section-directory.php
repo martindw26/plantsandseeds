@@ -68,6 +68,45 @@
   <h2><?php echo $directory_featured_heading; ?></h2>
   <?php endif; ?>
 
+  <div class="container mt-3">
+    <table class="table table-bordered">
+        <thead class="table-primary">
+            <tr>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Retailer</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php if (have_rows('repeater_field_name')) :
+            while (have_rows('repeater_field_name')) : the_row();
+                $Make = get_sub_field('Make');
+                $Model = get_sub_field('model');
+                $Retailer = get_sub_field('Retailer');
+                $Price = get_sub_field('Price');
+                $Rating = get_sub_field('Rating');
+        ?>
+                <tr>
+                    <td><?php echo $Make; ?></td>
+                    <td><?php echo $Model; ?></td>
+                    <td><?php echo $Retailer; ?></td>
+                    <td><?php echo $Price; ?></td>
+                    <td><?php echo $Rating; ?></td>
+                </tr>
+        <?php
+            endwhile;
+        else :
+            // Do something if no rows exist.
+        endif;
+        ?>
+        </tbody>
+    </table>
+</div>
+
+
+
 <div class="pb-2">
 <?php
 $product = get_field( 'product');
