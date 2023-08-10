@@ -152,53 +152,56 @@ function import_data_into_acf_repeater() {
     // Load WordPress functions and ACF
     require_once(ABSPATH . 'wp-load.php');
     if (function_exists('acf_add_local_field_group')) {
-        $repeater_field_key = 'field_64d54d1f3be1b';
+        // ACF Field Key
+        $acf_repeater_field_key = 'field_64d54d1f3be1b';
 
-        // Path to CSV file
-        $csv_file_path = 'https://techhobbyist.co.uk/Directory/August23/listings_august.csv';
+        // URL to CSV file
+        $csv_file_url = 'https://techhobbyist.co.uk/Directory/August23/listings_august.csv';
 
-        // Read CSV file
-        if (($handle = fopen($csv_file_path, 'r')) !== false) {
-            while (($data = fgetcsv($handle)) !== false) {
-                // Assuming CSV columns: Make, Model, Retailer, Price, Price_URL, Rating
-                $make = $data[0];
-                $model = $data[1];
-                $retailer = $data[2];
-                $price = $data[3];
-                $price_url = $data[4];
-                $rating = $data[5];
+        // Download CSV data
+        $csv_data = file_get_contents($csv_file_url);
+        $csv_rows = explode("\n", $csv_data);
 
-                // Create a new subfield array
-                $new_subfield = array(
-                    'make' => $make,
-                    'model' => $model,
-                    'retailer' => $retailer,
-                    'price' => $price,
-                    'price_url' => $price_url,
-                    'rating' => $rating,
-                );
+        foreach ($csv_rows as $csv_row) {
+            $data = str_getcsv($csv_row);
 
-                // Get existing ACF repeater field value
-                $existing_repeater_data = get_field($repeater_field_key, 'option');
+            // Assuming CSV columns: make, model, retailer, price, price_url, rating
+            $make = $data[0];
+            $model = $data[1];
+            $retailer = $data[2];
+            $price = $data[3];
+            $price_url = $data[4];
+            $rating = $data[5];
 
-                // Add the new subfield to the existing data
-                if (!empty($existing_repeater_data)) {
-                    $existing_repeater_data[] = $new_subfield;
-                } else {
-                    $existing_repeater_data = array($new_subfield);
-                }
+            // Create a new row array
+            $new_row = array(
+                'make' => $make,
+                'model' => $model,
+                'retailer' => $retailer,
+                'price' => $price,
+                'price_url' => $price_url,
+                'rating' => $rating,
+            );
 
-                // Update ACF repeater field
-                update_field($repeater_field_key, $existing_repeater_data, 'option');
+            // Get existing ACF repeater field value
+            $existing_repeater_data = get_field($acf_repeater_field_key, 'option');
+
+            // Add the new row to the existing data
+            if (!empty($existing_repeater_data)) {
+                $existing_repeater_data[] = $new_row;
+            } else {
+                $existing_repeater_data = array($new_row);
             }
 
-            fclose($handle);
+            // Update ACF repeater field
+            update_field($acf_repeater_field_key, $existing_repeater_data, 'option');
         }
     }
 }
 
 // Run the import function
 import_data_into_acf_repeater();
+
 
 
 
