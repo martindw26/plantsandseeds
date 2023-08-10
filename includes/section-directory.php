@@ -97,17 +97,18 @@
                     <td><?php echo $Retailer; ?></td>
                     <td><a href='<?php echo $url; ?>' target="_blank"><?php echo $Price; ?></a></td>
                     <td>
-                    <?php
+                      <?php
                       $star_full = '&#9733;';
                       $star_empty = '&#9734;';
 
                       // Display the star rating
                       if ($Rating) {
                       for ($i = 1; $i <= 5; $i++) {
-                      echo ($i <= $rating) ? $star_full : $star_empty;
+                          echo ($i <= $Rating) ? $star_full : $star_empty;
                       }
-                      ; ?>
-                  </td>
+                      }
+                      ?>
+                      </td>
                 </tr>
         <?php
             endwhile;
