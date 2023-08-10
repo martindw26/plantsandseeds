@@ -95,7 +95,7 @@
                 $star_empty = '&#9734;';
 
                 // Display the star rating
-                if ($rating) {
+                if ($Rating) {
                 for ($i = 1; $i <= 5; $i++) {
                 echo ($i <= $rating) ? $star_full : $star_empty;
                }
