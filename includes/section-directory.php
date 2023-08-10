@@ -65,6 +65,8 @@
   $directory_featured_heading = get_field('directory_featured_heading', 'option');
   if ($directory_featured_heading):
   ?>
+  <h2><?php echo $directory_featured_heading; ?></h2>
+  <?php endif; ?>
 
 <div class="pb-2">
 <?php
