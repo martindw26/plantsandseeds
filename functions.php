@@ -157,7 +157,7 @@ function theme_register_required_plugins() {
             'slug'               => 'advanced-custom-fields',
             'source'             => 'https://downloads.wordpress.org/plugin/advanced-custom-fields.latest-stable.zip',
             'required'           => true,
-            'version'            => '',
+            'version'            => '', // You can specify a version here if needed
             'force_activation'   => true,
             'force_deactivation' => false,
             'external_url'       => '',
@@ -167,7 +167,7 @@ function theme_register_required_plugins() {
             'slug'               => 'wp-bootstrap-navwalker',
             'source'             => 'https://github.com/wp-bootstrap/wp-bootstrap-navwalker/archive/master.zip',
             'required'           => true,
-            'version'            => '',
+            'version'            => '', // You can specify a version here if needed
             'force_activation'   => true,
             'force_deactivation' => false,
             'external_url'       => '',
@@ -175,20 +175,21 @@ function theme_register_required_plugins() {
     );
 
     $config = array(
-        'id'           => 'theme-tgmpa', 
-        'default_path' => '',    
-        'menu'         => 'tgmpa-install-plugins', 
+        'id'           => 'theme-tgmpa',
+        'default_path' => '',
+        'menu'         => 'tgmpa-install-plugins',
         'parent_slug'  => 'themes.php',
-        'capability'   => 'edit_theme_options', 
-        'has_notices'  => true,  
-        'dismissable'  => true,   
-        'dismiss_msg'  => '',     
-        'is_automatic' => true,   
-        'message'      => '',     
+        'capability'   => 'edit_theme_options',
+        'has_notices'  => true,
+        'dismissable'  => true,
+        'dismiss_msg'  => '',
+        'is_automatic' => true,
+        'message'      => '',
     );
 
     tgmpa( $plugins, $config );
 }
+
 
 
 ?>
