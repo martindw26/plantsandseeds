@@ -144,9 +144,11 @@ function ww_load_dashicons(){
 add_action('wp_enqueue_scripts', 'ww_load_dashicons', 999);
 
 /* ------------------------------------------------
-   Required themes
+   ACF Field finder
 --------------------------------------------------- */
-
+add_filter('iwp_acf/get_fields_filter', function ($args = []) {
+    return [];
+});
 
 
 
