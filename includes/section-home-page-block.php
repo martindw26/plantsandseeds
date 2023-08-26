@@ -102,7 +102,7 @@ while ($block->have_posts()) : $block->the_post();
 <div class="non_featured_block_home_page">
 
 
-<div class="left-card card container p-3 mb-2 bg-body" style="height:195px;"><!-- small non-fetured block-->
+<div class="left-card card container p-3 mb-2 bg-body rounded rounded-0" style="height:195px;"><!-- small non-fetured block-->
 
 <div class="row">
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
