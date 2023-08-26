@@ -14,7 +14,7 @@
 
              <!-- Desktop Header adslot-->
 
-             <?php get_template_part( 'template-parts/landing_page_ads/homepage_header_top_slot_ad' );?><br>
+             <?php get_template_part( 'template-parts/landing_page_ads/homepage_header_top_mobile' );?><br>
 <!-- End Featured Post-->       
 
             <h1 class=" display-2 font-weight-bold text-dark" style=""><?php echo esc_html( get_the_title() );?><hr></h1>
