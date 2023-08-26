@@ -419,17 +419,9 @@ button.buttons .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-prima
    }
 }
 
-@media screen and (min-width: 768px) { /* Adjust the min-width value based on your desired breakpoint for desktop devices */
   .left-card {
     border: darkgray;
   }
-}
-
-@media screen and (min-width: 480px) { /* Adjust the min-width value based on your desired breakpoint for desktop devices */
-  .left-card {
-    border: darkgray;
-   }
-}
 
 
 /*Featured Posts*/
