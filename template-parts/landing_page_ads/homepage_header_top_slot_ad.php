@@ -20,8 +20,8 @@ if ($adinformation) {
 
 <?php
 
-$LowerLimit = get_field('bbldr_bottom_min','option');
-$UpperLimit = get_field('bbldr_bottom_max','option');
+$LowerLimit = get_field('bbldr_top_min','option');
+$UpperLimit = get_field('bbldr_top_max','option');
 
 $advert = rand($LowerLimit,$UpperLimit);
 
@@ -46,25 +46,25 @@ case "1":
 
  
   // Get the 'banner_desktop_1' field from the 'option' object
-  $banner_mobile_bottom_1 = get_field('banner_mobile_bottom_1', 'option');
+  $banner_dt_1 = get_field('banner_desktop_top_1', 'option');
   
   // Check if the banner field exists
-  if ($banner_mobile_bottom_1) {
+  if ($banner_dt_1) {
   
     // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-    $start_date = strtotime($banner_db_1['start_date']);
-    $end_date = strtotime($banner_db_1['end_date']);
-    $campaign_name = $banner_db_1['campaign_name'];
-    $delivering = $banner_db_1['delivering'];
-    $CategoryTarget = $banner_db_1['category'];
-    $PostIDTarget = $banner_db_1['postid'];
-    $OrderNum = $banner_db_1['campaign_order_id'];
-    $Image = $banner_db_1['image'];
-    $Url = $banner_db_1['url'];
+    $start_date = strtotime($banner_dt_1['start_date']);
+    $end_date = strtotime($banner_dt_1['end_date']);
+    $campaign_name = $banner_dt_1['campaign_name'];
+    $delivering = $banner_dt_1['delivering'];
+    $CategoryTarget = $banner_dt_1['category'];
+    $PostIDTarget = $banner_dt_1['postid'];
+    $OrderNum = $banner_dt_1['campaign_order_id'];
+    $Image = $banner_dt_1['image'];
+    $Url = $banner_dt_1['url'];
   
     // Get the desktop header backup image and URL from the 'option' object
-    $mobile_subs_ad_image = get_field('mobile_image', 'option');
-    $mobile_subs_ad_url = get_field('mobile_url', 'option');
+    $desktop_subs_ad_image = get_field('desktop_image', 'option');
+    $desktop_subs_ad_url = get_field('desktop_url', 'option');
   
     // Get the current date and time
     $current_date = time();
@@ -73,8 +73,8 @@ case "1":
      if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
   
       // If the banner has a script, display it
-      if ($banner_mobile_bottom_1['banner_mbb_script_1']) {
-        echo $banner_mobile_bottom_1['banner_mbb_script_1'];
+      if ($banner_dt_1['banner_dt_script_top_1']) {
+        echo $banner_dt_1['banner_dt_script_top_1'];
       } else {
         // Otherwise, display the banner image
         echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -85,7 +85,7 @@ case "1":
   
     } else {
       // If the banner is not being delivered or the current date is not within the start and end dates, display the desktop header backup image
-      echo '<a href="' . $mobile_subs_ad_url . '" target="_blank"><img src="' . $mobile_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
+      echo '<a href="' . $desktop_subs_ad_url . '" target="_blank"><img src="' . $desktop_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
   
   
   
@@ -95,22 +95,22 @@ case "1":
 
 break;
 case "2":
- // Get the 'banner_desktop_bottom_2' field from the 'option' object
-$banner_db_2 = get_field('banner_desktop_bottom_2', 'option');
+ // Get the 'banner_desktop_top_2' field from the 'option' object
+$banner_dt_2 = get_field('banner_desktop_top_2', 'option');
 
 // Check if the banner field exists
-if ($banner_db_2) {
+if ($banner_dt_2) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_db_2['start_date2']);
-  $end_date = strtotime($banner_db_2['end_date2']);
-  $campaign_name = $banner_db_2['campaign_name2'];
-  $delivering = $banner_db_2['delivering2'];
-  $CategoryTarget = $banner_db_2['category2'];
-  $PostIDTarget = $banner_db_2['postid2'];
-  $OrderNum = $banner_db_2['campaign_order_id2'];
-  $Image = $banner_db_2['image2'];
-  $Url = $banner_db_2['url2'];
+  $start_date = strtotime($banner_dt_2['start_date2']);
+  $end_date = strtotime($banner_dt_2['end_date2']);
+  $campaign_name = $banner_dt_2['campaign_name2'];
+  $delivering = $banner_dt_2['delivering2'];
+  $CategoryTarget = $banner_dt_2['category2'];
+  $PostIDTarget = $banner_dt_2['postid2'];
+  $OrderNum = $banner_dt_2['campaign_order_id2'];
+  $Image = $banner_dt_2['image2'];
+  $Url = $banner_dt_2['url2'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -123,8 +123,8 @@ if ($banner_db_2) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_2['banner_db_script_bottom_2']) {
-      echo $banner_db_2['banner_db_script_bottom_2'];
+    if ($banner_dt_2['banner_dt_script_top_2']) {
+      echo $banner_dt_2['banner_dt_script_top_2'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -140,22 +140,22 @@ if ($banner_db_2) {
 }
 break;
 case "3":
-   // Get the 'banner_desktop_bottom_3' field from the 'option' object
-$banner_db_3 = get_field('banner_desktop_bottom_3', 'option');
+   // Get the 'banner_desktop_top_3' field from the 'option' object
+$banner_dt_3 = get_field('banner_desktop_top_3', 'option');
 
 // Check if the banner field exists
-if ($banner_db_3) {
+if ($banner_dt_3) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_db_3['start_date3']);
-  $end_date = strtotime($banner_db_3['end_date3']);
-  $campaign_name = $banner_db_3['campaign_name3'];
-  $delivering = $banner_db_3['delivering3'];
-  $CategoryTarget = $banner_db_3['category3'];
-  $PostIDTarget = $banner_db_3['postid3'];
-  $OrderNum = $banner_db_3['campaign_order_id3'];
-  $Image = $banner_db_3['image3'];
-  $Url = $banner_db_3['url3'];
+  $start_date = strtotime($banner_dt_3['start_date3']);
+  $end_date = strtotime($banner_dt_3['end_date3']);
+  $campaign_name = $banner_dt_3['campaign_name3'];
+  $delivering = $banner_dt_3['delivering3'];
+  $CategoryTarget = $banner_dt_3['category3'];
+  $PostIDTarget = $banner_dt_3['postid3'];
+  $OrderNum = $banner_dt_3['campaign_order_id3'];
+  $Image = $banner_dt_3['image3'];
+  $Url = $banner_dt_3['url3'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -168,8 +168,8 @@ if ($banner_db_3) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_3['banner_db_script_bottom_3']) {
-      echo $banner_db_3['banner_db_script_bottom_3'];
+    if ($banner_dt_3['banner_dt_script_top_3']) {
+      echo $banner_dt_3['banner_dt_script_top_3'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -185,22 +185,22 @@ if ($banner_db_3) {
 }
 break;
 case "4":
-   // Get the 'banner_desktop_bottom_4' field from the 'option' object
-$banner_db_4 = get_field('banner_desktop_bottom_4', 'option');
+   // Get the 'banner_desktop_top_4' field from the 'option' object
+$banner_dt_4 = get_field('banner_desktop_top_4', 'option');
 
 // Check if the banner field exists
-if ($banner_db_4) {
+if ($banner_dt_4) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_db_4['start_date4']);
-  $end_date = strtotime($banner_db_4['end_date4']);
-  $campaign_name = $banner_db_4['campaign_name4'];
-  $delivering = $banner_db_4['delivering4'];
-  $CategoryTarget = $banner_db_4['category4'];
-  $PostIDTarget = $banner_db_4['postid4'];
-  $OrderNum = $banner_db_4['campaign_order_id4'];
-  $Image = $banner_db_4['image4'];
-  $Url = $banner_db_4['url4'];
+  $start_date = strtotime($banner_dt_4['start_date4']);
+  $end_date = strtotime($banner_dt_4['end_date4']);
+  $campaign_name = $banner_dt_4['campaign_name4'];
+  $delivering = $banner_dt_4['delivering4'];
+  $CategoryTarget = $banner_dt_4['category4'];
+  $PostIDTarget = $banner_dt_4['postid4'];
+  $OrderNum = $banner_dt_4['campaign_order_id4'];
+  $Image = $banner_dt_4['image4'];
+  $Url = $banner_dt_4['url4'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -213,8 +213,8 @@ if ($banner_db_4) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_4['banner_db_script_bottom_4']) {
-      echo $banner_db_4['banner_db_script_bottom_4'];
+    if ($banner_dt_4['banner_dt_script_top_4']) {
+      echo $banner_dt_4['banner_dt_script_top_4'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -230,22 +230,22 @@ if ($banner_db_4) {
 }
 break;
 case "5":
-  // Get the 'banner_desktop_bottom_5' field from the 'option' object
-$banner_db_5 = get_field('banner_desktop_bottom_5', 'option');
+  // Get the 'banner_desktop_top_5' field from the 'option' object
+$banner_dt_5 = get_field('banner_desktop_top_5', 'option');
 
 // Check if the banner field exists
-if ($banner_db_5) {
+if ($banner_dt_5) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_db_5['start_date5']);
-  $end_date = strtotime($banner_db_5['end_date5']);
-  $campaign_name = $banner_db_5['campaign_name5'];
-  $delivering = $banner_db_5['delivering5'];
-  $CategoryTarget = $banner_db_5['category5'];
-  $PostIDTarget = $banner_db_5['postid5'];
-  $OrderNum = $banner_db_5['campaign_order_id5'];
-  $Image = $banner_db_5['image5'];
-  $Url = $banner_db_5['url5'];
+  $start_date = strtotime($banner_dt_5['start_date5']);
+  $end_date = strtotime($banner_dt_5['end_date5']);
+  $campaign_name = $banner_dt_5['campaign_name5'];
+  $delivering = $banner_dt_5['delivering5'];
+  $CategoryTarget = $banner_dt_5['category5'];
+  $PostIDTarget = $banner_dt_5['postid5'];
+  $OrderNum = $banner_dt_5['campaign_order_id5'];
+  $Image = $banner_dt_5['image5'];
+  $Url = $banner_dt_5['url5'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -258,8 +258,8 @@ if ($banner_db_5) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_5['banner_db_script_bottom_5']) {
-      echo $banner_db_5['banner_db_script_bottom_5'];
+    if ($banner_dt_5['banner_dt_script_top_5']) {
+      echo $banner_dt_5['banner_dt_script_top_5'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -275,22 +275,22 @@ if ($banner_db_5) {
 }
 break;
 case "6":
-  // Get the 'banner_desktop_bottom_6' field from the 'option' object
-$banner_db_6 = get_field('banner_desktop_bottom_6', 'option');
+  // Get the 'banner_desktop_top_6' field from the 'option' object
+$banner_dt_6 = get_field('banner_desktop_top_6', 'option');
 
 // Check if the banner field exists
-if ($banner_db_6) {
+if ($banner_dt_6) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_db_6['start_date6']);
-  $end_date = strtotime($banner_db_6['end_date6']);
-  $campaign_name = $banner_db_6['campaign_name6'];
-  $delivering = $banner_db_6['delivering6'];
-  $CategoryTarget = $banner_db_6['category6'];
-  $PostIDTarget = $banner_db_6['postid6'];
-  $OrderNum = $banner_db_6['campaign_order_id6'];
-  $Image = $banner_db_6['image6'];
-  $Url = $banner_db_6['url6'];
+  $start_date = strtotime($banner_dt_6['start_date6']);
+  $end_date = strtotime($banner_dt_6['end_date6']);
+  $campaign_name = $banner_dt_6['campaign_name6'];
+  $delivering = $banner_dt_6['delivering6'];
+  $CategoryTarget = $banner_dt_6['category6'];
+  $PostIDTarget = $banner_dt_6['postid6'];
+  $OrderNum = $banner_dt_6['campaign_order_id6'];
+  $Image = $banner_dt_6['image6'];
+  $Url = $banner_dt_6['url6'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -303,8 +303,8 @@ if ($banner_db_6) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_6['banner_db_script_bottom_6']) {
-      echo $banner_db_6['banner_db_script_bottom_6'];
+    if ($banner_dt_6['banner_dt_script_top_6']) {
+      echo $banner_dt_6['banner_dt_script_top_6'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -320,22 +320,22 @@ if ($banner_db_6) {
 }
 break;
 case "7":
-  // Get the 'banner_desktop_bottom_7' field from the 'option' object
-$banner_db_7 = get_field('banner_desktop_bottom_7', 'option');
+  // Get the 'banner_desktop_top_7' field from the 'option' object
+$banner_dt_7 = get_field('banner_desktop_top_7', 'option');
 
 // Check if the banner field exists
-if ($banner_db_7) {
+if ($banner_dt_7) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_db_7['start_date7']);
-  $end_date = strtotime($banner_db_7['end_date7']);
-  $campaign_name = $banner_db_7['campaign_name7'];
-  $delivering = $banner_db_7['delivering7'];
-  $CategoryTarget = $banner_db_7['category7'];
-  $PostIDTarget = $banner_db_7['postid7'];
-  $OrderNum = $banner_db_7['campaign_order_id7'];
-  $Image = $banner_db_7['image7'];
-  $Url = $banner_db_7['url7'];
+  $start_date = strtotime($banner_dt_7['start_date7']);
+  $end_date = strtotime($banner_dt_7['end_date7']);
+  $campaign_name = $banner_dt_7['campaign_name7'];
+  $delivering = $banner_dt_7['delivering7'];
+  $CategoryTarget = $banner_dt_7['category7'];
+  $PostIDTarget = $banner_dt_7['postid7'];
+  $OrderNum = $banner_dt_7['campaign_order_id7'];
+  $Image = $banner_dt_7['image7'];
+  $Url = $banner_dt_7['url7'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -348,8 +348,8 @@ if ($banner_db_7) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_7['banner_db_script_bottom_7']) {
-      echo $banner_db_7['banner_db_script_bottom_7'];
+    if ($banner_dt_7['banner_dt_script_top_7']) {
+      echo $banner_dt_7['banner_dt_script_top_7'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -365,22 +365,22 @@ if ($banner_db_7) {
 }
 break;
 case "8":
-  // Get the 'banner_desktop_bottom_8' field from the 'option' object
-$banner_db_8 = get_field('banner_desktop_bottom_8', 'option');
+  // Get the 'banner_desktop_top_8' field from the 'option' object
+$banner_dt_8 = get_field('banner_desktop_top_8', 'option');
 
 // Check if the banner field exists
-if ($banner_db_8) {
+if ($banner_dt_8) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_db_8['start_date8']);
-  $end_date = strtotime($banner_db_8['end_date8']);
-  $campaign_name = $banner_db_8['campaign_name8'];
-  $delivering = $banner_db_8['delivering8'];
-  $CategoryTarget = $banner_db_8['category8'];
-  $PostIDTarget = $banner_db_8['postid8'];
-  $OrderNum = $banner_db_8['campaign_order_id8'];
-  $Image = $banner_db_8['image8'];
-  $Url = $banner_db_8['url8'];
+  $start_date = strtotime($banner_dt_8['start_date8']);
+  $end_date = strtotime($banner_dt_8['end_date8']);
+  $campaign_name = $banner_dt_8['campaign_name8'];
+  $delivering = $banner_dt_8['delivering8'];
+  $CategoryTarget = $banner_dt_8['category8'];
+  $PostIDTarget = $banner_dt_8['postid8'];
+  $OrderNum = $banner_dt_8['campaign_order_id8'];
+  $Image = $banner_dt_8['image8'];
+  $Url = $banner_dt_8['url8'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -393,8 +393,8 @@ if ($banner_db_8) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_8['banner_db_script_bottom_8']) {
-      echo $banner_db_8['banner_db_script_bottom_8'];
+    if ($banner_dt_8['banner_dt_script_top_8']) {
+      echo $banner_dt_8['banner_dt_script_top_8'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -410,22 +410,22 @@ if ($banner_db_8) {
 }
 break;
 case "9":
-   // Get the 'banner_desktop_bottom_9' field from the 'option' object
-$banner_db_9 = get_field('banner_desktop_bottom_9', 'option');
+   // Get the 'banner_desktop_top_9' field from the 'option' object
+$banner_dt_9 = get_field('banner_desktop_top_9', 'option');
 
 // Check if the banner field exists
-if ($banner_db_9) {
+if ($banner_dt_9) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_db_9['start_date9']);
-  $end_date = strtotime($banner_db_9['end_date9']);
-  $campaign_name = $banner_db_9['campaign_name9'];
-  $delivering = $banner_db_9['delivering9'];
-  $CategoryTarget = $banner_db_9['category9'];
-  $PostIDTarget = $banner_db_9['postid9'];
-  $OrderNum = $banner_db_9['campaign_order_id9'];
-  $Image = $banner_db_9['image9'];
-  $Url = $banner_db_9['url9'];
+  $start_date = strtotime($banner_dt_9['start_date9']);
+  $end_date = strtotime($banner_dt_9['end_date9']);
+  $campaign_name = $banner_dt_9['campaign_name9'];
+  $delivering = $banner_dt_9['delivering9'];
+  $CategoryTarget = $banner_dt_9['category9'];
+  $PostIDTarget = $banner_dt_9['postid9'];
+  $OrderNum = $banner_dt_9['campaign_order_id9'];
+  $Image = $banner_dt_9['image9'];
+  $Url = $banner_dt_9['url9'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -438,8 +438,8 @@ if ($banner_db_9) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_9['banner_db_script_bottom_9']) {
-      echo $banner_db_9['banner_db_script_bottom_9'];
+    if ($banner_dt_9['banner_dt_script_top_9']) {
+      echo $banner_dt_9['banner_dt_script_top_9'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -455,22 +455,22 @@ if ($banner_db_9) {
 }
 break;
 case "10":
-   // Get the 'banner_desktop_bottom_10' field from the 'option' object
-$banner_db_10 = get_field('banner_desktop_bottom_10', 'option');
+   // Get the 'banner_desktop_top_10' field from the 'option' object
+$banner_dt_10 = get_field('banner_desktop_top_10', 'option');
 
 // Check if the banner field exists
-if ($banner_db_10) {
+if ($banner_dt_10) {
 
   // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
-  $start_date = strtotime($banner_db_10['start_date10']);
-  $end_date = strtotime($banner_db_10['end_date10']);
-  $campaign_name = $banner_db_10['campaign_name10'];
-  $delivering = $banner_db_10['delivering10'];
-  $CategoryTarget = $banner_db_10['category10'];
-  $PostIDTarget = $banner_db_10['postid10'];
-  $OrderNum = $banner_db_10['campaign_order_id10'];
-  $Image = $banner_db_10['image10'];
-  $Url = $banner_db_10['url10'];
+  $start_date = strtotime($banner_dt_10['start_date10']);
+  $end_date = strtotime($banner_dt_10['end_date10']);
+  $campaign_name = $banner_dt_10['campaign_name10'];
+  $delivering = $banner_dt_10['delivering10'];
+  $CategoryTarget = $banner_dt_10['category10'];
+  $PostIDTarget = $banner_dt_10['postid10'];
+  $OrderNum = $banner_dt_10['campaign_order_id10'];
+  $Image = $banner_dt_10['image10'];
+  $Url = $banner_dt_10['url10'];
 
   // Get the desktop header backup image and URL from the 'option' object
   $desktop_subs_ad_image = get_field('desktop_image', 'option');
@@ -483,8 +483,8 @@ if ($banner_db_10) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_db_10['banner_db_script_bottom_10']) {
-      echo $banner_db_10['banner_db_script_bottom_10'];
+    if ($banner_dt_10['banner_dt_script_top_10']) {
+      echo $banner_dt_10['banner_dt_script_top_10'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
