@@ -45,8 +45,8 @@ switch ($advert) {
 case "1":
 
  
-  // Get the 'banner_desktop_1' field from the 'option' object
-  $banner_dt_1 = get_field('banner_desktop_top_1', 'option');
+  // Get the 'banner_desktop_top_1' field from the 'option' object
+  $banner_dt_1 = get_field('banner_desktop_top_top_1', 'option');
   
   // Check if the banner field exists
   if ($banner_dt_1) {
@@ -95,8 +95,8 @@ case "1":
 
 break;
 case "2":
- // Get the 'banner_desktop_top_2' field from the 'option' object
-$banner_dt_2 = get_field('banner_desktop_top_2', 'option');
+ // Get the 'banner_desktop_top_top_2' field from the 'option' object
+$banner_dt_2 = get_field('banner_desktop_top_top_2', 'option');
 
 // Check if the banner field exists
 if ($banner_dt_2) {
@@ -140,8 +140,8 @@ if ($banner_dt_2) {
 }
 break;
 case "3":
-   // Get the 'banner_desktop_top_3' field from the 'option' object
-$banner_dt_3 = get_field('banner_desktop_top_3', 'option');
+   // Get the 'banner_desktop_top_top_3' field from the 'option' object
+$banner_dt_3 = get_field('banner_desktop_top_top_3', 'option');
 
 // Check if the banner field exists
 if ($banner_dt_3) {
@@ -185,8 +185,8 @@ if ($banner_dt_3) {
 }
 break;
 case "4":
-   // Get the 'banner_desktop_top_4' field from the 'option' object
-$banner_dt_4 = get_field('banner_desktop_top_4', 'option');
+   // Get the 'banner_desktop_top_top_4' field from the 'option' object
+$banner_dt_4 = get_field('banner_desktop_top_top_4', 'option');
 
 // Check if the banner field exists
 if ($banner_dt_4) {
@@ -230,8 +230,8 @@ if ($banner_dt_4) {
 }
 break;
 case "5":
-  // Get the 'banner_desktop_top_5' field from the 'option' object
-$banner_dt_5 = get_field('banner_desktop_top_5', 'option');
+  // Get the 'banner_desktop_top_top_5' field from the 'option' object
+$banner_dt_5 = get_field('banner_desktop_top_top_5', 'option');
 
 // Check if the banner field exists
 if ($banner_dt_5) {
@@ -275,8 +275,8 @@ if ($banner_dt_5) {
 }
 break;
 case "6":
-  // Get the 'banner_desktop_top_6' field from the 'option' object
-$banner_dt_6 = get_field('banner_desktop_top_6', 'option');
+  // Get the 'banner_desktop_top_top_6' field from the 'option' object
+$banner_dt_6 = get_field('banner_desktop_top_top_6', 'option');
 
 // Check if the banner field exists
 if ($banner_dt_6) {
@@ -320,8 +320,8 @@ if ($banner_dt_6) {
 }
 break;
 case "7":
-  // Get the 'banner_desktop_top_7' field from the 'option' object
-$banner_dt_7 = get_field('banner_desktop_top_7', 'option');
+  // Get the 'banner_desktop_top_top_7' field from the 'option' object
+$banner_dt_7 = get_field('banner_desktop_top_top_7', 'option');
 
 // Check if the banner field exists
 if ($banner_dt_7) {
@@ -365,8 +365,8 @@ if ($banner_dt_7) {
 }
 break;
 case "8":
-  // Get the 'banner_desktop_top_8' field from the 'option' object
-$banner_dt_8 = get_field('banner_desktop_top_8', 'option');
+  // Get the 'banner_desktop_top_top_8' field from the 'option' object
+$banner_dt_8 = get_field('banner_desktop_top_top_8', 'option');
 
 // Check if the banner field exists
 if ($banner_dt_8) {
@@ -410,8 +410,8 @@ if ($banner_dt_8) {
 }
 break;
 case "9":
-   // Get the 'banner_desktop_top_9' field from the 'option' object
-$banner_dt_9 = get_field('banner_desktop_top_9', 'option');
+   // Get the 'banner_desktop_top_top_9' field from the 'option' object
+$banner_dt_9 = get_field('banner_desktop_top_top_9', 'option');
 
 // Check if the banner field exists
 if ($banner_dt_9) {
@@ -455,8 +455,8 @@ if ($banner_dt_9) {
 }
 break;
 case "10":
-   // Get the 'banner_desktop_top_10' field from the 'option' object
-$banner_dt_10 = get_field('banner_desktop_top_10', 'option');
+   // Get the 'banner_desktop_top_top_10' field from the 'option' object
+$banner_dt_10 = get_field('banner_desktop_top_top_10', 'option');
 
 // Check if the banner field exists
 if ($banner_dt_10) {
