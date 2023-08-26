@@ -31,9 +31,7 @@
 
                         <div class="sidebar col-lg-4 col-md-4 p-2">
 
-                                      <!-- Category sidebar search-->
-                                      <?php get_template_part('includes/section','search');?>
-                                      <!-- End Category sidebar search-->
+
 
                                       <!-- Reviews sidebar project posts-->
                                       <?php get_template_part('includes/section','reviews-sidebar');?>

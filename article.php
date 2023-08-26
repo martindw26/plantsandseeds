@@ -91,9 +91,7 @@
 
                         <div class="sidebar col-lg-4 col-md-4">
 
-                                      <!-- Category sidebar search-->
-                                      <?php get_template_part('includes/section','search');?>
-                                      <!-- End Category sidebar search-->
+
 
 		   <!-- Start of posts sidebar related posts-->
 	 	   <?php get_template_part( 'template-parts/reviews_sidebar' );?>
