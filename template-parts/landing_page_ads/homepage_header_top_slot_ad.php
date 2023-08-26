@@ -11,7 +11,7 @@ if ($adinformation) {
     Advertisment
     <span class="px-2" style="position: absolute; top: 0; right: 0;">
   <a class="text-decoration-none text-dark" href="<?php the_field( 'adinformation','option')?>" target='_blank'>
-    &#128712;
+  &#9432;
   </a>
 </span>
 
@@ -520,7 +520,7 @@ if ($adinformation) {
 }
 ?>
 <div class="d-flex justify-content-center p-2 text-dark" style="width:350px; margin: 0 auto; background-color: #dee2e6; position: relative;">Advertisement   <a class="text-decoration-none text-dark ms-2 me-2" href="<?php the_field( 'adinformation','option')?>" target='_blank'>
-    &#128712;
+    &#9432;
   </a>
 </div>
 
