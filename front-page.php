@@ -7,7 +7,7 @@
 
  <!-- Desktop Header adslot-->
  <div class="commerce_hp_desktop">
-<?php get_template_part( 'template-parts/landing_page_ads/homepage_header_top' );?><br>
+<?php get_template_part( 'template-parts/landing_page_ads/homepage_header_top_slot_ad' );?><br>
 <!-- End Featured Post-->
 </div>
 
