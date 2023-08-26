@@ -1,3 +1,6 @@
+<div class="commerce_hp_desktop">
+<div class="commerce_ldr">
+<div class="py-2">
 
 <?php
 if ($adinformation) {
@@ -1944,7 +1947,4 @@ echo "No advert selected";
 </div>
 </div>
 </div>
-
-
-
 
