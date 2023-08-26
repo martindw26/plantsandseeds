@@ -5,7 +5,7 @@ if ($adinformation) {
 }
 ?>
 
-<div class="d-flex justify-content-center p-2 text-dark position-relative" style="width:980px; margin: 0 auto; background-color: #dee2e6;">
+<div class="d-flex justify-content-center p-2 text-dark position-relative mt-2" style="width:980px; margin: 0 auto; background-color: #dee2e6;">
     Advertisment
     <span class="px-2" style="position: absolute; top: 0; right: 0;">
   <a class="text-decoration-none text-dark" href="<?php the_field( 'adinformation','option')?>" target='_blank'>
