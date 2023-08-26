@@ -11,7 +11,7 @@ if ($adinformation) {
     Advertisment
     <span class="px-2" style="position: absolute; top: 0; right: 0;">
   <a class="text-decoration-none text-dark" href="<?php the_field( 'adinformation','option')?>" target='_blank'>
-    &#128712;
+    &#9432;
   </a>
 </span>
 
