@@ -63,8 +63,8 @@ case "1":
     $Url = $banner_db_1['url'];
   
     // Get the desktop header backup image and URL from the 'option' object
-    $mobile_subs_ad_image = get_field('mobile_image', 'option');
-    $mobile_subs_ad_url = get_field('mobile_url', 'option');
+    $desktop_subs_ad_image = get_field('desktop_image', 'option');
+    $desktop_subs_ad_url = get_field('desktop_url', 'option');
   
     // Get the current date and time
     $current_date = time();
