@@ -409,20 +409,8 @@ button.buttons .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-prima
   .right-card {
     min-height: 600px;
     max-height: 670px;
-    border: darkgray;
   }
 }
-
-@media screen and (min-width: 480px) { /* Adjust the min-width value based on your desired breakpoint for desktop devices */
-  .right-card {
-    height: 250px;
-   }
-}
-
-  .left-card {
-    border: darkgray;
-  }
-
 
 /*Featured Posts*/
 
