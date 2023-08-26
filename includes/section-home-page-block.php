@@ -172,7 +172,7 @@ while ($block->have_posts()) : $block->the_post();
 						 while ($block->have_posts()) : $block->the_post();
 						 ?>
 <div class="non_featured_block_home_page_mobile pb-2">
-<div class="card rounded rounded-0 border border-0">
+<div class="left-card card rounded rounded-0">
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
 <img class="card-img-top rounded rounded-0 featured" src="<?php echo $url ?>" alt="Card image cap" style=" object-fit: cover; height:300px">  <div class="card-body">
     <h5 class="card-title"><?php echo get_the_title();?></h5>
