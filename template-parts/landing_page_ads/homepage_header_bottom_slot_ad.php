@@ -46,10 +46,10 @@ case "1":
 
  
   // Get the 'banner_desktop_1' field from the 'option' object
-  $banner_mobile_bottom_1 = get_field('banner_mobile_bottom_1', 'option');
+  $banner_desktop_bottom_1 = get_field('banner_desktop_bottom_1', 'option');
   
   // Check if the banner field exists
-  if ($banner_mobile_bottom_1) {
+  if ($banner_desktop_bottom_1) {
   
     // Extract the start and end dates, campaign name, delivering status, category target, post ID target, and order number from the banner field
     $start_date = strtotime($banner_db_1['start_date']);
