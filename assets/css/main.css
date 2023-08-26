@@ -409,6 +409,7 @@ button.buttons .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-prima
   .right-card {
     min-height: 600px;
     max-height: 670px;
+    border: darkgray;
   }
 }
 
