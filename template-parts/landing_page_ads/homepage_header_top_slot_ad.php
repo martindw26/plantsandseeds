@@ -1942,9 +1942,9 @@ echo "No advert selected";
 }
 ?>
 
-</div>
-</div>
-</div>
-</div>
-</div>
 
+</div>
+</div>
+</div>
+</div>
+</div>
