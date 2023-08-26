@@ -73,8 +73,8 @@ case "1":
      if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
   
       // If the banner has a script, display it
-      if ($banner_mobile_bottom_1['banner_mbb_script_1']) {
-        echo $banner_mobile_bottom_1['banner_mbb_script_1'];
+      if ($banner_desktop_bottom_1['banner_mbb_script_1']) {
+        echo $banner_desktop_bottom_1['banner_mbb_script_1'];
       } else {
         // Otherwise, display the banner image
         echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -85,7 +85,7 @@ case "1":
   
     } else {
       // If the banner is not being delivered or the current date is not within the start and end dates, display the desktop header backup image
-      echo '<a href="' . $mobile_subs_ad_url . '" target="_blank"><img src="' . $mobile_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
+      echo '<a href="' . $desktop_subs_ad_url . '" target="_blank"><img src="' . $desktop_subs_ad_image . '" alt="techhobbyist.co.uk"></a>';
   
   
   
