@@ -1,6 +1,6 @@
 <?php
   get_header();
-  /*Template Name: category-reviews*/
+  /*Template Name: Search Page*/
 ?>  
 
       <div class="container">
@@ -22,24 +22,34 @@
 
                                         <div class="col">
 
-                                        <div class="card mb-4">
-                                                  <div class="card-img-top">  
-                                                    <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-                                                    <img class="img-fluid rounded-top" src="<?php echo $url ?>" />
-                                                  </div>
-                                                     <div class="card-body">
-                                                        <div class="small text-muted"><?php echo get_the_date();?></div>
-                                                        <h2 class="card-title"><?php the_title();?></h2>
-                                                        <div class="small text-muted">*****</div>
-                                                        <p class="card-text">&ldquo;<?php echo excerpt(15);?>&rdquo;</p>
-                                                        <div class="mb-4 card-text">By <i><?php echo get_the_author();?></i></div>
-                                                        <a class="btn btn-danger" href="#!">Read more →</a>
-                                                    </div>
-                                                  </div>
+                                        <?php printf( esc_html__( 'Search Results for: %s', 'your-theme-name' ), '<span>' . get_search_query() . '</span>' ); ?>
+            </h1>
+        </header>
 
-                                          </div>
+        <?php if ( have_posts() ) : ?>
+            <div class="search-results">
 
-                                        </div>
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <article <?php post_class(); ?>>
+                        <header class="entry-header">
+                            <h2 class="entry-title">
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            </h2>
+                        </header>
+
+                        <div class="entry-content">
+                            <?php the_excerpt(); ?>
+                        </div>
+                    </article>
+                <?php endwhile; ?>
+
+            </div>
+
+            <?php the_posts_pagination(); ?>
+
+        <?php else : ?>
+            <p><?php esc_html_e( 'No results found.', 'your-theme-name' ); ?></p>
+        <?php endif; ?>
 
                                       </div>
 
