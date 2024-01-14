@@ -15,7 +15,7 @@
     'container_class' => 'collapse navbar-collapse',
     'container_id'    => 'navbar-collapse-1',
 	  'add_li_class'    => 'nav-text',
-    'menu_class'      => 'nav navbar-nav p-2',
+    'menu_class'      => 'nav navbar-nav',
     'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
     'walker'          => new WP_Bootstrap_Navwalker(),
   ) );
