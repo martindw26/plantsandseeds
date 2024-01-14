@@ -112,20 +112,34 @@ while ($block->have_posts()) : $block->the_post();
     <h4 class="card-title fw-bold"><?php echo get_the_title();?></h4>
 	<h5 class="mb-4" style="height:25px";>	
 				<!-- catarrayrated -->
-				<?php 
-				$catarrayrated = get_the_category( $post->ID );
-				foreach ($catarrayrated as $catarrayrated) {
-				$catarrayrated = $catarrayrated->term_id;
-				if ($catarrayrated == 2) {
-				get_template_part('includes/section','reviewratingshort');
-                }elseif ($catarrayrated == 3 || $catarrayrated == 84){
-				get_template_part('includes/section','difficultyratingshort');
-				}
-				}
-				?>
-				<!-- End catarrayrated -->
-				</h5>
-				<p class="mb-3">&#34;<?php echo excerpt(35);?>&#34;</p>
+				<?php
+$catarrayrated = get_the_category($post->ID);
+
+foreach ($catarrayrated as $cat) {
+    $cat_id = $cat->term_id;
+
+    if ($cat_id == 2) {
+        get_template_part('includes/section', 'reviewratingshort');
+    } elseif ($cat_id == 3 || $cat_id == 84) {
+        get_template_part('includes/section', 'difficultyratingshort');
+    }
+}
+
+// Check if the post does not belong to the "rating" category (assuming 2 is the ID for the "rating" category)
+$is_rating_category = array_reduce(
+    $catarrayrated,
+    function ($carry, $cat) {
+        return $carry || $cat->term_id == 2;
+    },
+    false
+);
+
+if (!$is_rating_category) {
+    echo '<p class="mb-3">&#34;' . excerpt(35) . '&#34;</p>';
+}
+?>
+<!-- End catarrayrated -->
+
 				<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark"><?php echo $post_button_text;?></button></a>
   </div>
 </div>
