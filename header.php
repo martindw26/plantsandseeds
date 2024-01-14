@@ -50,7 +50,7 @@ echo $GA;
 <?php echo '<style>{ display:none;}</style>';?>
 <?php endif;?>
 <!-- Page header logo-->
-<div class="container-fluid bg-black">
+<div class="container-fluid bg-white">
 <?php get_template_part('includes/section','logo');?>
 
 <?php get_template_part('includes/section','main_nav');?>
