@@ -125,6 +125,7 @@ while ($block->have_posts()) : $block->the_post();
 				?>
 				<!-- End catarrayrated -->
 				</h5>
+				<p class="mb-3">&#34;<?php echo excerpt(35);?>&#34;</p>
 				<a href="<?php the_permalink() ?>"><button type="button" class="btn btn-outline-dark"><?php echo $post_button_text;?></button></a>
   </div>
 </div>
