@@ -11,17 +11,3 @@ background-color: white;
 color: white !important;
 }
 
-.navbar-toggler:focus {
-  text-decoration: none;
-  outline: 0;
-  box-shadow: 0 0 0 0.0rem!important;
-  /* padding: 2px; */
-}
-
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px!important;
-  margin-bottom: 0;
-  list-style: none;
-}
