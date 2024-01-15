@@ -9,18 +9,22 @@ $navbar_text_color = get_field('navbar_text_color', 'option'); // Add this line 
 // Check if the color values are not empty
 if ($navbar_background_color) {
     $style = 'style="background-color: ' . esc_attr($navbar_background_color) . ';';
+
     // Check if text color is set, and if so, append it to the style
     if ($navbar_text_color) {
-        $style .= ' color: ' . esc_attr($navbar_text_color) . ';"'; // Corrected this line
+        $style .= ' color: ' . esc_attr($navbar_text_color) . ';"';
     } else {
-        $style .= '"'; // Added this line to properly close the style attribute
+        $style .= '"';
     }
 
-    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . ' role="navigation">';
+    $nav_class = 'navbar_background navbar-fluid navbar-expand-md pt-1';
+    echo '<nav class="' . $nav_class . '" ' . $style . ' role="navigation">';
 } else {
-    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" role="navigation">';
+    $nav_class = 'navbar_background navbar-fluid navbar-expand-md pt-1';
+    echo '<nav class="' . $nav_class . '" role="navigation">';
 }
 ?>
+
 
 
 	
