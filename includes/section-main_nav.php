@@ -16,10 +16,25 @@ if ($navbar_background_color || $navbar_text_color) {
   if ($navbar_text_color) {
     $style .= 'color: ' . esc_attr($navbar_text_color) . ';';
   }
+  $style .= '"';
   echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . ' role="navigation">';
 } else {
   echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" role="navigation">';
-}
+} 
+
+/* Add this style block in your HTML head or in your stylesheet */
+?>
+<style>
+  .navbar_background a.nav-link {
+    <?php
+    // Apply the text color to the nav-text based on the $navbar_text_color variable
+    if ($navbar_text_color) {
+        echo 'color: ' . esc_attr($navbar_text_color) . ';';
+    }
+    ?>
+  }
+</style>
+
 ?>
 
 	
