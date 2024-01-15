@@ -35,7 +35,7 @@ if ($navbar_background_color || $navbar_text_color) {
   }
 </style>
 
-?>
+
 
 	
 <!-- Brand and toggle get grouped for better mobile display -->
