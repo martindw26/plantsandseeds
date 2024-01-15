@@ -2,36 +2,21 @@
 
 <!--<nav class="navbar-fluid navbar-expand-md navbar-black bg-black pt-1" role="navigation">-->
 
-<style>
-    /* Add this style block in your HTML head or in your stylesheet */
-    .navbar_background .nav-link {
-        <?php
-        // Apply the text color to the nav-text based on the $navbar_text_color variable
-        if ($navbar_text_color) {
-            echo 'color: ' . esc_attr($navbar_text_color) . ';';
-        }
-        ?>
-    }
-</style>
-
-
 <?php
 $navbar_background_color = get_field('navbar_background_color', 'option');
 $navbar_text_color = get_field('navbar_text_color', 'option'); // Add this line to get the text color
 
-if ($navbar_background_color || $navbar_text_color) {
-  $style = 'style="';
-  // Check if background color is set, and if so, append it to the style
-  if ($navbar_background_color) {
-      $style .= 'background-color: ' . esc_attr($navbar_background_color) . ';';
-  }
-  // Check if text color is set, and if so, append it to the style
-  if ($navbar_text_color) {
-      $style .= '"';
-  }
-  echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . ' role="navigation">';
+// Check if the color values are not empty
+if ($navbar_background_color) {
+    $style = 'style="background-color: ' . esc_attr($navbar_background_color) . ';';
+    // Check if text color is set, and if so, append it to the style
+    if ($navbar_text_color) {
+        $style .= ' color: ' . esc_attr($navbar_text_color) . ';';
+    }
+
+    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . '" role="navigation">';
 } else {
-  echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" role="navigation">';
+    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" role="navigation">';
 }
 ?>
 
