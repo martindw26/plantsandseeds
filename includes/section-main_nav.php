@@ -11,14 +11,17 @@ if ($navbar_background_color) {
     $style = 'style="background-color: ' . esc_attr($navbar_background_color) . ';';
     // Check if text color is set, and if so, append it to the style
     if ($navbar_text_color) {
-        $style .= ' color: ' . esc_attr($navbar_text_color) . ';';
+        $style .= ' color: ' . esc_attr($navbar_text_color) . ';"'; // Corrected this line
+    } else {
+        $style .= '"'; // Added this line to properly close the style attribute
     }
 
-    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . '" role="navigation">';
+    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . ' role="navigation">';
 } else {
     echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" role="navigation">';
 }
 ?>
+
 
 	
 <!-- Brand and toggle get grouped for better mobile display -->
