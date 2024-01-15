@@ -3,7 +3,7 @@
 <nav class="navbar-fluid navbar-expand-md navbar-black bg-black pt-1" role="navigation">
 <!-- Brand and toggle get grouped for better mobile display -->
 <button class="navbar-toggler text-start" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"><h5 class="	fas fa-bars"></h5>
+<span class="navbar-toggler-icon"><h5 class="fas fa-bars"><p class="p-2" style="display: inline;">Menu</p></h5></span>
 </span>
 </button>
 

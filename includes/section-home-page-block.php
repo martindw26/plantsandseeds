@@ -36,7 +36,7 @@ while ($block->have_posts()) : $block->the_post();
 
 <div class="right-card card rounded rounded-0 p-lg-3 mb-2 bg-body"><!-- non-fetured block-->
 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-<img class="card-img-top rounded rounded-0 featured" src="<?php echo $url ?>" alt="Card image cap" style=" object-fit: cover; height:300px">  <div class="card-body">
+<img class="card-img-top rounded rounded-0 featured" src="<?php echo $url ?>" alt="Card image cap" style=" object-fit: cover; height:400px">  <div class="card-body">
     <h4 class="card-title fw-bold"><?php echo get_the_title();?></h4>
 				<!-- catarrayrated -->
 				<?php 
