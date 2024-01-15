@@ -3,16 +3,23 @@
 <!--<nav class="navbar-fluid navbar-expand-md navbar-black bg-black pt-1" role="navigation">-->
 
 <?php
-$navbar_background_color = get_field('navbar_background_color' ,'option');
+$navbar_background_color = get_field('navbar_background_color', 'option');
+$navbar_text_color = get_field('navbar_text_color', 'option'); // Add this line to get the text color
 
-// Check if the color value is not empty
+// Check if the color values are not empty
 if ($navbar_background_color) {
+    $style = 'style="background-color: ' . esc_attr($navbar_background_color) . ';';
+    // Check if text color is set, and if so, append it to the style
+    if ($navbar_text_color) {
+        $style .= ' color: ' . esc_attr($navbar_text_color) . ';';
+    }
 
-    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1"" style="background-color: ' . esc_attr($navbar_background_color) . ';" role="navigation">';
+    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . '" role="navigation">';
 } else {
     echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" role="navigation">';
 }
 ?>
+
 	
 <!-- Brand and toggle get grouped for better mobile display -->
 <button class="navbar-toggler text-start" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
