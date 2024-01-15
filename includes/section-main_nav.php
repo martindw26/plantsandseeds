@@ -4,7 +4,7 @@
 
 <style>
     /* Add this style block in your HTML head or in your stylesheet */
-    .navbar_background .nav-text {
+    .navbar_background .nav-link {
         <?php
         // Apply the text color to the nav-text based on the $navbar_text_color variable
         if ($navbar_text_color) {
