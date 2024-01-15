@@ -109,8 +109,8 @@ while ($block->have_posts()) : $block->the_post();
   <div class="col"><img class="img-fluid featured rounded rounded-0" src="<?php echo $url ?>" style="height:150px";>
 </div>
     <div class="col-6">
-    <h4 class="card-title fw-bold"><?php echo get_the_title();?></h4>
-	<h5 class="mb-4" style="height:25px";>	
+    <h4 class="card-title fw-bold" style="height:15px";><?php echo get_the_title();?></h4>
+	<h5 class="mb-4" style="height:25px";>
 				<!-- catarrayrated -->
 				<?php 
 				$catarrayrated = get_the_category( $post->ID );
