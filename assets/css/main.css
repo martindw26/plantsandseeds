@@ -105,7 +105,7 @@ hr.horizontal-line {
 /*###### End Ads CSS ######*/
 
 .header_background.container-fluid.p-0 {
-    background-color: <?php echo $header_background_color; ?>;
+    background-color: <?php echo $header_background_color; ?>!important;
 }
 
 
