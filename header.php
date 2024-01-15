@@ -41,7 +41,7 @@ echo $GA;
 
 </head>
 <?php
-$navbar_color = get_field('header_baground', 'option');
+$header_background_color = get_field('header_background', 'option');
 ?>
   
 <?php $enable_header_on = get_field('header_on','option');?>
@@ -53,7 +53,7 @@ $navbar_color = get_field('header_baground', 'option');
 <?php echo '<style>{ display:none;}</style>';?>
 <?php endif;?>
 <!-- Page header logo-->
-<div class="header_baground container-fluid p-0">
+<div class="header_background container-fluid p-0">
 <?php get_template_part('includes/section','logo');?>
 
 <?php get_template_part('includes/section','main_nav');?>
