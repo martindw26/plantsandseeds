@@ -104,11 +104,11 @@ hr.horizontal-line {
 
 /*###### End Ads CSS ######*/
 
-<style>
-    .header_background.container-fluid.p-0{
-        background-color: <?php echo $header_background_color; ?>;
-    }
-</style>
+.header_background.container-fluid.p-0 {
+    background-color: <?php echo $header_background_color; ?>;
+}
+
+
 
 /* Header/logo Title */
 .header { padding: 20px; text-align: center; background: #264764; color: white;}
