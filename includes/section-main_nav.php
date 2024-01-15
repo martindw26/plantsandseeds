@@ -2,6 +2,19 @@
 
 <!--<nav class="navbar-fluid navbar-expand-md navbar-black bg-black pt-1" role="navigation">-->
 
+<style>
+    /* Add this style block in your HTML head or in your stylesheet */
+    .navbar_background .nav-text {
+        <?php
+        // Apply the text color to the nav-text based on the $navbar_text_color variable
+        if ($navbar_text_color) {
+            echo 'color: ' . esc_attr($navbar_text_color) . ';';
+        }
+        ?>
+    }
+</style>
+
+
 <?php
 $navbar_background_color = get_field('navbar_background_color', 'option');
 $navbar_text_color = get_field('navbar_text_color', 'option'); // Add this line to get the text color
