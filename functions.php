@@ -151,6 +151,11 @@ add_filter('iwp_acf/get_fields_filter', function ($args = []) {
 });
 
 
-
+function enqueue_custom_styles() {
+    $header_background_color = get_field('header_background_color', 'option');
+    wp_enqueue_style('custom-styles', get_template_directory_uri() . '/plantsandseeds.co.uk/wp-content/themes/plants/assets/css/main.css');
+    wp_add_inline_style('custom-styles', '.navbar { background-color: ' . $header_background_color . '; }');
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
 ?>
