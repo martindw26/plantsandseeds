@@ -40,9 +40,6 @@ echo $GA;
 
 
 </head>
-<?php
-$header_background_color = get_field('header_background', 'option');
-?>
   
 <?php $enable_header_on = get_field('header_on','option');?>
 <?php if($enable_header_on):?>
@@ -53,7 +50,17 @@ $header_background_color = get_field('header_background', 'option');
 <?php echo '<style>{ display:none;}</style>';?>
 <?php endif;?>
 <!-- Page header logo-->
-<div class="header_background container-fluid p-0">
+<?php
+$header_background_color = get_field('header_background_color' ,'option');
+
+// Check if the color value is not empty
+if ($header_background_color) {
+
+    echo '<div class="header_background container-fluid p-0" style="background-color: ' . esc_attr($header_background_color) . ';">';
+} else {
+    echo '<div class="header_background container-fluid p-0">';
+}
+?>
 <?php get_template_part('includes/section','logo');?>
 
 <?php get_template_part('includes/section','main_nav');?>
