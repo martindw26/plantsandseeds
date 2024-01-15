@@ -14,7 +14,7 @@ if ($navbar_background_color || $navbar_text_color) {
   }
   // Check if text color is set, and if so, append it to the style
   if ($navbar_text_color) {
-      $style .= '"';
+    $style .= 'color: ' . esc_attr($navbar_text_color) . ';';
   }
   echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . ' role="navigation">';
 } else {
