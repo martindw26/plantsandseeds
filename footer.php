@@ -39,8 +39,18 @@
 <p class="text-white"> Copyright <?php
 $current_year = date('Y');
 echo $current_year;
-?> techhobbyist.co.uk All Rights Reserved.</p>
-<button class="cmplz-manage-consent">Manage consent settings</button>
+?> plantsandseeds.co.uk All Rights Reserved.</p>
+<button class="tracking-opt-out" onclick="openTrackingOptOutPage()">Tracking opt-out</button>
+
+<script>
+    function openTrackingOptOutPage() {
+       
+        var optOutUrl = "https://plantsandseeds.co.uk/tracking/tracking-opt-out/";
+
+ 
+        window.open(optOutUrl, "_blank");
+    }
+</script>
     </div>
   </div>
 </div>
