@@ -407,8 +407,8 @@ button.buttons .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-prima
 
 @media screen and (min-width: 768px) { /* Adjust the min-width value based on your desired breakpoint for desktop devices */
   .right-card {
-    min-height: 660px;
-    max-height: 670px;
+    height: 705px;
+
   }
 }
 
