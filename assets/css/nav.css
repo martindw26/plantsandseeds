@@ -3,11 +3,11 @@
 }*/
 
     /* Add this style block in your HTML head or in your stylesheet */
-    .navbar_background .nav-link {
+    .navbar_background a.nav-link {
       <?php
       // Apply the text color to the nav-text based on the $navbar_text_color variable
       if ($navbar_text_color) {
-          echo 'color: ' . esc_attr($navbar_text_color) . ';';
+          echo 'color: ' . esc_attr($navbar_text_color) . ';'!important;
       }
       ?>
   }
