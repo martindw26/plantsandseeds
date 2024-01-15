@@ -3,7 +3,7 @@
 <!--<nav class="navbar-fluid navbar-expand-md navbar-black bg-black pt-1" role="navigation">-->
 
 <?php
-$header_background_color = get_field('navbar_background_color' ,'option');
+$navbar_background_color = get_field('navbar_background_color' ,'option');
 
 // Check if the color value is not empty
 if ($navbar_background_color) {
