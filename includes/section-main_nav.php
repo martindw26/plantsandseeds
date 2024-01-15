@@ -8,27 +8,35 @@ $navbar_text_color = get_field('navbar_text_color', 'option'); // Add this line 
 
 // Check if the color values are not empty
 if ($navbar_background_color) {
-    $style = 'style="background-color: ' . esc_attr($navbar_background_color) . ';';
-
+    $style = 'style="background-color: ' . esc_attr($navbar_background_color) . ';"';
     // Check if text color is set, and if so, append it to the style
     if ($navbar_text_color) {
-        $style .= ' color: ' . esc_attr($navbar_text_color) . ';"';
-    } else {
-        $style .= '"';
+        $style .= ' color: ' . esc_attr($navbar_text_color) . ';';
     }
 
-    $nav_class = 'navbar_background navbar-fluid navbar-expand-md pt-1';
-    echo '<nav class="' . $nav_class . '" ' . $style . ' role="navigation">';
+    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . ' role="navigation">';
 } else {
-    $nav_class = 'navbar_background navbar-fluid navbar-expand-md pt-1';
-    echo '<nav class="' . $nav_class . '" role="navigation">';
+    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" role="navigation">';
+}
+
+// Resetting $style for the next block
+$style = '';
+
+if ($navbar_text_color) {
+    $style = 'style="color: ' . esc_attr($navbar_text_color) . ';"';
+    // Check if background color is set, and if so, append it to the style
+    if ($navbar_background_color) {
+        $style .= ' background-color: ' . esc_attr($navbar_background_color) . ';';
+    }
+
+    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" ' . $style . ' role="navigation">';
+} else {
+    echo '<nav class="navbar_background navbar-fluid navbar-expand-md pt-1" role="navigation">';
 }
 ?>
 
 
 
-	
-<!-- Brand and toggle get grouped for better mobile display -->
 <button class="navbar-toggler text-start" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"><h5 class="fas fa-bars"><p class="p-2" style="display: inline;">Menu</p></h5></span>
 </span>
