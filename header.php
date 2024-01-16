@@ -13,6 +13,26 @@
 <meta name="google-site-verification" content="JbtpfGonAlshcSxHW_vqTXmpIU-rrA9O2Yq-6Du3aNA" />
 <!-- Affiliate scripts --><?php the_field('affiliate_scripts', 'option'); ?>
 
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  var allElements = document.querySelectorAll('*');
+
+  for (var i = 0; i < allElements.length; i++) {
+    var element = allElements[i];
+
+    var computedStyle = window.getComputedStyle(element);
+    var overflowX = computedStyle.overflowX;
+    var overflowY = computedStyle.overflowY;
+
+    if (overflowX === 'auto' || overflowX === 'scroll' || overflowY === 'auto' || overflowY === 'scroll') {
+      console.log('Element causing overflow:', element);
+    }
+  }
+});
+
+</script>
+
+
 <?php wp_head();?>
 
 <!-- Collapse.js-->
