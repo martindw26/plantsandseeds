@@ -19,9 +19,9 @@ if ($footer_background_color || $footer_text_color) {
     $style .= 'color: ' . esc_attr($footer_text_color) . ';';
   }
   $style .= '"';
-  echo '<nav class="footer_background navbar-fluid navbar-expand-md pt-1" ' . $style . ' role="navigation">';
+  echo '<div class="container-fluid mt-3 text-decoration-none">" ' . $style . '';
 } else {
-  echo '<nav class="footer_background navbar-fluid navbar-expand-md pt-1" role="navigation">';
+  echo '<div class="container-fluid mt-3 text-decoration-none">';
 } 
 
 /* Add this style block in your HTML head or in your stylesheet */
