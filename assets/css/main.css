@@ -119,7 +119,7 @@ p.header-social{ background-color: black;}
 
 
 @media screen and (min-width: 768px) {
-  .header_background {
+  .header_background.container-fluid {
     padding: 2px; /* Apply 2px padding only on desktop screens */
   }
 }
