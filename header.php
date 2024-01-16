@@ -76,9 +76,9 @@ $header_background_color = get_field('header_background_color' ,'option');
 // Check if the color value is not empty
 if ($header_background_color) {
 
-    echo '<div class="header_background container-fluid p-0" style="background-color: ' . esc_attr($header_background_color) . ';">';
+    echo '<div class="header_background container-fluid" style="background-color: ' . esc_attr($header_background_color) . ';">';
 } else {
-    echo '<div class="header_background container-fluid p-0">';
+    echo '<div class="header_background container-fluid">';
 }
 ?>
 <?php get_template_part('includes/section','logo');?>
