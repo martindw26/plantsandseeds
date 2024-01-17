@@ -21,11 +21,11 @@ if ($adinformation) {
 
 <?php
 
-//$LowerLimit = get_field('mobile_banner_top_min','option');
-//$UpperLimit = get_field('mobile_banner_top_max','option');
+$LowerLimit = get_field('mobile_banner_top_min','option');
+$UpperLimit = get_field('mobile_banner_top_max','option');
 
-$LowerLimit = 1;
-$UpperLimit = 10;
+//$LowerLimit = 1;
+//$UpperLimit = 10;
 
 $advert = rand($LowerLimit,$UpperLimit);
 
@@ -76,8 +76,8 @@ if ($banner_mobile_1) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_1['banner_mobile_script_1']) {
-      echo $banner_mobile_1['banner_mobile_script_1'];
+    if ($banner_mobile_1['banner_mbt_script_1']) {
+      echo $banner_mobile_1['banner_mbt_script_1'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -126,8 +126,8 @@ if ($banner_mobile_2) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_2['banner_mobile_script_2']) {
-      echo $banner_mobile_2['banner_mobile_script_2'];
+    if ($banner_mobile_2['banner_mbt_script_2']) {
+      echo $banner_mobile_2['banner_mbt_script_2'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -171,8 +171,8 @@ if ($banner_mobile_3) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_3['banner_mobile_script_3']) {
-      echo $banner_mobile_3['banner_mobile_script_3'];
+    if ($banner_mobile_3['banner_mbt_script_3']) {
+      echo $banner_mobile_3['banner_mbt_script_3'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -216,8 +216,8 @@ if ($banner_mobile_4) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_4['banner_mobile_script_4']) {
-      echo $banner_mobile_4['banner_mobile_script_4'];
+    if ($banner_mobile_4['banner_mbt_script_4']) {
+      echo $banner_mobile_4['banner_mbt_script_4'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -261,8 +261,8 @@ if ($banner_mobile_5) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_5['banner_mobile_script_5']) {
-      echo $banner_mobile_5['banner_mobile_script_5'];
+    if ($banner_mobile_5['banner_mbt_script_5']) {
+      echo $banner_mobile_5['banner_mbt_script_5'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -306,8 +306,8 @@ if ($banner_mobile_6) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_6['banner_mobile_script_6']) {
-      echo $banner_mobile_6['banner_mobile_script_6'];
+    if ($banner_mobile_6['banner_mbt_script_6']) {
+      echo $banner_mobile_6['banner_mbt_script_6'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -351,8 +351,8 @@ if ($banner_mobile_7) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_7['banner_mobile_script_7']) {
-      echo $banner_mobile_7['banner_mobile_script_7'];
+    if ($banner_mobile_7['banner_mbt_script_7']) {
+      echo $banner_mobile_7['banner_mbt_script_7'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -396,8 +396,8 @@ if ($banner_mobile_8) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_8['banner_mobile_script_8']) {
-      echo $banner_mobile_8['banner_mobile_script_8'];
+    if ($banner_mobile_8['banner_mbt_script_8']) {
+      echo $banner_mobile_8['banner_mbt_script_8'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -441,8 +441,8 @@ if ($banner_mobile_9) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_9['banner_mobile_script_9']) {
-      echo $banner_mobile_9['banner_mobile_script_9'];
+    if ($banner_mobile_9['banner_mbt_script_9']) {
+      echo $banner_mobile_9['banner_mbt_script_9'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -486,8 +486,8 @@ if ($banner_mobile_10) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_10['banner_mobile_script_10']) {
-      echo $banner_mobile_10['banner_mobile_script_10'];
+    if ($banner_mobile_10['banner_mbt_script_10']) {
+      echo $banner_mobile_10['banner_mbt_script_10'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -531,8 +531,8 @@ if ($banner_mobile_11) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_11['banner_mobile_script_11']) {
-      echo $banner_mobile_11['banner_mobile_script_11'];
+    if ($banner_mobile_11['banner_mbt_script_11']) {
+      echo $banner_mobile_11['banner_mbt_script_11'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -576,8 +576,8 @@ if ($banner_mobile_12) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_12['banner_mobile_script_12']) {
-      echo $banner_mobile_12['banner_mobile_script_12'];
+    if ($banner_mobile_12['banner_mbt_script_12']) {
+      echo $banner_mobile_12['banner_mbt_script_12'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -622,8 +622,8 @@ if ($banner_mobile_13) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_13['banner_mobile_script_13']) {
-      echo $banner_mobile_13['banner_mobile_script_13'];
+    if ($banner_mobile_13['banner_mbt_script_13']) {
+      echo $banner_mobile_13['banner_mbt_script_13'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -667,8 +667,8 @@ if ($banner_mobile_14) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_14['banner_mobile_script_14']) {
-      echo $banner_mobile_14['banner_mobile_script_14'];
+    if ($banner_mobile_14['banner_mbt_script_14']) {
+      echo $banner_mobile_14['banner_mbt_script_14'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -712,8 +712,8 @@ if ($banner_mobile_15) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_15['banner_mobile_script_15']) {
-      echo $banner_mobile_15['banner_mobile_script_15'];
+    if ($banner_mobile_15['banner_mbt_script_15']) {
+      echo $banner_mobile_15['banner_mbt_script_15'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -757,8 +757,8 @@ if ($banner_mobile_16) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_16['banner_mobile_script_16']) {
-      echo $banner_mobile_16['banner_mobile_script_16'];
+    if ($banner_mobile_16['banner_mbt_script_16']) {
+      echo $banner_mobile_16['banner_mbt_script_16'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -802,8 +802,8 @@ if ($banner_mobile_17) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_17['banner_mobile_script_17']) {
-      echo $banner_mobile_17['banner_mobile_script_17'];
+    if ($banner_mobile_17['banner_mbt_script_17']) {
+      echo $banner_mobile_17['banner_mbt_script_17'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -847,8 +847,8 @@ if ($banner_mobile_18) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_18['banner_mobile_script_18']) {
-      echo $banner_mobile_18['banner_mobile_script_18'];
+    if ($banner_mobile_18['banner_mbt_script_18']) {
+      echo $banner_mobile_18['banner_mbt_script_18'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -892,8 +892,8 @@ if ($banner_mobile_19) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_19['banner_mobile_script_19']) {
-      echo $banner_mobile_19['banner_mobile_script_19'];
+    if ($banner_mobile_19['banner_mbt_script_19']) {
+      echo $banner_mobile_19['banner_mbt_script_19'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
@@ -937,8 +937,8 @@ if ($banner_mobile_20) {
    if ($delivering == 'yes' && $current_date >= $start_date && $current_date <= $end_date) {
 
     // If the banner has a script, display it
-    if ($banner_mobile_20['banner_mobile_script_20']) {
-      echo $banner_mobile_20['banner_mobile_script_20'];
+    if ($banner_mobile_20['banner_mbt_script_20']) {
+      echo $banner_mobile_20['banner_mbt_script_20'];
     } else {
       // Otherwise, display the banner image
       echo '<a href="' . $Url . '" target="_blank"><img src="' . $Image . '" alt="' . $campaign_name .'"></a>';
