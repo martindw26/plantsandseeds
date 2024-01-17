@@ -120,7 +120,7 @@ p.header-social{ background-color: black;}
 /* Padding logo*/
 @media screen and (max-width: 480px)
 .header_background.container-fluid {
-    padding: 0px!important;
+    width:100%;
 }
 
 .page-wrap{
