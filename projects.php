@@ -56,7 +56,16 @@
              <!-- SEO text-->
 
              <div class=" bg-secondary text-light p-4 mb-4 border-dark lead">
-             <?php the_field('seo_paragraph');?> 
+             <?php
+              $seo_paragraph = get_field('seo_paragraph'); // Assuming get_field is a function to retrieve the SEO paragraph
+
+              if (!empty($seo_paragraph)) {
+                  echo '<div class="bg-secondary text-light p-4 mb-4 border-dark lead">';
+                  echo $seo_paragraph;
+                  echo '</div>';
+              }
+              ?>
+
              </div>
 
 
