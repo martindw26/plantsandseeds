@@ -146,7 +146,7 @@ p.header-social{ background-color: black;}
 @media (min-width: 768px) {
 .desktop-logo{
   display: block;
-
+  padding-left: 20px;
 }
 }
 
