@@ -326,18 +326,21 @@ $Product = get_field('review_product');
 <?php endif; ?>
 <!-- End Single Green button Block-->
 
-<!-- Single Green button Block-->
 <?php if (get_row_layout() == 'buy_now_button_ft'):
     $Buy_now_button_ft_url = get_sub_field('buy_now_button_free_text_url');
     $BuyNewProductFreeText = get_sub_field('buy_now_button_free_text');
 ?>	
 <div class="row p-4">
-<?php if ($Buy_now_button_ft_url): ?>	 
-<button type="button" class="btn btn-success rounded rounded-0"><h3 class="text-white text-decoration-none">Get your <a class="text-white text-decoration-none" href='<?php echo $Buy_now_button_ft_url; ?>'  target='_blank'/> <?php echo $BuyNewProductFreeText; ?></a> Now</h3></button>
+    <?php if ($Buy_now_button_ft_url): ?>	 
+        <button type="button" class="btn btn-success rounded rounded-0">
+            <h3 class="text-white text-decoration-none">
+                Get your <a class="text-white text-decoration-none" href='<?php echo $Buy_now_button_ft_url; ?>' target='_blank'><?php echo $BuyNewProductFreeText; ?></a> Now
+            </h3>
+        </button>
+    <?php endif; ?>
 </div>
 <?php endif; ?>
-<?php endif; ?>
-<!-- End Single Green button Block-->
+<!-- End Single Green free text button Block-->
 
 
 
