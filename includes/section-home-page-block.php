@@ -45,7 +45,7 @@ while ($block->have_posts()) : $block->the_post();
 				$catarrayrated = $catarrayrated->term_id;
 				if ($catarrayrated == 2) {
 				get_template_part('includes/section','reviewratingshort');
-				}elseif ($catarrayrated == 3 || $catarrayrated == 84){
+				}elseif ($catarrayrated == 31 || $catarrayrated == 30){
 				get_template_part('includes/section','difficultyratingshort');
 				}
 				}
