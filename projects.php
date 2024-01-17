@@ -66,7 +66,7 @@ if (!empty($seo_paragraph)) :
 <?php endif; ?>
 
 
-             </div>
+
 
 
              <!-- Article content blocks -->
