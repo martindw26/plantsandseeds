@@ -78,7 +78,7 @@ if ($header_background_color) {
 
     echo '<div class="header_background container-fluid" style="background-color: ' . esc_attr($header_background_color) . ';">';
 } else {
-    echo '<div class="header_background container-fluid">';
+    echo '<div class="header_background container-fluid p-0">';
 }
 ?>
 <?php get_template_part('includes/section','logo');?>

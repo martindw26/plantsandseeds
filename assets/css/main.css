@@ -105,8 +105,13 @@ hr.horizontal-line {
 
 .header_background.container-fluid.p-0 {
     background-color: <?php echo $header_background_color; ?>!important;
+
 }
 
+.header_background 
+@media screen and (max-width: 480px) {
+    padding:0px;
+}
 
 
 /* Header/logo Title */
@@ -116,17 +121,6 @@ hr.horizontal-line {
 
 .header-social{ background-color: black;}
 p.header-social{ background-color: black;}
-
-/* Padding logo*/
-@media only screen and (max-width: 767px) {
-  .header-background {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: -15px;
-    margin-right: -15px;
-    width: calc(100% + 30px);
-  }
-}
 
 .page-wrap{
   padding: 2rem 0;
