@@ -13,10 +13,10 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         </div>
 
         <div class="col">
-	<a class="bi bi-twitter text-light m-1 p-2" width="48" height="48" href="http://twitter.com/share?u=<?php echo $actual_link;?>&text=techhobbyist-<?php 	the_permalink() ?>&hashtags=techhobbyist" target="_blank" /></a></div>
+	<a class="bi bi-twitter text-light m-1 p-2" width="48" height="48" href="http://twitter.com/share?u=<?php echo $actual_link;?>&text=plantsandseeds.co.uk-<?php 	the_permalink() ?>&hashtags=plantsandseeds.co.uk" target="_blank" /></a></div>
 
         <div class="col">
-        	<a class="bi bi-reddit text-light m-1 p-2" width="48" height="48" href="http://reddit.com/submit?url=<?php the_permalink() ?>&title=techhobbyist" target="_blank" />	</a>	
+        	<a class="bi bi-reddit text-light m-1 p-2" width="48" height="48" href="http://reddit.com/submit?url=<?php the_permalink() ?>&title=plantsandseeds.co.uk" target="_blank" />	</a>	
 
          </div>
     
@@ -25,7 +25,7 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
       </div>
       <div class="col">
        <a class="bi bi-envelope text-light m-1 p-2" width="48" height="48" 
-         href="mailto:?Subject=techhobbyist.co.uk | <?php echo get_the_title();?>&body=Check%20out%20this%20artile!%20<?php echo get_the_title();?><?php the_permalink()  
+         href="mailto:?Subject=plantsandseeds.co.uk.co.uk | <?php echo get_the_title();?>&body=Check%20out%20this%20artile!%20<?php echo get_the_title();?><?php the_permalink()  
         ?>" target="_blank" /></a>
       </div>
 
