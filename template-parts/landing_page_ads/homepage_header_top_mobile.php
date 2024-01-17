@@ -21,11 +21,11 @@ if ($adinformation) {
 
 <?php
 
-//$LowerLimit = get_field('mobile_banner_top_min','option');
-//$UpperLimit = get_field('mobile_banner_top_max','option');
+$LowerLimit = get_field('mobile_banner_min','option');
+$UpperLimit = get_field('mobile_banner_max','option');
 
-$LowerLimit = 1;
-$UpperLimit = 10;
+//$LowerLimit = 1;
+//$UpperLimit = 10;
 
 $advert = rand($LowerLimit,$UpperLimit);
 
