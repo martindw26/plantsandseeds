@@ -81,6 +81,8 @@ if ($header_background_color) {
     echo '<div class="header_background container-fluid p-0">';
 }
 ?>
+</div>
+<div>
 <?php get_template_part('includes/section','logo');?>
 
 <?php get_template_part('includes/section','main_nav');?>
