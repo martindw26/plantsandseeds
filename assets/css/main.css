@@ -108,9 +108,10 @@ hr.horizontal-line {
 
 }
 
-.header_background 
+.header_background.container-fluid{
 @media screen and (max-width: 480px) {
-    padding:0px;
+    padding: 0px;
+  }
 }
 
 
