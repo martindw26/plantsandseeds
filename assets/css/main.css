@@ -118,10 +118,14 @@ hr.horizontal-line {
 p.header-social{ background-color: black;}
 
 /* Padding logo*/
-@media screen and (max-width: 480px)
-.header_background {
-  /* width: 100%; */
-  display: contents;
+@media only screen and (max-width: 767px) {
+  .header-background {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+  }
 }
 
 .page-wrap{
