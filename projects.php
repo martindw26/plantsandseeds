@@ -55,7 +55,6 @@
 
              <!-- SEO text-->
 
-             <div class=" bg-secondary text-light p-4 mb-4 border-dark lead">
              <?php
               $seo_paragraph = get_field('seo_paragraph'); // Assuming get_field is a function to retrieve the SEO paragraph
 
